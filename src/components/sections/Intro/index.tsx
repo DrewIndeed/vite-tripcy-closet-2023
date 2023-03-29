@@ -31,32 +31,14 @@ const Intro = (props: Props) => {
       ease: "expo.inOut",
     });
 
-    const tlpart2 = gsap.timeline({
-      duration: 0.5,
-      ease: "expo.inOut",
+    anime.timeline().add({
+      targets: "#part2",
+      opacity: [0, 1],
+      translateX: [-75, 50, 0],
+      easing: "easeInOutSine",
+      duration: 2000,
+      delay: 1200,
     });
-
-    tlpart2
-      .from("#part2", {
-        x: -100,
-        opacity: 0,
-        ease: "expo.inOut",
-      })
-      .to(
-        "#part2",
-        {
-          x: 50,
-          opacity: 1,
-        },
-        "+=0.2"
-      )
-      .to(
-        "#part2",
-        {
-          x: 0,
-        },
-        "+=0.2"
-      );
 
     gsap.from(".part3", {
       opacity: 0,

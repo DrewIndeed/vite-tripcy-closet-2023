@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import path from "path";
 import react from "@vitejs/plugin-react";
+import viteCompression from "vite-plugin-compression";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,5 +17,8 @@ export default defineConfig({
   server: {
     port: 3333,
   },
-  plugins: [react()],
+  preview: {
+    port: 8888,
+  },
+  plugins: [react(), viteCompression({ algorithm: "gzip" })],
 });

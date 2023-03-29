@@ -9,7 +9,6 @@ function App() {
     <HelmetProvider>
       <Helmet>
         <title>Tripcy Closet</title>
-        <link rel="icon" type="image/svg+xml" href="/imgs/logo-white.svg" />
       </Helmet>
       <ThemeProvider theme={common}>
         <CustomCursor />
