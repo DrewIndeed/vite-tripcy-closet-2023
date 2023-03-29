@@ -1,3 +1,20 @@
+/* fonts */
+@font-face {
+  font-family: "Cochin";
+  src: url("../../public/fonts/cochin.otf") format("otf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cochin Bold";
+  src: url("../../public/fonts/cochin-bold.ttf") format("ttf");
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+}
+/* fonts */
+
 /* css overkill baselines start */
 *,
 *::before,
@@ -10,7 +27,7 @@
 }
 
 html {
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  font-family: "Cochin", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -47,3 +64,14 @@ ul {
   -ms-user-select: none;
 }
 /* css overkill baselines end */
+
+/* utils */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+/* utils */
