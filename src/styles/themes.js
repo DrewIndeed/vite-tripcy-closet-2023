@@ -1,5 +1,5 @@
 const MAIN_CURSOR = {
-  dimensionValue: 20, // change this if needed
+  dimensionValue: 30, // change this if needed
 };
 
 const SECOND_CURSOR = {

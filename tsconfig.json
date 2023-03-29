@@ -19,7 +19,7 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"],
-      "@utils/*": ["utils/*"],
+      "@utils": ["utils/index.ts"],
       "@assets/*": ["assets/*"],
       "@styles/*": ["styles/*"],
       "@components/*": ["components/*"]
