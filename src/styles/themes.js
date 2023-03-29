@@ -1,3 +1,11 @@
+const MAIN_CURSOR = {
+  dimensionValue: 20, // change this if needed
+};
+
+const SECOND_CURSOR = {
+  dimensionValue: MAIN_CURSOR.dimensionValue * 2,
+};
+
 export const common = {
   fontxs: "0.75em",
   fontsm: "0.875em",
@@ -7,6 +15,11 @@ export const common = {
   fontxxl: "3em",
   fontxxxl: "5em",
   fontBig: "10em",
+  cursor: {
+    main: MAIN_CURSOR.dimensionValue,
+    second: SECOND_CURSOR.dimensionValue,
+    third: MAIN_CURSOR.dimensionValue / 10,
+  },
   colors: {
     bg1: "#ffffff",
     bg2: "#f6f5f0",

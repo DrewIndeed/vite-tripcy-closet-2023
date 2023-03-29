@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { ThemeProvider } from "styled-components";
+import CustomCursor from "@components/common/CustomCursor";
 
 function App() {
   const containerRef = useRef(null);
@@ -22,6 +23,7 @@ function App() {
           watch={[]}
           containerRef={containerRef}
         >
+          <CustomCursor />
           <main className="App" data-scroll-container ref={containerRef}>
             <Welcome />
             <Welcome />
