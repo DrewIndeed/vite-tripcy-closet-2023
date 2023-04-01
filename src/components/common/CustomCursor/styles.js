@@ -7,12 +7,12 @@ export const CursorWrapper = styled.div`
     pointer-events: none;
     transform: translate3d(0, 0, 0);
     position: fixed;
+    mix-blend-mode: exclusion;
   }
 
   .main-cursor {
     transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1);
     animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
-    mix-blend-mode: difference;
 
     .cursor-background {
       width: ${(props) => `${props.theme.cursor.main}px`};

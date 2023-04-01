@@ -1,7 +1,6 @@
+import { common as commonTheme } from "@/styles/themes";
 import { stringToStyle } from "@utils";
 import anime from "animejs";
-import gsap from "gsap";
-import { common as commonTheme } from "@/styles/themes";
 import { useEffect } from "react";
 import { IntroWrapper } from "./styles";
 
@@ -19,16 +18,12 @@ const Intro = (props: Props) => {
   } = props;
 
   useEffect(() => {
-    gsap.from("#part1", {
-      opacity: 0,
-      y: -150,
-      ease: "expo.inOut",
-    });
-    gsap.to("#part1", {
-      duration: 1.5,
-      opacity: 1,
-      y: 0,
-      ease: "expo.inOut",
+    anime.timeline().add({
+      targets: "#part1",
+      opacity: [0.5, 1],
+      translateY: [23.5, 23.5, -150, 22, 0],
+      easing: "easeInOutSine",
+      duration: 2000,
     });
 
     anime.timeline().add({
@@ -40,19 +35,13 @@ const Intro = (props: Props) => {
       delay: 1200,
     });
 
-    gsap.from(".part3", {
-      opacity: 0,
-      y: 150,
-      ease: "expo.inOut",
+    anime.timeline().add({
+      targets: ".part3",
+      opacity: [0.5, 1],
+      translateY: [-23.5, -23.5, 150, -22, 0],
+      easing: "easeInOutSine",
+      duration: 2000,
     });
-
-    gsap.to(".part3", {
-      duration: 1.5,
-      opacity: 1,
-      y: 0,
-      ease: "expo.inOut",
-    });
-
     const headerWrapper: HTMLDivElement | null =
       document.querySelector(".header");
     headerWrapper!.innerHTML = headerWrapper!.textContent!.replace(

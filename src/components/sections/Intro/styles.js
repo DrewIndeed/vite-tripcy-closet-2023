@@ -9,8 +9,10 @@ export const IntroWrapper = styled.div`
   z-index: 200;
   flex: 1;
 
+  width: 100%;
   height: 100vh;
-  position: relative;
+  position: absolute;
+  top: 0;
   overflow: hidden;
 
   .svg-wrapper {
