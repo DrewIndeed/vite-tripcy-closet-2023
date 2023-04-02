@@ -1,4 +1,6 @@
 import CustomCursor from "@components/common/CustomCursor";
+import Banner from "@components/sections/Banner";
+import About from "@components/sections/About";
 import Intro from "@components/sections/Intro";
 import { AppWrapper } from "@styles/global";
 import { common as commonTheme } from "@styles/themes";
@@ -53,7 +55,7 @@ function App() {
         >
           <AppWrapper>
             {/* INTRO AND TRANSITION */}
-            <Intro
+            {/* <Intro
               svgColorHex={commonTheme.colors.typo}
               textColorHex={commonTheme.colors.typo}
               bgColorHex={commonTheme.colors.bg2}
@@ -75,16 +77,18 @@ function App() {
                 width: "50vw",
                 zIndex: 50,
               }}
-            />
+            /> */}
 
             {/* MAIN CONTENT */}
+            <div className="main-nav">
+              <p>Main nav</p>
+            </div>
+            <div className="socials-nav">
+              <p>Socials nav</p>
+            </div>
             <div className="app" data-scroll-container ref={containerRef}>
-              <div className="section" data-scroll-section>
-                Andrew
-              </div>
-              <div className="section" data-scroll-section>
-                Le Nguyen
-              </div>
+              <Banner />
+              <About />
             </div>
           </AppWrapper>
         </LocomotiveScrollProvider>

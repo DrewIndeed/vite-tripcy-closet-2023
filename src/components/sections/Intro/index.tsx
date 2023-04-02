@@ -42,6 +42,7 @@ const Intro = (props: Props) => {
       easing: "easeInOutSine",
       duration: 2000,
     });
+
     const headerWrapper: HTMLDivElement | null =
       document.querySelector(".header");
     headerWrapper!.innerHTML = headerWrapper!.textContent!.replace(
@@ -51,7 +52,7 @@ const Intro = (props: Props) => {
     anime.timeline().add({
       targets: ".header .letter",
       opacity: [0, 1],
-      translateY: [75, 0],
+      translateY: [50, 0],
       translateZ: 0,
       easing: "easeOutExpo",
       duration: 2000,
