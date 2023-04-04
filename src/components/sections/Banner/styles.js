@@ -163,8 +163,8 @@ export const BannerWrapper = styled.section`
         margin-right: 7rem;
         margin-bottom: 3rem;
         background-color: #c1b6a340;
-        box-shadow: #c1b6a340 5px 5px, #c1b6a330 10px 10px, #c1b6a320 15px 15px,
-          #c1b6a310 20px 20px, #c1b6a305 25px 25px;
+        box-shadow: #c1b6a340 -5px 5px, #c1b6a330 -10px 10px,
+          #c1b6a320 -15px 15px, #c1b6a310 -20px 20px, #c1b6a305 -25px 25px;
 
         img {
           height: 100%;
@@ -182,8 +182,8 @@ export const BannerWrapper = styled.section`
         bottom: 4rem;
         left: -4rem;
         background-color: #c1b6a340;
-        box-shadow: #c1b6a340 5px 5px, #c1b6a330 10px 10px, #c1b6a320 15px 15px,
-          #c1b6a310 20px 20px, #c1b6a305 25px 25px;
+        box-shadow: #c1b6a340 -5px 5px, #c1b6a330 -10px 10px,
+          #c1b6a320 -15px 15px, #c1b6a310 -20px 20px, #c1b6a305 -25px 25px;
       }
 
       img {

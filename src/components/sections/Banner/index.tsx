@@ -90,20 +90,29 @@ const Banner = () => {
 
           <div className="model-img" data-scroll data-scroll-speed="-4">
             <img
+              width="750px"
+              height="900px"
+              sizes="2500px"
               src="/imgs/samples/sample1.jpg"
               alt="Female model sitting looking down"
             />
           </div>
 
           <div className="small-product-img">
-            <img src="/imgs/samples/sample5.jpg" alt="Sample blazer" />
+            <img
+              sizes="2500px"
+              width="320px"
+              height="320px"
+              src="/imgs/samples/sample5.jpg"
+              alt="Sample blazer"
+            />
           </div>
         </div>
       </div>
 
       <div className="brandname">
         <div className="text-container">
-          <p>TRIPCY CLOSET</p>
+          <p>TRIPCY</p>
         </div>
       </div>
     </BannerWrapper>

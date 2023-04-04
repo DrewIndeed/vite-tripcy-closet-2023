@@ -30,9 +30,12 @@
     "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^3.1.0",
     "path": "^0.12.7",
+    "sharp": "^0.32.0",
+    "svgo": "^3.0.2",
     "tslib": "^2.5.0",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
-    "vite-plugin-compression": "^0.5.1"
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-image-optimizer": "^1.1.2"
   }
 }
