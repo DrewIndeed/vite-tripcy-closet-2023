@@ -64,6 +64,10 @@ ul {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
+button {
+  cursor: none;
+}
 /* css overkill baselines end */
 
 /* utils */

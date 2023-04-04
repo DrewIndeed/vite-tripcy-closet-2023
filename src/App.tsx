@@ -55,7 +55,7 @@ function App() {
         >
           <AppWrapper>
             {/* INTRO AND TRANSITION */}
-            {/* <Intro
+            <Intro
               svgColorHex={commonTheme.colors.typo}
               textColorHex={commonTheme.colors.typo}
               bgColorHex={commonTheme.colors.bg2}
@@ -77,7 +77,7 @@ function App() {
                 width: "50vw",
                 zIndex: 50,
               }}
-            /> */}
+            />
 
             {/* MAIN CONTENT */}
             <div className="main-nav">

@@ -9,6 +9,37 @@ export const BannerWrapper = styled.section`
   background-color: ${(props) => props.theme.colors.bg1};
   overflow: hidden;
 
+  .brandname {
+    width: 12vw;
+    height: 100vh;
+    right: 0;
+    position: absolute;
+    z-index: 30;
+    display: flex;
+    justify-content: flex-end;
+    /* border: 2px solid red; */
+
+    .text-container {
+      position: relative;
+      width: 10vw;
+      height: 100%;
+      /* border: 2px solid green; */
+
+      p {
+        color: ${(props) => props.theme.colors.sup2};
+        opacity: 0.5;
+        position: absolute;
+        width: max-content;
+        font-size: 10em;
+        top: 100px;
+        left: calc(100% - 2rem);
+        transform-origin: 0 0;
+        transform: rotate(90deg) scale(1.3);
+        /* border: 2px solid purple; */
+      }
+    }
+  }
+
   .content {
     position: relative;
     display: flex;
@@ -30,6 +61,7 @@ export const BannerWrapper = styled.section`
 
       p {
         padding: 0 4rem;
+        z-index: 40;
       }
 
       p:nth-child(1) {
@@ -61,6 +93,8 @@ export const BannerWrapper = styled.section`
       p:nth-child(2) {
         font-size: 2.5em;
         color: ${(props) => props.theme.colors.typo};
+        display: flex;
+        white-space: pre-wrap;
       }
 
       p:nth-child(3) {
@@ -161,30 +195,6 @@ export const BannerWrapper = styled.section`
           filter: brightness(0.8);
           transform: scale(1.08);
         }
-      }
-    }
-
-    .brandname {
-      display: block;
-      position: relative;
-      margin: 40px 0;
-      z-index: 30;
-
-      p {
-        /* Abs positioning makes it not take up vert space */
-        color: ${(props) => props.theme.colors.sup2};
-        opacity: 0.5;
-        position: absolute;
-        bottom: 74%;
-        left: -1rem;
-        font-size: 6em;
-        white-space: nowrap;
-
-        /* Border is the new background */
-
-        /* Rotate from top left corner (not default) */
-        transform-origin: 0 0;
-        transform: rotate(90deg) scale(2);
       }
     }
   }

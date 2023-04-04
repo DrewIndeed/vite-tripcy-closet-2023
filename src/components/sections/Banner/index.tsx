@@ -3,18 +3,67 @@ import { useEffect } from "react";
 import { BannerWrapper } from "./styles";
 
 const Banner = () => {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    anime.timeline().add({
+      targets: "#stay",
+      translateX: [0, 50, -10, 0],
+      opacity: [0, 1],
+      easing: "easeInOutSine",
+      duration: 2000,
+      delay: 5000,
+    });
+    anime.timeline().add({
+      targets: "#stylish",
+      translateX: [0, 50, -10, 0],
+      opacity: [0, 1],
+      easing: "easeInOutSine",
+      duration: 2200,
+      delay: 5000,
+    });
+    anime.timeline().add({
+      targets: [".model-img"],
+      translateX: [-60, 10, 0],
+      easing: "easeInOutSine",
+      duration: 3000,
+      delay: 5000,
+    });
+    anime.timeline().add({
+      targets: ".small-product-img",
+      translateX: [60, -10, 0],
+      easing: "easeInOutSine",
+      duration: 3000,
+      delay: 5000,
+    });
+  }, []);
 
   return (
     <BannerWrapper data-scroll-section>
       <div className="content">
         <div className="text">
           <p>
-            <span>Stay</span>
-            <span>Stylish.</span>
+            <span
+              id="stay"
+              data-scroll
+              data-scroll-speed="-4"
+              data-scroll-direction="horizontal"
+              data-scroll-target=".text"
+              data-scroll-position="left"
+            >
+              Stay
+            </span>
+            <span
+              id="stylish"
+              data-scroll
+              data-scroll-speed="-8"
+              data-scroll-direction="horizontal"
+              data-scroll-target=".text"
+              data-scroll-position="left"
+            >
+              Stylish.
+            </span>
           </p>
           <p>For Your Inner Chic.</p>
-          <p>
+          <p id="inner-desc">
             Tripcy Closet hightens a gentle muse that conceals massive elegance
             and mild luxury, making the best of each individual's natural beauty
             to leverage our brand and products.
@@ -39,19 +88,21 @@ const Banner = () => {
             />
           </svg>
 
-          <div className="model-img">
+          <div className="model-img" data-scroll data-scroll-speed="-4">
             <img
-              src="/public/imgs/samples/sample1.jpg"
+              src="/imgs/samples/sample1.jpg"
               alt="Female model sitting looking down"
             />
           </div>
 
           <div className="small-product-img">
-            <img src="/public/imgs/samples/sample5.jpg" alt="Sample blazer" />
+            <img src="/imgs/samples/sample5.jpg" alt="Sample blazer" />
           </div>
         </div>
+      </div>
 
-        <div className="brandname">
+      <div className="brandname">
+        <div className="text-container">
           <p>TRIPCY CLOSET</p>
         </div>
       </div>
