@@ -14,7 +14,7 @@ const Intro = (props: Props) => {
   const {
     svgColorHex = "#ffffff",
     textColorHex = "#ffffff",
-    bgColorHex = commonTheme.colors.typo,
+    bgColorHex = commonTheme.colors.typo1,
   } = props;
 
   useEffect(() => {

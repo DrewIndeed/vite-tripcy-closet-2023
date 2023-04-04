@@ -1,6 +1,6 @@
 import CustomCursor from "@components/common/CustomCursor";
-import Banner from "@components/sections/Banner";
 import About from "@components/sections/About";
+import Banner from "@components/sections/Banner";
 import Intro from "@components/sections/Intro";
 import { AppWrapper } from "@styles/global";
 import { common as commonTheme } from "@styles/themes";
@@ -13,6 +13,7 @@ import { ThemeProvider } from "styled-components";
 
 function App() {
   const containerRef = useRef(null);
+
   useEffect(() => {
     anime.timeline().add({
       targets: "#intro",
@@ -21,7 +22,6 @@ function App() {
       duration: 2000,
       delay: 2400,
     });
-
     anime.timeline().add({
       targets: "#intro-jump-1",
       translateX: "-100%",
@@ -29,7 +29,6 @@ function App() {
       duration: 1500,
       delay: 4000,
     });
-
     anime.timeline().add({
       targets: "#intro-jump-2",
       translateX: "-100%",
@@ -49,6 +48,12 @@ function App() {
         <LocomotiveScrollProvider
           options={{
             smooth: true,
+            tablet: {
+              smooth: true,
+            },
+            smartphone: {
+              smooth: true,
+            },
           }}
           watch={[]}
           containerRef={containerRef}
@@ -56,15 +61,15 @@ function App() {
           <AppWrapper>
             {/* INTRO AND TRANSITION */}
             <Intro
-              svgColorHex={commonTheme.colors.typo}
-              textColorHex={commonTheme.colors.typo}
+              svgColorHex={commonTheme.colors.typo1}
+              textColorHex={commonTheme.colors.typo1}
               bgColorHex={commonTheme.colors.bg2}
             />
             <div
               className="jump"
               id="intro-jump-1"
               style={{
-                backgroundColor: commonTheme.colors.typo,
+                backgroundColor: commonTheme.colors.typo1,
                 width: "100vw",
                 zIndex: 100,
               }}

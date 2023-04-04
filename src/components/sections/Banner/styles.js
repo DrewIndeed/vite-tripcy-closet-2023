@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "@/styles/themes";
 
 export const BannerWrapper = styled.section`
   width: 100%;
@@ -77,7 +78,7 @@ export const BannerWrapper = styled.section`
 
         span:nth-child(1) {
           /* font-weight: bold; */
-          color: ${(props) => props.theme.colors.typo};
+          color: ${(props) => props.theme.colors.typo1};
           font-size: 9em;
           transform: translateY(3rem);
         }
@@ -92,13 +93,13 @@ export const BannerWrapper = styled.section`
 
       p:nth-child(2) {
         font-size: 2.5em;
-        color: ${(props) => props.theme.colors.typo};
+        color: ${(props) => props.theme.colors.typo1};
         display: flex;
         white-space: pre-wrap;
       }
 
       p:nth-child(3) {
-        color: #332f2a90;
+        color: ${(props) => props.theme.colors.typo2};
         font-size: 1.4em;
         margin-top: 0.5rem;
         line-height: 2rem;
