@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { devices } from "@/styles/themes";
 
 export const BannerWrapper = styled.section`
   width: 100%;

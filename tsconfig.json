@@ -19,9 +19,10 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"],
-      "@utils": ["utils/index.ts"],
-      "@assets/*": ["assets/*"],
+      "@hooks/*": ["hooks/*"],
       "@styles/*": ["styles/*"],
+      "@assets/*": ["assets/*"],
+      "@utils": ["utils/index.ts"],
       "@components/*": ["components/*"]
     }
   },
