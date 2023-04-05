@@ -69,8 +69,12 @@ export const BannerWrapper = styled.section`
       margin-bottom: 8rem;
 
       p {
-        padding: 0 4rem;
+        padding: 0 3rem;
         z-index: 40;
+
+        @media ${devices.laptop} {
+          padding: 0 4rem;
+        }
       }
 
       p:nth-child(1) {
@@ -87,51 +91,81 @@ export const BannerWrapper = styled.section`
         span:nth-child(1) {
           /* font-weight: bold; */
           color: ${(props) => props.theme.colors.typo1};
-          font-size: 9em;
-          transform: translateY(3rem);
+          font-size: 7em;
+          transform: translateY(0rem);
+
+          @media ${devices.laptop} {
+            font-size: 9em;
+            transform: translateY(3rem);
+          }
         }
 
         span:nth-child(2) {
           font-family: "Cochin Bold";
           font-weight: bold;
           color: ${(props) => props.theme.colors.out1};
-          font-size: 14em;
+          font-size: 10em;
+
+          @media ${devices.laptop} {
+            font-size: 14em;
+          }
         }
       }
 
       p:nth-child(2) {
-        font-size: 2.5em;
+        font-size: 1.75em;
         color: ${(props) => props.theme.colors.typo1};
         display: flex;
         white-space: pre-wrap;
+
+        @media ${devices.laptop} {
+          font-size: 2.5em;
+        }
       }
 
       p:nth-child(3) {
         color: ${(props) => props.theme.colors.typo2};
-        font-size: 1.4em;
+        font-size: 1.2em;
         margin-top: 0.5rem;
-        line-height: 2rem;
-        padding-right: 8rem;
+        line-height: 1.5rem;
+        padding-right: 4rem;
         z-index: 40;
+
+        @media ${devices.laptop} {
+          font-size: 1.4em;
+          padding-right: 8rem;
+          line-height: 2rem;
+        }
       }
 
       button {
         color: #fff;
         background-color: ${(props) => props.theme.colors.out2};
-        width: 14rem;
+        width: 10rem;
         padding: 20px 0;
-        margin-left: 4rem;
+        margin-left: 3rem;
         margin-top: 2rem;
         border-radius: 2px;
         border: none;
         outline: none;
-        font-size: 1.3em;
+        font-size: 1em;
         z-index: 5;
         transition: opacity 0.2s ease-in-out, font-size 0.4s ease-in-out;
 
         :hover {
           opacity: 0.75;
-          font-size: 1.4em;
+          font-size: 1.1em;
+        }
+
+        @media ${devices.laptop} {
+          width: 14rem;
+          font-size: 1.3em;
+          margin-left: 4rem;
+
+          :hover {
+            opacity: 0.75;
+            font-size: 1.4em;
+          }
         }
       }
     }
