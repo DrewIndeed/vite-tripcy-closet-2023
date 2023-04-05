@@ -2,6 +2,7 @@ import CustomCursor from "@components/common/CustomCursor";
 import About from "@components/sections/About";
 import Banner from "@components/sections/Banner";
 import Intro from "@components/sections/Intro";
+import useGlobalMedia from "@hooks/useGlobalMedia";
 import { AppWrapper } from "@styles/global";
 import { common as commonTheme } from "@styles/themes";
 import anime from "animejs";
@@ -13,6 +14,7 @@ import { ThemeProvider } from "styled-components";
 
 function App() {
   const containerRef = useRef(null);
+  const { MediaWrappers } = useGlobalMedia();
 
   useEffect(() => {
     anime.timeline().add({
@@ -44,7 +46,9 @@ function App() {
         <title>Tripcy Closet</title>
       </Helmet>
       <ThemeProvider theme={commonTheme}>
-        <CustomCursor />
+        <MediaWrappers.Tablet>
+          <CustomCursor />
+        </MediaWrappers.Tablet>
         <LocomotiveScrollProvider
           options={{
             smooth: true,

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "@/styles/themes";
 
 export const BannerWrapper = styled.section`
   width: 100%;
@@ -26,16 +27,24 @@ export const BannerWrapper = styled.section`
       /* border: 2px solid green; */
 
       p {
-        color: ${(props) => props.theme.colors.sup2};
-        opacity: 0.5;
+        color: ${(props) => props.theme.colors.out1};
+        opacity: 0.35;
+        font-size: 2em;
         position: absolute;
         width: max-content;
-        font-size: 10em;
-        top: 100px;
-        left: calc(100% - 2rem);
+        bottom: 20rem;
+        left: calc(100% - 1rem);
         transform-origin: 0 0;
         transform: rotate(90deg) scale(1.3);
         /* border: 2px solid purple; */
+
+        @media ${devices.laptopL} {
+          color: ${(props) => props.theme.colors.sup2};
+          opacity: 0.5;
+          font-size: 10em;
+          top: 110px;
+          left: calc(100% - 2rem);
+        }
       }
     }
   }
@@ -117,6 +126,7 @@ export const BannerWrapper = styled.section`
         border: none;
         outline: none;
         font-size: 1.3em;
+        z-index: 5;
         transition: opacity 0.2s ease-in-out, font-size 0.4s ease-in-out;
 
         :hover {
@@ -134,23 +144,44 @@ export const BannerWrapper = styled.section`
       justify-content: center;
       align-items: center;
 
-      svg:nth-child(1) {
-        width: 900px;
+      #svg-hard {
+        width: 650px;
         position: absolute;
         bottom: 0;
         right: 0;
         transform: translate3d(20rem, 14rem, 0) scaleY(1.1) scale(1.1)
           rotate(20deg);
-        z-index: 10;
+        z-index: 2;
+
+        @media ${devices.laptop} {
+          width: 720px;
+        }
+
+        @media ${devices.laptopL} {
+          width: 900px;
+        }
       }
 
-      svg:nth-child(2) {
-        width: 900px;
+      #svg-light {
+        width: 650px;
+        opacity: 0.95;
         position: absolute;
         bottom: 0;
         right: 0;
         transform: translate3d(10rem, 16rem, 0) rotate(-30deg);
-        z-index: 5;
+        z-index: 1;
+
+        @media ${devices.laptop} {
+          width: 720px;
+        }
+        @media ${devices.laptopL} {
+          width: 900px;
+        }
+      }
+
+      #test {
+        z-index: 1000;
+        font-size: 4em;
       }
 
       .model-img {
@@ -184,6 +215,26 @@ export const BannerWrapper = styled.section`
         background-color: #c1b6a340;
         box-shadow: #c1b6a340 -5px 5px, #c1b6a330 -10px 10px,
           #c1b6a320 -15px 15px, #c1b6a310 -20px 20px, #c1b6a305 -25px 25px;
+      }
+
+      .img-stack-item {
+        width: 230px;
+        height: 230px;
+        overflow: hidden;
+        border-radius: 0.4rem;
+        z-index: 20;
+        margin-top: 1.5rem;
+        background-color: #c1b6a340;
+        box-shadow: #c1b6a340 -5px 5px, #c1b6a330 -10px 10px,
+          #c1b6a320 -15px 15px, #c1b6a310 -20px 20px, #c1b6a305 -25px 25px;
+      }
+
+      .right-medium {
+        margin-right: 3.5rem;
+      }
+
+      .right-hard {
+        margin-right: 7rem;
       }
 
       img {

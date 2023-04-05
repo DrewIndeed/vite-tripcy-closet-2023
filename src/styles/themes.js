@@ -7,25 +7,27 @@ const SECOND_CURSOR = {
 };
 
 // screen sizes
-const size = {
+export const sizes = {
   mobileS: "320px",
   mobileM: "375px",
   mobileL: "425px",
   tablet: "768px",
   laptop: "1024px",
+  laptopM: "1208px", //custom value
   laptopL: "1440px",
   desktop: "2560px",
 };
 
 // media queries
 export const devices = {
-  mobileS: `(min-width: ${size.mobileS})`,
-  mobileM: `(min-width: ${size.mobileM})`,
-  mobileL: `(min-width: ${size.mobileL})`,
-  tablet: `(min-width: ${size.tablet})`,
-  laptop: `(min-width: ${size.laptop})`,
-  laptopL: `(min-width: ${size.laptopL})`,
-  desktop: `(min-width: ${size.desktop})`,
+  mobileS: `(min-width: ${sizes.mobileS})`,
+  mobileM: `(min-width: ${sizes.mobileM})`,
+  mobileL: `(min-width: ${sizes.mobileL})`,
+  tablet: `(min-width: ${sizes.tablet})`,
+  laptop: `(min-width: ${sizes.laptop})`,
+  laptopM: `(min-width: ${sizes.laptopM})`,
+  laptopL: `(min-width: ${sizes.laptopL})`,
+  desktop: `(min-width: ${sizes.desktop})`,
 };
 
 export const common = {

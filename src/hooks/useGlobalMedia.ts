@@ -6,35 +6,52 @@ const useGlobalMedia = () => {
   const useMobileMedium = () => useMediaQuery({ query: devices.mobileM });
   const useTablet = () => useMediaQuery({ query: devices.tablet });
   const useLaptop = () => useMediaQuery({ query: devices.laptop });
+  const useLaptopMedium = () => useMediaQuery({ query: devices.laptopM });
   const useLaptopLarge = () => useMediaQuery({ query: devices.laptopL });
 
-  // responsive wrappers
-  const MobileMedium = ({ children }: { children: any }) => {
-    const isMobileMedium = useMobileMedium();
-    return isMobileMedium ? children : null;
-  };
-  const Tablet = ({ children }: { children: any }) => {
-    const isTable = useTablet();
-    return isTable ? children : null;
-  };
-  const Laptop = ({ children }: { children: any }) => {
-    const isLaptop = useLaptop();
-    return isLaptop ? children : null;
-  };
-  const LaptopLarge = ({ children }: { children: any }) => {
-    const isLaptopLarge = useLaptopLarge();
-    return isLaptopLarge ? children : null;
-  };
+  // responsive booleans
+  const isMobileMedium = useMobileMedium();
+  const isTablet = useTablet();
+  const isLaptop = useLaptop();
+  const isLaptopMedium = useLaptopMedium();
+  const isLaptopLarge = useLaptopLarge();
 
-  const hooks = { useMobileMedium, useTablet, useLaptop, useLaptopLarge };
+  // responsive wrappers
+  const MobileMedium = ({ children }: { children: any }) =>
+    isMobileMedium ? children : null;
+  const Tablet = ({ children }: { children: any }) =>
+    isTablet ? children : null;
+  const Laptop = ({ children }: { children: any }) =>
+    isLaptop ? children : null;
+  const LaptopMedium = ({ children }: { children: any }) =>
+    isLaptop ? children : null;
+  const LaptopLarge = ({ children }: { children: any }) =>
+    isLaptopLarge ? children : null;
+
+  // this hook's objects
+  const hooks = {
+    useMobileMedium,
+    useTablet,
+    useLaptop,
+    useLaptopMedium,
+    useLaptopLarge,
+  };
+  const booleans = {
+    isMobileMedium,
+    isTablet,
+    isLaptop,
+    isLaptopMedium,
+    isLaptopLarge,
+  };
   const MediaWrappers = {
     MobileMedium,
     Tablet,
     Laptop,
+    LaptopMedium,
     LaptopLarge,
   };
 
-  return { hooks, MediaWrappers };
+  return { hooks, booleans, MediaWrappers };
 };
 
 export default useGlobalMedia;
