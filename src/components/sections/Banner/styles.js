@@ -27,19 +27,22 @@ export const BannerWrapper = styled.section`
       /* border: 2px solid green; */
 
       p {
-        color: ${(props) => props.theme.colors.out1};
+        color: ${(props) => props.theme.colors.sup2};
         opacity: 0.35;
         font-size: 2em;
         position: absolute;
         width: max-content;
-        bottom: 20rem;
         left: calc(100% - 1rem);
         transform-origin: 0 0;
         transform: rotate(90deg) scale(1.3);
         /* border: 2px solid purple; */
 
+        /* VERY IMPORTANT */
+        @media (max-width: 1440px) {
+          bottom: 20rem;
+        }
+
         @media ${devices.laptopL} {
-          color: ${(props) => props.theme.colors.sup2};
           opacity: 0.5;
           font-size: 10em;
           top: 110px;
@@ -90,24 +93,32 @@ export const BannerWrapper = styled.section`
 
         span:nth-child(1) {
           /* font-weight: bold; */
+          /* background: cyan; */
           color: ${(props) => props.theme.colors.typo1};
           font-size: 7em;
-          transform: translateY(0rem);
 
           @media ${devices.laptop} {
+            font-size: 8em;
+          }
+
+          @media ${devices.laptopL} {
             font-size: 9em;
-            transform: translateY(3rem);
           }
         }
 
         span:nth-child(2) {
+          /* background: green; */
           font-family: "Cochin Bold";
           font-weight: bold;
-          color: ${(props) => props.theme.colors.out1};
+          color: ${(props) => props.theme.colors.sup3};
           font-size: 10em;
 
           @media ${devices.laptop} {
-            font-size: 14em;
+            font-size: 12em;
+          }
+
+          @media ${devices.laptopL} {
+            font-size: 12em;
           }
         }
       }
@@ -119,6 +130,10 @@ export const BannerWrapper = styled.section`
         white-space: pre-wrap;
 
         @media ${devices.laptop} {
+          font-size: 2em;
+        }
+
+        @media ${devices.laptopL} {
           font-size: 2.5em;
         }
       }
@@ -128,10 +143,16 @@ export const BannerWrapper = styled.section`
         font-size: 1.2em;
         margin-top: 0.5rem;
         line-height: 1.5rem;
-        padding-right: 4rem;
+        padding-right: 3rem;
         z-index: 40;
 
         @media ${devices.laptop} {
+          font-size: 1.3em;
+          padding-right: 6rem;
+          line-height: 1.75rem;
+        }
+
+        @media ${devices.laptopL} {
           font-size: 1.4em;
           padding-right: 8rem;
           line-height: 2rem;
@@ -213,15 +234,21 @@ export const BannerWrapper = styled.section`
         }
       }
 
-      #test {
-        z-index: 1000;
-        font-size: 4em;
+      img {
+        width: 100%;
+        object-fit: cover;
+        transition: all 0.6s ease-in-out;
+
+        :hover {
+          filter: brightness(0.8);
+          transform: scale(1.08);
+        }
       }
 
       .model-img {
         position: relative;
         width: 80%;
-        height: 75%;
+        height: 65%;
         overflow: hidden;
         border-radius: 0.25rem;
         z-index: 20;
@@ -234,51 +261,35 @@ export const BannerWrapper = styled.section`
         img {
           height: 100%;
           filter: brightness(0.95);
+
+          :hover {
+            filter: brightness(0.8);
+          }
+        }
+
+        @media (min-width: 1200px) {
+          height: 75%;
         }
       }
 
       .small-product-img {
         position: absolute;
-        width: 230px;
-        height: 230px;
+        width: 170px;
+        height: 170px;
         overflow: hidden;
         border-radius: 0.25rem;
         z-index: 20;
-        bottom: 4rem;
-        left: -4rem;
+        bottom: 8rem;
+        left: -5rem;
         background-color: #c1b6a340;
         box-shadow: #c1b6a340 -5px 5px, #c1b6a330 -10px 10px,
           #c1b6a320 -15px 15px, #c1b6a310 -20px 20px, #c1b6a305 -25px 25px;
-      }
 
-      .img-stack-item {
-        width: 230px;
-        height: 230px;
-        overflow: hidden;
-        border-radius: 0.4rem;
-        z-index: 20;
-        margin-top: 1.5rem;
-        background-color: #c1b6a340;
-        box-shadow: #c1b6a340 -5px 5px, #c1b6a330 -10px 10px,
-          #c1b6a320 -15px 15px, #c1b6a310 -20px 20px, #c1b6a305 -25px 25px;
-      }
-
-      .right-medium {
-        margin-right: 3.5rem;
-      }
-
-      .right-hard {
-        margin-right: 7rem;
-      }
-
-      img {
-        width: 100%;
-        object-fit: cover;
-        transition: all 0.6s ease-in-out;
-
-        :hover {
-          filter: brightness(0.8);
-          transform: scale(1.08);
+        @media (min-width: 1200px) {
+          width: 230px;
+          height: 230px;
+          bottom: 4rem;
+          left: -4rem;
         }
       }
     }

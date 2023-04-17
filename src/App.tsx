@@ -1,4 +1,4 @@
-import CustomCursor from "@components/common/CustomCursor";
+import MainNav from "@components/common/MainNav";
 import About from "@components/sections/About";
 import Banner from "@components/sections/Banner";
 import Intro from "@components/sections/Intro";
@@ -46,9 +46,9 @@ function App() {
         <title>Tripcy Closet</title>
       </Helmet>
       <ThemeProvider theme={commonTheme}>
-        <MediaWrappers.Tablet>
-          <CustomCursor />
-        </MediaWrappers.Tablet>
+        {/* <MediaWrappers.Tablet> */}
+        {/* <CustomCursor /> */}
+        {/* </MediaWrappers.Tablet> */}
         <LocomotiveScrollProvider
           options={{
             smooth: true,
@@ -90,11 +90,13 @@ function App() {
 
             {/* MAIN CONTENT */}
             <div className="main-nav">
-              <p>Main nav</p>
+              <MainNav />
             </div>
-            <div className="socials-nav">
-              <p>Socials nav</p>
-            </div>
+            <MediaWrappers.Tablet>
+              <div className="socials-nav">
+                <p>Socials nav</p>
+              </div>
+            </MediaWrappers.Tablet>
             <div className="app" data-scroll-container ref={containerRef}>
               <Banner />
               <About />

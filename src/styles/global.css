@@ -37,7 +37,6 @@ body {
   overscroll-behavior: hidden;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  cursor: none;
 }
 
 body {
@@ -65,8 +64,8 @@ ul {
   -ms-user-select: none;
 }
 
-button {
-  cursor: none;
+.c-scrollbar {
+  display: none;
 }
 /* css overkill baselines end */
 

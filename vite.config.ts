@@ -1,6 +1,6 @@
-import { defineConfig } from "vite";
-import path from "path";
 import react from "@vitejs/plugin-react";
+import path from "path";
+import { defineConfig } from "vite";
 import viteCompression from "vite-plugin-compression";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
@@ -39,19 +39,19 @@ const DEFAULT_IMG_OPTIONS = {
   },
   png: {
     // https://sharp.pixelplumbing.com/api-output#png
-    quality: 50,
+    quality: 25,
   },
   jpeg: {
     // https://sharp.pixelplumbing.com/api-output#jpeg
-    quality: 50,
+    quality: 25,
   },
   jpg: {
     // https://sharp.pixelplumbing.com/api-output#jpeg
-    quality: 40,
+    quality: 25,
   },
   tiff: {
     // https://sharp.pixelplumbing.com/api-output#tiff
-    quality: 50,
+    quality: 25,
   },
   // gif does not support lossless compression
   // https://sharp.pixelplumbing.com/api-output#gif
