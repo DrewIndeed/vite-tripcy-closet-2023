@@ -13,59 +13,59 @@ import MediaQuery from "react-responsive";
 import { BannerWrapper } from "./styles";
 
 const Banner = () => {
-  useEffect(() => {
-    anime.timeline().add({
-      targets: "#stay",
-      translateX: [0, 50, -10, 0],
-      opacity: [0, 1],
-      easing: "easeInOutSine",
-      duration: 2000,
-      delay: 5000,
-    });
-    anime.timeline().add({
-      targets: "#stylish",
-      translateX: [0, 50, -10, 0],
-      opacity: [0, 1],
-      easing: "easeInOutSine",
-      duration: 2200,
-      delay: 5000,
-    });
-    anime.timeline().add({
-      targets: ".model-img",
-      translateX: [-60, 10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 5000,
-    });
-    anime.timeline().add({
-      targets: ".small-product-img",
-      translateX: [60, -10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 5000,
-    });
-    anime.timeline().add({
-      targets: ".right-none",
-      translateX: [-60, 10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 5000,
-    });
-    anime.timeline().add({
-      targets: ".right-medium",
-      translateX: [-60, 10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 5500,
-    });
-    anime.timeline().add({
-      targets: ".right-hard",
-      translateX: [-60, 10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 6000,
-    });
-  }, []);
+  // useEffect(() => {
+  //   anime.timeline().add({
+  //     targets: "#stay",
+  //     translateX: [0, 50, -10, 0],
+  //     opacity: [0, 1],
+  //     easing: "easeInOutSine",
+  //     duration: 2000,
+  //     delay: 5000,
+  //   });
+  //   anime.timeline().add({
+  //     targets: "#stylish",
+  //     translateX: [0, 50, -10, 0],
+  //     opacity: [0, 1],
+  //     easing: "easeInOutSine",
+  //     duration: 2200,
+  //     delay: 5000,
+  //   });
+  //   anime.timeline().add({
+  //     targets: ".model-img",
+  //     translateX: [-60, 10, 0],
+  //     easing: "easeInOutSine",
+  //     duration: 3000,
+  //     delay: 5000,
+  //   });
+  //   anime.timeline().add({
+  //     targets: ".small-product-img",
+  //     translateX: [60, -10, 0],
+  //     easing: "easeInOutSine",
+  //     duration: 3000,
+  //     delay: 5000,
+  //   });
+  //   anime.timeline().add({
+  //     targets: ".right-none",
+  //     translateX: [-60, 10, 0],
+  //     easing: "easeInOutSine",
+  //     duration: 3000,
+  //     delay: 5000,
+  //   });
+  //   anime.timeline().add({
+  //     targets: ".right-medium",
+  //     translateX: [-60, 10, 0],
+  //     easing: "easeInOutSine",
+  //     duration: 3000,
+  //     delay: 5500,
+  //   });
+  //   anime.timeline().add({
+  //     targets: ".right-hard",
+  //     translateX: [-60, 10, 0],
+  //     easing: "easeInOutSine",
+  //     duration: 3000,
+  //     delay: 6000,
+  //   });
+  // }, []);
 
   return (
     <BannerWrapper data-scroll-section>

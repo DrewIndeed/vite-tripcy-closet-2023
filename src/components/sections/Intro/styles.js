@@ -17,8 +17,6 @@ export const IntroWrapper = styled.div`
 
   .svg-wrapper {
     transform: scale(0.25);
-    animation: blurOutHard 2s ease-in-out forwards;
-    animation-delay: 2.7s;
 
     @media (min-width: 500px) {
       transform: scale(0.3);
@@ -35,29 +33,8 @@ export const IntroWrapper = styled.div`
     z-index: 1000;
     font-size: 2em;
 
-    animation: blurOutLight 2s ease-in-out forwards;
-    animation-delay: 2.7s;
-
     @media (min-width: 500px) {
       font-size: 3.5em;
-    }
-  }
-
-  @keyframes blurOutLight {
-    from {
-      filter: blur(0);
-    }
-    to {
-      filter: blur(2rem);
-    }
-  }
-
-  @keyframes blurOutHard {
-    from {
-      filter: blur(0);
-    }
-    to {
-      filter: blur(10rem);
     }
   }
 `;
