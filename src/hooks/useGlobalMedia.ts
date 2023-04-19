@@ -1,5 +1,5 @@
 import { useMediaQuery } from "react-responsive";
-import { devices } from "@/styles/themes";
+import { devices } from "@styles/themes";
 
 const useGlobalMedia = () => {
   // responsive hooks

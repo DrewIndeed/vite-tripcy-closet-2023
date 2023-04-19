@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { devices } from "@/styles/themes";
+import { devices } from "@styles/themes";
 
 export const BannerWrapper = styled.section`
   width: 100%;
@@ -28,25 +28,36 @@ export const BannerWrapper = styled.section`
 
       p {
         color: ${(props) => props.theme.colors.sup2};
-        opacity: 0.35;
-        font-size: 2em;
+        opacity: 0.2;
         position: absolute;
         width: max-content;
-        left: calc(100% - 1rem);
         transform-origin: 0 0;
         transform: rotate(90deg) scale(1.3);
+
+        font-size: 6em;
+        left: calc(120%);
+        top: 110px;
+        bottom: auto;
         /* border: 2px solid purple; */
 
-        /* VERY IMPORTANT */
-        @media (max-width: 1440px) {
+        @media ${devices.tablet} {
+          opacity: 0.35;
+          font-size: 2em;
+          left: calc(100% - 1rem);
+          top: auto;
+          bottom: 10rem;
+        }
+
+        /* VERY IMPORTANT, max-width */
+        @media (max-width: 1439px) {
           bottom: 20rem;
         }
 
         @media ${devices.laptopL} {
-          opacity: 0.5;
           font-size: 10em;
-          top: 110px;
           left: calc(100% - 2rem);
+          top: 110px;
+          opacity: 0.5;
         }
       }
     }
@@ -68,19 +79,31 @@ export const BannerWrapper = styled.section`
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-left: calc(2rem + 64px);
-      margin-bottom: 8rem;
+
+      /* mobile spacing */
+      padding-left: 0;
+      margin-bottom: 0;
+
+      @media ${devices.tablet} {
+        padding-left: calc(2rem + 64px);
+        margin-bottom: 8rem;
+      }
 
       p {
-        padding: 0 3rem;
+        /* mobile spacing */
+        padding: 0 2rem;
         z-index: 40;
+
+        @media ${devices.tablet} {
+          padding: 0 3rem;
+        }
 
         @media ${devices.laptop} {
           padding: 0 4rem;
         }
       }
 
-      p:nth-child(1) {
+      #text-container {
         display: flex;
         flex-direction: column;
         gap: -3rem;
@@ -91,13 +114,13 @@ export const BannerWrapper = styled.section`
           transform: scaleY(1.05);
         }
 
-        span:nth-child(1) {
+        #stay {
           /* font-weight: bold; */
           /* background: cyan; */
           color: ${(props) => props.theme.colors.typo1};
-          font-size: 7em;
+          font-size: 4em;
 
-          @media ${devices.laptop} {
+          @media ${devices.tablet} {
             font-size: 8em;
           }
 
@@ -106,28 +129,33 @@ export const BannerWrapper = styled.section`
           }
         }
 
-        span:nth-child(2) {
+        #stylish {
           /* background: green; */
           font-family: "Cochin Bold";
           font-weight: bold;
           color: ${(props) => props.theme.colors.sup3};
-          font-size: 10em;
+          font-size: 6em;
 
-          @media ${devices.laptop} {
-            font-size: 12em;
+          @media ${devices.tablet} {
+            font-size: 10em;
           }
 
-          @media ${devices.laptopL} {
+          @media ${devices.laptop} {
             font-size: 12em;
           }
         }
       }
 
-      p:nth-child(2) {
-        font-size: 1.75em;
+      #chic {
+        margin-top: 1rem;
+        font-size: 1.5em;
         color: ${(props) => props.theme.colors.typo1};
         display: flex;
         white-space: pre-wrap;
+
+        @media ${devices.tablet} {
+          font-size: 1.75em;
+        }
 
         @media ${devices.laptop} {
           font-size: 2em;
@@ -138,13 +166,21 @@ export const BannerWrapper = styled.section`
         }
       }
 
-      p:nth-child(3) {
+      #inner-desc {
         color: ${(props) => props.theme.colors.typo2};
-        font-size: 1.2em;
         margin-top: 0.5rem;
-        line-height: 1.5rem;
-        padding-right: 3rem;
         z-index: 40;
+
+        font-size: 0.95em;
+        line-height: 1.2rem;
+        padding-right: 3rem;
+        text-align: justify;
+
+        @media ${devices.tablet} {
+          font-size: 1.2em;
+          line-height: 1.5rem;
+          padding-right: 3rem;
+        }
 
         @media ${devices.laptop} {
           font-size: 1.3em;
@@ -163,8 +199,8 @@ export const BannerWrapper = styled.section`
         color: #fff;
         background-color: ${(props) => props.theme.colors.out2};
         width: 10rem;
-        padding: 20px 0;
-        margin-left: 3rem;
+        padding: 15px 0;
+        margin-left: 2rem;
         margin-top: 2rem;
         border-radius: 2px;
         border: none;
@@ -176,6 +212,12 @@ export const BannerWrapper = styled.section`
         :hover {
           opacity: 0.75;
           font-size: 1.1em;
+        }
+
+        @media ${devices.tablet} {
+          margin-left: 3rem;
+          margin-top: 2rem;
+          padding: 20px 0;
         }
 
         @media ${devices.laptop} {
@@ -200,6 +242,7 @@ export const BannerWrapper = styled.section`
       align-items: center;
 
       #svg-hard {
+        display: none;
         width: 650px;
         position: absolute;
         bottom: 0;
@@ -207,6 +250,10 @@ export const BannerWrapper = styled.section`
         transform: translate3d(20rem, 14rem, 0) scaleY(1.1) scale(1.1)
           rotate(20deg);
         z-index: 2;
+
+        @media ${devices.tablet} {
+          display: block;
+        }
 
         @media ${devices.laptop} {
           width: 720px;
@@ -218,6 +265,7 @@ export const BannerWrapper = styled.section`
       }
 
       #svg-light {
+        display: none;
         width: 650px;
         opacity: 0.95;
         position: absolute;
@@ -225,6 +273,10 @@ export const BannerWrapper = styled.section`
         right: 0;
         transform: translate3d(10rem, 16rem, 0) rotate(-30deg);
         z-index: 1;
+
+        @media ${devices.tablet} {
+          display: block;
+        }
 
         @media ${devices.laptop} {
           width: 720px;
@@ -236,6 +288,7 @@ export const BannerWrapper = styled.section`
 
       img {
         width: 100%;
+        height: 100%;
         object-fit: cover;
         transition: all 0.6s ease-in-out;
 
@@ -248,9 +301,10 @@ export const BannerWrapper = styled.section`
       .model-img {
         position: relative;
         width: 80%;
-        height: 65%;
+        width: 80%;
+        height: 75%;
         overflow: hidden;
-        border-radius: 0.25rem;
+        border-radius: 1rem;
         z-index: 20;
         margin-right: 7rem;
         margin-bottom: 3rem;
@@ -274,20 +328,20 @@ export const BannerWrapper = styled.section`
 
       .small-product-img {
         position: absolute;
-        width: 170px;
-        height: 170px;
+        width: 190px;
+        height: 240px;
         overflow: hidden;
-        border-radius: 0.25rem;
+        border-radius: 1rem;
         z-index: 20;
-        bottom: 8rem;
+        bottom: 5rem;
         left: -5rem;
         background-color: #c1b6a340;
         box-shadow: #c1b6a340 -5px 5px, #c1b6a330 -10px 10px,
           #c1b6a320 -15px 15px, #c1b6a310 -20px 20px, #c1b6a305 -25px 25px;
 
         @media (min-width: 1200px) {
-          width: 230px;
-          height: 230px;
+          width: 190px;
+          height: 240px;
           bottom: 4rem;
           left: -4rem;
         }

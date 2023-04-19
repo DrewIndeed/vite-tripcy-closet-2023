@@ -1,4 +1,4 @@
-import { common as commonTheme } from "@/styles/themes";
+import { common as commonTheme } from "@styles/themes";
 import { stringToStyle } from "@utils";
 import anime from "animejs";
 import { useEffect } from "react";

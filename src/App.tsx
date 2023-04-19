@@ -46,9 +46,6 @@ function App() {
         <title>Tripcy Closet</title>
       </Helmet>
       <ThemeProvider theme={commonTheme}>
-        {/* <MediaWrappers.Tablet> */}
-        {/* <CustomCursor /> */}
-        {/* </MediaWrappers.Tablet> */}
         <LocomotiveScrollProvider
           options={{
             smooth: true,
