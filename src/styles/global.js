@@ -9,7 +9,7 @@ export const AppWrapper = styled.main`
     height: 100vh;
   }
 
-  .app {
+  .App {
     width: 100%;
     height: 100%;
   }

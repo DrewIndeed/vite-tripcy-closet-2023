@@ -64,6 +64,10 @@ ul {
   -ms-user-select: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .c-scrollbar {
   display: none;
 }

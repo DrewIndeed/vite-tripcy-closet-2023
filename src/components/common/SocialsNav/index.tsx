@@ -10,15 +10,21 @@ const SocialsNav = () => {
       <SocialsNavWrapper>
         <a
           className="icon-wrapper"
+          aria-label="Envelope icon wrapper"
           href="https://mail.google.com/mail/?view=cm&fs=1&to=tripcycloset@gmail.com"
           target="_blank"
         >
           <EnvelopeIcon className="icons" />
         </a>
-        <a className="icon-wrapper" target="_blank" href="tel:+84383430553">
+        <a
+          className="icon-wrapper"
+          aria-label="Telephone icon wrapper"
+          target="_blank"
+          href="tel:+84383430553"
+        >
           <PhoneIcon className="icons" />
         </a>
-        <div className="icon-wrapper">
+        <div className="icon-wrapper" aria-label="Instagram icon wrapper">
           <SocialIcon
             url="https://www.instagram.com/tripcycloset/"
             target="_blank"
