@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { devices } from "@styles/themes";
 
 export const SocialsNavWrapper = styled.div`
   left: 0;
@@ -39,9 +38,8 @@ export const SocialsNavWrapper = styled.div`
     transition: all 0.4s ease-in-out;
   }
 
-  #insta-icon:hover,
   .icon-wrapper:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) translateX(10px);
     background-color: ${(props) => props.theme.colors.out2};
   }
 `;

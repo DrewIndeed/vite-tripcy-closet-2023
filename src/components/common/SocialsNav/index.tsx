@@ -18,12 +18,10 @@ const SocialsNav = () => {
         <a className="icon-wrapper" target="_blank" href="tel:+84383430553">
           <PhoneIcon className="icons" />
         </a>
-        <a
-          className="icon-wrapper"
-          target="_blank"
-          href="https://www.instagram.com/tripcycloset/"
-        >
+        <div className="icon-wrapper">
           <SocialIcon
+            url="https://www.instagram.com/tripcycloset/"
+            target="_blank"
             id="insta-icon"
             network="instagram"
             label="Tripcy Closet's Instagram"
@@ -31,7 +29,7 @@ const SocialsNav = () => {
             bgColor="#ffffff00"
             style={{ borderRadius: "50%" }}
           />
-        </a>
+        </div>
       </SocialsNavWrapper>
     </MediaWrappers.Tablet>
   );
