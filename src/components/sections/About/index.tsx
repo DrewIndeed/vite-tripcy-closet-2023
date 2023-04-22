@@ -1,17 +1,9 @@
-import { AboutWrapper } from "./styles";
+import { AboutWrapper } from "./style";
 
 const About = () => {
   return (
     <AboutWrapper data-scroll-section id="about">
-      <div>
-        <h1
-          data-scroll
-          data-scroll-speed="-4"
-          data-scroll-direction="horizontal"
-        >
-          About
-        </h1>
-      </div>
+      <div className="content">About Us.</div>
     </AboutWrapper>
   );
 };

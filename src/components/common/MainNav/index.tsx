@@ -12,39 +12,27 @@ const MainNav = () => {
   const { scroll } = useLocomotiveScroll();
   const [isOpen, setIsOpen] = useState(false);
   const navContainerControls = useAnimation();
-  const onMenuOpen = useCallback(
-    debounce(() => {
-      if (!isOpen) {
-        navContainerControls.start({
-          left: 0,
-          opacity: [0, 1],
-          transition: {
-            duration: 0.8,
-            delay: 0.4,
-          },
-        });
-
-        anime({
-          targets: ".menu__item",
-          opacity: [0, 1],
-          translateY: [-30, 10, 0],
-          easing: "easeInOutSine",
-          duration: 1200,
-          delay: anime.stagger(100, { start: 800 }),
-        });
-
-        anime({
-          targets: ".logo-container",
-          rotate: 45,
-          easing: "easeInOutSine",
-          duration: 400,
-        });
-
-        setIsOpen(true);
-      }
-    }, 200),
-    [isOpen]
-  );
+  const onMenuOpen = useCallback(() => {
+    if (!isOpen) {
+      navContainerControls.start({
+        left: 0,
+        opacity: [0, 1],
+        transition: {
+          duration: 0.8,
+          delay: 0.4,
+        },
+      });
+      anime({
+        targets: ".menu__item",
+        opacity: [0, 1],
+        translateY: [-30, 10, 0],
+        easing: "easeInOutSine",
+        duration: 1200,
+        delay: anime.stagger(100, { start: 800 }),
+      });
+      setIsOpen(true);
+    }
+  }, [isOpen]);
   const onMenuClose = () => {
     if (isOpen) {
       navContainerControls.start({
@@ -54,14 +42,6 @@ const MainNav = () => {
           duration: 0.8,
         },
       });
-
-      anime({
-        targets: ".logo-container",
-        rotate: 0,
-        easing: "easeOutSine",
-        duration: 400,
-      });
-
       setIsOpen(false);
     }
   };

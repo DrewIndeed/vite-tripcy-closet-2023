@@ -8,4 +8,12 @@ export const AboutWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: ${(props) => `${props.theme.colors.bg2}`};
+  }
 `;

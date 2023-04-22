@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { CursorWrapper } from "./styles";
+import { CursorWrapper } from "./style";
 
 const CustomCursor = () => {
   const mainCursor = useRef<HTMLDivElement | null>(null);

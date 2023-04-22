@@ -36,28 +36,27 @@ export const BannerWrapper = styled.section`
 
         font-size: 6em;
         left: calc(120%);
-        top: 110px;
-        bottom: auto;
+        margin-bottom: 50vh;
         /* border: 2px solid purple; */
 
-        @media ${devices.tablet} {
-          opacity: 0.35;
-          font-size: 2em;
-          left: calc(100% - 1rem);
-          top: auto;
-          bottom: 10rem;
+        @media (min-width: 769px) and (max-width: 1090px) {
+          display: none;
         }
 
-        /* VERY IMPORTANT, max-width */
-        @media (max-width: 1439px) {
-          bottom: 20rem;
+        @media (min-width: 1091px) {
+          opacity: 0.35;
+          left: calc(60%);
+          font-size: 5em;
+          margin-top: 5vh;
         }
 
         @media ${devices.laptopL} {
+          display: block;
           font-size: 10em;
           left: calc(100% - 2rem);
           top: 110px;
           opacity: 0.5;
+          margin-top: 0;
         }
       }
     }
@@ -308,18 +307,9 @@ export const BannerWrapper = styled.section`
         z-index: 20;
         margin-right: 7rem;
         margin-bottom: 3rem;
-        background-color: #c1b6a340;
-        box-shadow: #c1b6a340 -5px 5px, #c1b6a330 -10px 10px,
-          #c1b6a320 -15px 15px, #c1b6a310 -20px 20px, #c1b6a305 -25px 25px;
-
-        img {
-          height: 100%;
-          filter: brightness(0.95);
-
-          :hover {
-            filter: brightness(0.8);
-          }
-        }
+        background-color: #8b8a8740;
+        box-shadow: #8b8a8740 -5px 5px, #8b8a8730 -10px 10px,
+          #8b8a8720 -15px 15px, #8b8a8710 -20px 20px, #8b8a8705 -25px 25px;
 
         @media (min-width: 1200px) {
           height: 75%;
@@ -335,9 +325,9 @@ export const BannerWrapper = styled.section`
         z-index: 20;
         bottom: 5rem;
         left: -5rem;
-        background-color: #c1b6a340;
-        box-shadow: #c1b6a340 -5px 5px, #c1b6a330 -10px 10px,
-          #c1b6a320 -15px 15px, #c1b6a310 -20px 20px, #c1b6a305 -25px 25px;
+        background-color: #8b8a8740;
+        box-shadow: #8b8a8740 -5px 5px, #8b8a8730 -10px 10px,
+          #8b8a8720 -15px 15px, #8b8a8710 -20px 20px, #8b8a8705 -25px 25px;
 
         @media (min-width: 1200px) {
           width: 190px;

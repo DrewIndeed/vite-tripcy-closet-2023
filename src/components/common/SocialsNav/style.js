@@ -25,6 +25,8 @@ export const SocialsNavWrapper = styled.div`
     border-radius: 50%;
     background-color: ${(props) => props.theme.colors.sup3};
     cursor: pointer;
+    transform: translateX(-100px);
+    opacity: 0;
   }
 
   .icons {

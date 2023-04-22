@@ -1,10 +1,23 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import useGlobalMedia from "@hooks/useGlobalMedia";
+import anime from "animejs";
+import { useEffect } from "react";
 import { SocialIcon } from "react-social-icons";
 import { SocialsNavWrapper } from "./style";
 
 const SocialsNav = () => {
   const { MediaWrappers } = useGlobalMedia();
+  useEffect(() => {
+    anime({
+      targets: ".icon-wrapper",
+      opacity: [0, 1],
+      translateX: [-100, 0],
+      easing: "easeInOutSine",
+      duration: 1200,
+      delay: anime.stagger(100, { start: 5000 }),
+    });
+  }, []);
+
   return (
     <MediaWrappers.Tablet>
       <SocialsNavWrapper>

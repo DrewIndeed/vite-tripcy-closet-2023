@@ -2,7 +2,7 @@ import { common as commonTheme } from "@styles/themes";
 import { stringToStyle } from "@utils";
 import anime from "animejs";
 import { useEffect } from "react";
-import { IntroWrapper } from "./styles";
+import { IntroWrapper } from "./style";
 
 type Props = {
   svgColorHex?: string;

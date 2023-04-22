@@ -1,3 +1,4 @@
+import { devices } from "@styles/themes";
 import styled from "styled-components";
 
 export const MainNavWrapper = styled.div`
@@ -20,8 +21,13 @@ export const MainNavWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-inline: 1rem;
+
+    @media ${devices.mobileL} {
+      padding-top: 2rem;
+      padding-inline: 2rem;
+    }
 
     .logo-container {
       display: flex;
@@ -33,10 +39,12 @@ export const MainNavWrapper = styled.div`
       border-radius: 50%;
       padding: 10px;
       cursor: pointer;
-      transition: all 0.4s ease-in-out;
+      transition: all 1s ease-in-out;
       /* border: 1px solid #332f2a; */
       backdrop-filter: blur(1rem);
       background-color: #332f2a05;
+      box-shadow: 5px 5px 10px 5px #332f2a10;
+      transform: scale(0.8);
 
       #logo {
         width: 100%;
@@ -45,8 +53,13 @@ export const MainNavWrapper = styled.div`
         object-position: center;
       }
 
-      @media (max-width: 425px) {
-        transform: scale(0.9);
+      @media ${devices.mobileL} {
+        transform: scale(1);
+      }
+
+      :hover {
+        transform: rotate(90deg);
+        box-shadow: -5px -5px 10px 5px #332f2a12;
       }
     }
 
