@@ -49,20 +49,29 @@ export const AboutWrapper = styled.section`
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          gap: 1rem;
+          gap: 0.75rem;
           backdrop-filter: blur(5px);
 
           .title {
             color: #fff;
-            font-size: 3em;
+            font-size: 1.5em;
+            margin-top: 1rem;
+
+            @media ${devices.mobileL} {
+              font-size: 2em;
+            }
           }
 
           .about-content {
             color: #fff;
             text-align: justify;
             padding-inline: 20px;
-            font-size: 1.2em;
+            font-size: 1em;
             line-height: 1.5rem;
+
+            @media ${devices.mobileL} {
+              font-size: 1.2em;
+            }
           }
 
           .quote-author {

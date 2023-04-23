@@ -1,6 +1,25 @@
+import { aboutUs1, aboutUs2 } from "@constants/text";
+import { motion } from "framer-motion";
+import { ReactNode } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { AboutWrapper } from "./style";
-import { aboutUs1, aboutUs2 } from "@constants/text";
+
+const AboutContent = ({
+  isSecond,
+  children,
+}: {
+  isSecond?: boolean;
+  children: ReactNode;
+}) => (
+  <motion.p
+    initial={{ opacity: 0, y: 100 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ ease: "easeOut", duration: 0.75, delay: isSecond ? 0.1 : 0 }}
+    className="about-content"
+  >
+    {children}
+  </motion.p>
+);
 
 const About = () => {
   return (
@@ -15,8 +34,8 @@ const About = () => {
           <div className="mobile-content">
             <div className="container">
               <h1 className="title">About Us.</h1>
-              <p className="about-content">{aboutUs1}</p>
-              <p className="about-content">{aboutUs2}</p>
+              <AboutContent>{aboutUs1}</AboutContent>
+              <AboutContent isSecond>{aboutUs2}</AboutContent>
               <span className="quote-author">Di • Founder, CFO</span>
             </div>
           </div>
@@ -38,8 +57,8 @@ const About = () => {
           <h2 className="title" data-scroll data-scroll-speed="-2">
             About us.
           </h2>
-          <p className="about-content">{aboutUs1}</p>
-          <p className="about-content">{aboutUs2}</p>
+          <AboutContent>{aboutUs1}</AboutContent>
+          <AboutContent isSecond>{aboutUs2}</AboutContent>
           <span className="quote-author">Di • Founder, CFO</span>
         </div>
       </div>
