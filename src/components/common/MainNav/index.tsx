@@ -2,7 +2,6 @@ import { navItemsData } from "@constants/obj";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import anime from "animejs";
 import { motion, useAnimation } from "framer-motion";
-import debounce from "lodash.debounce";
 import { useCallback, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useLocomotiveScroll } from "react-locomotive-scroll";

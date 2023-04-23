@@ -1,8 +1,4 @@
-import {
-  innerDesc,
-  svgHardD,
-  svgLightD
-} from "@constants/text";
+import { innerDesc, svgHardD, svgLightD } from "@constants/text";
 import { common as commonTheme } from "@styles/themes";
 import anime from "animejs";
 import { useEffect } from "react";
@@ -11,59 +7,59 @@ import MediaQuery from "react-responsive";
 import { BannerWrapper } from "./style";
 
 const Banner = () => {
-  // useEffect(() => {
-  //   anime({
-  //     targets: "#stay",
-  //     translateX: [0, 50, -10, 0],
-  //     opacity: [0, 1],
-  //     easing: "easeInOutSine",
-  //     duration: 2000,
-  //     delay: 5000,
-  //   });
-  //   anime({
-  //     targets: "#stylish",
-  //     translateX: [0, 50, -10, 0],
-  //     opacity: [0, 1],
-  //     easing: "easeInOutSine",
-  //     duration: 2200,
-  //     delay: 5000,
-  //   });
-  //   anime({
-  //     targets: ".model-img",
-  //     translateX: [-60, 10, 0],
-  //     easing: "easeInOutSine",
-  //     duration: 3000,
-  //     delay: 5000,
-  //   });
-  //   anime({
-  //     targets: ".small-product-img",
-  //     translateX: [60, -10, 0],
-  //     easing: "easeInOutSine",
-  //     duration: 3000,
-  //     delay: 5000,
-  //   });
-  //   anime({
-  //     targets: ".right-none",
-  //     translateX: [-60, 10, 0],
-  //     easing: "easeInOutSine",
-  //     duration: 3000,
-  //     delay: 5000,
-  //   });
-  //   anime({
-  //     targets: ".right-medium",
-  //     translateX: [-60, 10, 0],
-  //     easing: "easeInOutSine",
-  //     duration: 3000,
-  //     delay: 5500,
-  //   });
-  //   anime({
-  //     targets: ".right-hard",
-  //     translateX: [-60, 10, 0],
-  //     easing: "easeInOutSine",
-  //     duration: 3000,
-  //     delay: 6000,
-  //   });
-  // }, []);
+  useEffect(() => {
+    anime({
+      targets: "#stay",
+      translateX: [0, 50, -10, 0],
+      opacity: [0, 1],
+      easing: "easeInOutSine",
+      duration: 2000,
+      delay: 5000,
+    });
+    anime({
+      targets: "#stylish",
+      translateX: [0, 50, -10, 0],
+      opacity: [0, 1],
+      easing: "easeInOutSine",
+      duration: 2200,
+      delay: 5000,
+    });
+    anime({
+      targets: ".model-img",
+      translateX: [-60, 10, 0],
+      easing: "easeInOutSine",
+      duration: 3000,
+      delay: 5000,
+    });
+    anime({
+      targets: ".small-product-img",
+      translateX: [60, -10, 0],
+      easing: "easeInOutSine",
+      duration: 3000,
+      delay: 5000,
+    });
+    anime({
+      targets: ".right-none",
+      translateX: [-60, 10, 0],
+      easing: "easeInOutSine",
+      duration: 3000,
+      delay: 5000,
+    });
+    anime({
+      targets: ".right-medium",
+      translateX: [-60, 10, 0],
+      easing: "easeInOutSine",
+      duration: 3000,
+      delay: 5500,
+    });
+    anime({
+      targets: ".right-hard",
+      translateX: [-60, 10, 0],
+      easing: "easeInOutSine",
+      duration: 3000,
+      delay: 6000,
+    });
+  }, []);
 
   return (
     <BannerWrapper data-scroll-section id="home">
@@ -128,10 +124,10 @@ const Banner = () => {
                 height="750px"
                 sizes="(max-width: 1352px) 100vw, 1352px"
                 srcSet="
-                /imgs/main-model_r1.png 320w,
-                /imgs/main-model_r2.png 706w,
-                /imgs/main-model_r3.png 1182w"
-                src="/imgs/main-model_r3.png"
+                /imgs/main-model_r1.webp 320w,
+                /imgs/main-model_r2.webp 706w,
+                /imgs/main-model_r3.webp 1182w"
+                src="/imgs/main-model_r3.webp"
                 alt="Female model looking directly outwards"
               />
             </div>
@@ -142,10 +138,10 @@ const Banner = () => {
                 height="230px"
                 sizes="(max-width: 1334px) 100vw, 1334px"
                 srcSet="
-                /imgs/main-submodel_r1.png 320w,
-                /imgs/main-submodel_r2.png 706w,
-                /imgs/main-submodel_r3.png 1182w"
-                src="/imgs/main-model_r3.png 1182w"
+                /imgs/main-submodel_r1.webp 320w,
+                /imgs/main-submodel_r2.webp 706w,
+                /imgs/main-submodel_r3.webp 1182w"
+                src="/imgs/main-submodel_r3.webp 1182w"
                 alt="Female model standing and looking directly outwards"
               />
             </div>

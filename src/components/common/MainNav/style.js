@@ -19,9 +19,9 @@ export const MainNavWrapper = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     padding-inline: 1rem;
 
     @media ${devices.mobileL} {
@@ -40,9 +40,10 @@ export const MainNavWrapper = styled.div`
       padding: 10px;
       cursor: pointer;
       transition: all 1s ease-in-out;
-      /* border: 1px solid #332f2a; */
+      /* border-left: 1px solid #fff;
+      border-bottom: 1px solid #fff; */
       backdrop-filter: blur(1rem);
-      background-color: #332f2a05;
+      background-color: #ffffff90;
       box-shadow: 5px 5px 10px 5px #332f2a10;
       transform: scale(0.8);
 

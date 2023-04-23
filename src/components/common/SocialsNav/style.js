@@ -9,9 +9,9 @@ export const SocialsNavWrapper = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  gap: 1.25rem;
+  /* gap: 1.25rem; */
 
   /* TEMP */
   /* border: 1px solid brown; */
@@ -27,6 +27,7 @@ export const SocialsNavWrapper = styled.div`
     cursor: pointer;
     transform: translateX(-100px);
     opacity: 0;
+    margin-bottom: 1.25rem;
   }
 
   .icons {

@@ -13,8 +13,8 @@ const SocialsNav = () => {
       opacity: [0, 1],
       translateX: [-100, 0],
       easing: "easeInOutSine",
-      duration: 1200,
-      delay: anime.stagger(100, { start: 5000 }),
+      duration: 1500,
+      delay: anime.stagger(150, { start: 5500 }),
     });
   }, []);
 
