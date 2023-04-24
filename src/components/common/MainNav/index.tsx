@@ -1,4 +1,4 @@
-import { navItemsData } from "@constants/obj";
+import { navItemsData } from "@constants/arr";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import anime from "animejs";
 import { motion, useAnimation } from "framer-motion";
@@ -71,36 +71,40 @@ const MainNav = () => {
 
           {/* MENU ITEMS */}
           <nav className="menu">
-            {navItemsData.map(({ text, href, imgSrc, imgSrcSet, imgSizes }) => {
-              return (
-                <div
-                  className="menu__item"
-                  key={text}
-                  onClick={() => {
-                    onMenuClose();
-                    scroll.scrollTo(href);
-                  }}
-                >
-                  <p className="menu__item-link">{text}</p>
-                  <LazyLoadImage
-                    width="100px"
-                    height="200px"
-                    className="menu__item-img"
-                    alt="Nav items random content"
-                    src={imgSrc}
-                    srcSet={imgSrcSet}
-                    sizes={imgSizes}
-                  />
-                  <div className="marquee">
-                    <div className="marquee__inner">
-                      <span>
-                        {[...new Array(7).keys()].map(() => text).join(" - ")}
-                      </span>
+            {navItemsData.map(
+              ({ text, href, imgSrc, imgSrcSet, imgSizes, isOpen }) => {
+                return (
+                  <div
+                    className="menu__item"
+                    key={text}
+                    onClick={() => {
+                      onMenuClose();
+                      scroll.scrollTo(href);
+                    }}
+                  >
+                    <p className="menu__item-link">{text}</p>
+                    <LazyLoadImage
+                      width="100px"
+                      height="200px"
+                      className="menu__item-img"
+                      alt="Nav items random content"
+                      src={imgSrc}
+                      srcSet={imgSrcSet}
+                      sizes={imgSizes}
+                    />
+                    <div className="marquee">
+                      <div className="marquee__inner">
+                        <span>
+                          {[...new Array(7).keys()]
+                            .map(() => (isOpen ? text : "Coming Soon"))
+                            .join(" - ")}
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              }
+            )}
           </nav>
         </motion.div>
       </div>

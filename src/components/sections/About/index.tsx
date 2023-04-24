@@ -1,3 +1,4 @@
+import { imgAttributes } from "@constants/obj";
 import { aboutUs1, aboutUs2 } from "@constants/text";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
@@ -44,13 +45,7 @@ const About = () => {
               <img src="/imgs/logo-white.svg" alt="Logo white placholder" />
             }
             id="tripcy-pack"
-            sizes="(max-width: 1046px) 100vw, 1046px"
-            srcSet="
-            /imgs/about-parallax_r1.webp 320w,
-            /imgs/about-parallax_r2.webp 759w,
-            /imgs/about-parallax_r3.webp 1046w"
-            src="/imgs/about-parallax_r3.webp 1046w"
-            alt="Tripcy cards pack"
+            {...imgAttributes.about.mainBg}
           />
         </div>
         <div className="content__col col-2">

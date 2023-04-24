@@ -1,5 +1,13 @@
-import { innerDesc, svgHardD, svgLightD } from "@constants/text";
+import {
+  actionBtnText,
+  innerDesc,
+  slogan,
+  svgHardD,
+  svgLightD,
+} from "@constants/text";
+import { imgAttributes } from "@constants/obj";
 import { common as commonTheme } from "@styles/themes";
+import { Tooltip } from "react-tooltip";
 import anime from "animejs";
 import { useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -7,59 +15,59 @@ import MediaQuery from "react-responsive";
 import { BannerWrapper } from "./style";
 
 const Banner = () => {
-  useEffect(() => {
-    anime({
-      targets: "#stay",
-      translateX: [0, 50, -10, 0],
-      opacity: [0, 1],
-      easing: "easeInOutSine",
-      duration: 2000,
-      delay: 5000,
-    });
-    anime({
-      targets: "#stylish",
-      translateX: [0, 50, -10, 0],
-      opacity: [0, 1],
-      easing: "easeInOutSine",
-      duration: 2200,
-      delay: 5000,
-    });
-    anime({
-      targets: ".model-img",
-      translateX: [-60, 10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 5000,
-    });
-    anime({
-      targets: ".small-product-img",
-      translateX: [60, -10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 5000,
-    });
-    anime({
-      targets: ".right-none",
-      translateX: [-60, 10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 5000,
-    });
-    anime({
-      targets: ".right-medium",
-      translateX: [-60, 10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 5500,
-    });
-    anime({
-      targets: ".right-hard",
-      translateX: [-60, 10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 6000,
-    });
-  }, []);
+  // useEffect(() => {
+  //   anime({
+  //     targets: "#stay",
+  //     translateX: [0, 50, -10, 0],
+  //     opacity: [0, 1],
+  //     easing: "easeInOutSine",
+  //     duration: 2000,
+  //     delay: 5000,
+  //   });
+  //   anime({
+  //     targets: "#stylish",
+  //     translateX: [0, 50, -10, 0],
+  //     opacity: [0, 1],
+  //     easing: "easeInOutSine",
+  //     duration: 2200,
+  //     delay: 5000,
+  //   });
+  //   anime({
+  //     targets: ".model-img",
+  //     translateX: [-60, 10, 0],
+  //     easing: "easeInOutSine",
+  //     duration: 3000,
+  //     delay: 5000,
+  //   });
+  //   anime({
+  //     targets: ".small-product-img",
+  //     translateX: [60, -10, 0],
+  //     easing: "easeInOutSine",
+  //     duration: 3000,
+  //     delay: 5000,
+  //   });
+  //   anime({
+  //     targets: ".right-none",
+  //     translateX: [-60, 10, 0],
+  //     easing: "easeInOutSine",
+  //     duration: 3000,
+  //     delay: 5000,
+  //   });
+  //   anime({
+  //     targets: ".right-medium",
+  //     translateX: [-60, 10, 0],
+  //     easing: "easeInOutSine",
+  //     duration: 3000,
+  //     delay: 5500,
+  //   });
+  //   anime({
+  //     targets: ".right-hard",
+  //     translateX: [-60, 10, 0],
+  //     easing: "easeInOutSine",
+  //     duration: 3000,
+  //     delay: 6000,
+  //   });
+  // }, []);
 
   return (
     <BannerWrapper data-scroll-section id="home">
@@ -87,9 +95,17 @@ const Banner = () => {
               Stylish.
             </span>
           </p>
-          <p id="chic">For Your Inner Chic.</p>
+          <p id="chic">{slogan}.</p>
           <p id="inner-desc">{innerDesc}</p>
-          <button>Explore More</button>
+          <Tooltip id="banner-shopnow-btn" />
+          <button
+            data-tooltip-id="banner-shopnow-btn"
+            data-tooltip-content="Coming Soon"
+            data-tooltip-place="right"
+            data-tooltip-delay-hide={500}
+          >
+            {actionBtnText}
+          </button>
         </div>
 
         <div className="model">
@@ -119,31 +135,11 @@ const Banner = () => {
 
           <MediaQuery minWidth={1100}>
             <div className="model-img" data-scroll data-scroll-speed="-4">
-              <LazyLoadImage
-                width="320px"
-                height="750px"
-                sizes="(max-width: 1352px) 100vw, 1352px"
-                srcSet="
-                /imgs/main-model_r1.webp 320w,
-                /imgs/main-model_r2.webp 706w,
-                /imgs/main-model_r3.webp 1182w"
-                src="/imgs/main-model_r3.webp"
-                alt="Female model looking directly outwards"
-              />
+              <LazyLoadImage {...imgAttributes.banner.mainModel} />
             </div>
 
             <div className="small-product-img">
-              <LazyLoadImage
-                width="230px"
-                height="230px"
-                sizes="(max-width: 1334px) 100vw, 1334px"
-                srcSet="
-                /imgs/main-submodel_r1.webp 320w,
-                /imgs/main-submodel_r2.webp 706w,
-                /imgs/main-submodel_r3.webp 1182w"
-                src="/imgs/main-submodel_r3.webp 1182w"
-                alt="Female model standing and looking directly outwards"
-              />
+              <LazyLoadImage {...imgAttributes.banner.subModel} />
             </div>
           </MediaQuery>
         </div>

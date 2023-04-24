@@ -19,6 +19,7 @@
     "react-lazy-load-image-component": "^1.5.6",
     "react-locomotive-scroll": "^0.2.2",
     "react-router": "^6.9.0",
+    "react-tooltip": "^5.11.1",
     "styled-components": "^5.3.9",
     "uuidjs": "^5.0.0",
     "zod": "^3.21.4"

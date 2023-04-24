@@ -146,11 +146,11 @@ export const MainNavWrapper = styled.div`
     }
 
     .menu {
-      padding: 10vh 0 25vh;
+      padding: 6vh 0 25vh;
       --offset: 20vw;
       --move-initial: calc(-25% + var(--offset));
       --move-final: calc(-50% + var(--offset));
-      font-size: 7vw;
+      font-size: 6vw;
     }
 
     .marquee {
@@ -180,7 +180,7 @@ export const MainNavWrapper = styled.div`
     .menu__item-link,
     .marquee span {
       white-space: nowrap;
-      font-size: 7vw;
+      font-size: 6vw;
       padding: 0 1vw;
       line-height: 1.15;
     }
