@@ -2,7 +2,7 @@ import { navItemsData } from "@constants/arr";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import anime from "animejs";
 import { motion, useAnimation } from "framer-motion";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import { MainNavWrapper } from "./style";
@@ -44,18 +44,6 @@ const MainNav = () => {
       setIsOpen(false);
     }
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      scroll.destroy();
-    }, 0);
-    setTimeout(() => {
-      scroll.init();
-    }, 50);
-    setTimeout(() => {
-      scroll.update();
-    }, 1000);
-  }, []);
 
   return (
     <MainNavWrapper>
