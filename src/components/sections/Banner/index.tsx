@@ -15,59 +15,59 @@ import MediaQuery from "react-responsive";
 import { BannerWrapper } from "./style";
 
 const Banner = () => {
-  // useEffect(() => {
-  //   anime({
-  //     targets: "#stay",
-  //     translateX: [0, 50, -10, 0],
-  //     opacity: [0, 1],
-  //     easing: "easeInOutSine",
-  //     duration: 2000,
-  //     delay: 5000,
-  //   });
-  //   anime({
-  //     targets: "#stylish",
-  //     translateX: [0, 50, -10, 0],
-  //     opacity: [0, 1],
-  //     easing: "easeInOutSine",
-  //     duration: 2200,
-  //     delay: 5000,
-  //   });
-  //   anime({
-  //     targets: ".model-img",
-  //     translateX: [-60, 10, 0],
-  //     easing: "easeInOutSine",
-  //     duration: 3000,
-  //     delay: 5000,
-  //   });
-  //   anime({
-  //     targets: ".small-product-img",
-  //     translateX: [60, -10, 0],
-  //     easing: "easeInOutSine",
-  //     duration: 3000,
-  //     delay: 5000,
-  //   });
-  //   anime({
-  //     targets: ".right-none",
-  //     translateX: [-60, 10, 0],
-  //     easing: "easeInOutSine",
-  //     duration: 3000,
-  //     delay: 5000,
-  //   });
-  //   anime({
-  //     targets: ".right-medium",
-  //     translateX: [-60, 10, 0],
-  //     easing: "easeInOutSine",
-  //     duration: 3000,
-  //     delay: 5500,
-  //   });
-  //   anime({
-  //     targets: ".right-hard",
-  //     translateX: [-60, 10, 0],
-  //     easing: "easeInOutSine",
-  //     duration: 3000,
-  //     delay: 6000,
-  //   });
-  // }, []);
+  useEffect(() => {
+    anime({
+      targets: "#stay",
+      translateX: [0, 50, -10, 0],
+      opacity: [0, 1],
+      easing: "easeInOutSine",
+      duration: 2000,
+      delay: 5000,
+    });
+    anime({
+      targets: "#stylish",
+      translateX: [0, 50, -10, 0],
+      opacity: [0, 1],
+      easing: "easeInOutSine",
+      duration: 2200,
+      delay: 5000,
+    });
+    anime({
+      targets: ".model-img",
+      translateX: [-60, 10, 0],
+      easing: "easeInOutSine",
+      duration: 3000,
+      delay: 5000,
+    });
+    anime({
+      targets: ".small-product-img",
+      translateX: [60, -10, 0],
+      easing: "easeInOutSine",
+      duration: 3000,
+      delay: 5000,
+    });
+    anime({
+      targets: ".right-none",
+      translateX: [-60, 10, 0],
+      easing: "easeInOutSine",
+      duration: 3000,
+      delay: 5000,
+    });
+    anime({
+      targets: ".right-medium",
+      translateX: [-60, 10, 0],
+      easing: "easeInOutSine",
+      duration: 3000,
+      delay: 5500,
+    });
+    anime({
+      targets: ".right-hard",
+      translateX: [-60, 10, 0],
+      easing: "easeInOutSine",
+      duration: 3000,
+      delay: 6000,
+    });
+  }, []);
 
   return (
     <BannerWrapper data-scroll-section id="home">

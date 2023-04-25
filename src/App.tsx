@@ -17,29 +17,29 @@ const SocialsNav = lazy(() => import("@components/common/SocialsNav"));
 
 function App() {
   const containerRef = useRef(null);
-  // useEffect(() => {
-  //   anime({
-  //     targets: "#intro",
-  //     translateX: "-100%",
-  //     easing: "easeInOutExpo",
-  //     duration: 2000,
-  //     delay: 2400,
-  //   });
-  //   anime({
-  //     targets: "#intro-jump-1",
-  //     translateX: "-100%",
-  //     easing: "easeInOutExpo",
-  //     duration: 1500,
-  //     delay: 4000,
-  //   });
-  //   anime({
-  //     targets: "#intro-jump-2",
-  //     translateX: "-100%",
-  //     easing: "easeInOutExpo",
-  //     duration: 1200,
-  //     delay: 4600,
-  //   });
-  // }, []);
+  useEffect(() => {
+    anime({
+      targets: "#intro",
+      translateX: "-100%",
+      easing: "easeInOutExpo",
+      duration: 2000,
+      delay: 2400,
+    });
+    anime({
+      targets: "#intro-jump-1",
+      translateX: "-100%",
+      easing: "easeInOutExpo",
+      duration: 1500,
+      delay: 4000,
+    });
+    anime({
+      targets: "#intro-jump-2",
+      translateX: "-100%",
+      easing: "easeInOutExpo",
+      duration: 1200,
+      delay: 4600,
+    });
+  }, []);
 
   return (
     <HelmetProvider>
@@ -62,7 +62,7 @@ function App() {
         >
           <AppWrapper>
             {/* INTRO AND TRANSITION */}
-            {/* <Intro
+            <Intro
               svgColorHex={commonTheme.colors.typo1}
               textColorHex={commonTheme.colors.typo1}
               bgColorHex={commonTheme.colors.bg2}
@@ -84,7 +84,7 @@ function App() {
                 width: "50vw",
                 zIndex: 50,
               }}
-            /> */}
+            />
 
             {/* NAVIGATION */}
             <Suspense fallback={<></>}>
