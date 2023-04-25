@@ -1,21 +1,25 @@
 import About from "@components/sections/About";
 import Banner from "@components/sections/Banner";
-import Products from "@components/sections/Products";
 import Intro from "@components/sections/Intro";
+import Products from "@components/sections/Products";
 import { AppWrapper } from "@styles/global";
 import { common as commonTheme } from "@styles/themes";
 import anime from "animejs";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import "react-tooltip/dist/react-tooltip.css";
 import { Suspense, lazy, useEffect, useRef } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import {
+  LocomotiveScrollProvider,
+  useLocomotiveScroll,
+} from "react-locomotive-scroll";
+import "react-tooltip/dist/react-tooltip.css";
 import { ThemeProvider } from "styled-components";
 
 const MainNav = lazy(() => import("@components/common/MainNav"));
 const SocialsNav = lazy(() => import("@components/common/SocialsNav"));
 
 function App() {
+  const { scroll } = useLocomotiveScroll();
   const containerRef = useRef(null);
   useEffect(() => {
     anime({
@@ -39,6 +43,17 @@ function App() {
       duration: 1200,
       delay: 4600,
     });
+  }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      scroll.destroy();
+    }, 0);
+    setTimeout(() => {
+      scroll.init();
+    }, 50);
+    setTimeout(() => {
+      scroll.update();
+    }, 1000);
   }, []);
 
   return (
@@ -74,6 +89,7 @@ function App() {
                 backgroundColor: commonTheme.colors.typo1,
                 width: "100vw",
                 zIndex: 100,
+                willChange: "transform",
               }}
             />
             <div
@@ -83,6 +99,7 @@ function App() {
                 backgroundColor: commonTheme.colors.sup3,
                 width: "50vw",
                 zIndex: 50,
+                willChange: "transform",
               }}
             />
 
@@ -94,9 +111,9 @@ function App() {
 
             {/* MAIN CONTENT */}
             <div className="App" data-scroll-container ref={containerRef}>
-              <Banner />
+              {/* <Banner />
               <About />
-              <Products />
+              <Products /> */}
             </div>
           </AppWrapper>
         </LocomotiveScrollProvider>
