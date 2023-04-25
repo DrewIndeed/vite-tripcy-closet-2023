@@ -16,15 +16,7 @@ export const navItemsData = [
     imgSrcSet: "",
   },
   {
-    text: "New collection.",
-    isOpen: true,
-    href: "#collection",
-    imgSrc: "/imgs/samples/sample5.jpg",
-    imgSizes: "",
-    imgSrcSet: "",
-  },
-  {
-    text: "Our products.",
+    text: "Products.",
     isOpen: true,
     href: "#products",
     imgSrc: "/imgs/samples/sample4.jpg",

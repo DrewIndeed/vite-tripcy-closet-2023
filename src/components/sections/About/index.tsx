@@ -16,6 +16,7 @@ const AboutContent = ({
     initial={{ opacity: 0, y: 100 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ ease: "easeOut", duration: 0.75, delay: isSecond ? 0.1 : 0 }}
+    exit={{ opacity: 0, y: 100 }}
     className="about-content"
   >
     {children}
@@ -34,7 +35,7 @@ const About = () => {
         >
           <div className="mobile-content">
             <div className="container">
-              <h1 className="title">About Us.</h1>
+              <h1 className="title">About us.</h1>
               <AboutContent>{aboutUs1}</AboutContent>
               <AboutContent isSecond>{aboutUs2}</AboutContent>
               <span className="quote-author">Di • Founder, CFO</span>
@@ -49,9 +50,7 @@ const About = () => {
           />
         </div>
         <div className="content__col col-2">
-          <h2 className="title" data-scroll data-scroll-speed="-2">
-            About us.
-          </h2>
+          <h2 className="title">About us.</h2>
           <AboutContent>{aboutUs1}</AboutContent>
           <AboutContent isSecond>{aboutUs2}</AboutContent>
           <span className="quote-author">Di • Founder, CFO</span>

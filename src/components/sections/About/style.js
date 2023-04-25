@@ -26,6 +26,7 @@ export const AboutWrapper = styled.section`
       position: relative;
       height: 100%;
       margin-left: 0;
+      z-index: 20;
 
       @media ${devices.laptopM} {
         margin-left: 6rem;
@@ -99,13 +100,14 @@ export const AboutWrapper = styled.section`
         .title {
           color: ${(props) => props.theme.colors.typo1};
           margin-left: 3rem;
-          margin-bottom: 2rem;
+          /* margin-bottom: 2rem; */
           font-size: 5em;
           transform: scaleY(1.4);
+          z-index: 20;
 
           @media ${devices.laptopM} {
             font-size: 6em;
-            margin-bottom: 1.5rem;
+            /* margin-bottom: 1.5rem; */
           }
         }
 
@@ -115,6 +117,7 @@ export const AboutWrapper = styled.section`
           margin-inline: 3rem;
           font-size: 1.3em;
           line-height: 2rem;
+          z-index: 15;
 
           @media ${devices.laptopM} {
             font-size: 1.5em;
@@ -130,6 +133,7 @@ export const AboutWrapper = styled.section`
     }
 
     #tripcy-pack {
+      z-index: 20;
       width: 100%;
       height: 100%;
       object-fit: cover;

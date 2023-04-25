@@ -1,11 +1,12 @@
 import About from "@components/sections/About";
 import Banner from "@components/sections/Banner";
+import Products from "@components/sections/Products";
 import Intro from "@components/sections/Intro";
 import { AppWrapper } from "@styles/global";
 import { common as commonTheme } from "@styles/themes";
 import anime from "animejs";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import 'react-tooltip/dist/react-tooltip.css';
+import "react-tooltip/dist/react-tooltip.css";
 import { Suspense, lazy, useEffect, useRef } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
@@ -95,6 +96,7 @@ function App() {
             <div className="App" data-scroll-container ref={containerRef}>
               <Banner />
               <About />
+              <Products />
             </div>
           </AppWrapper>
         </LocomotiveScrollProvider>
