@@ -4,18 +4,37 @@ import { devices } from "@styles/themes";
 export const ProductsWrapper = styled.section`
   width: 100%;
   min-height: 100vh;
+  background-color: ${(props) => `${props.theme.colors.out2}`};
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  .title {
+    width: 100%;
+    color: ${(props) => `${props.theme.colors.sup1}`};
+    /* background-color: ${(props) => `${props.theme.colors.out2}`}; */
+    text-align: center;
+    font-size: 3em;
+    padding: 3rem 0;
+    transform: scaleY(1.4);
+
+    .title-content {
+      white-space: nowrap;
+    }
+
+    @media ${devices.laptop} {
+      font-size: 6em;
+    }
+  }
+
   .cards {
     width: 100%;
     height: 100%;
     display: grid;
     gap: 3px;
-    background-color: ${(props) => `${props.theme.colors.out2}90`};
+    /* background-color: ${(props) => `${props.theme.colors.out2}`}; */
     /* max-width: 1440px; */
     /* margin: 0 auto; */
     /*   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
@@ -48,7 +67,7 @@ export const ProductsWrapper = styled.section`
       height: 100%;
       top: -100%;
       left: 0;
-      background-color: ${(props) => props.theme.colors.sup2};
+      background-color: ${(props) => props.theme.colors.typo3};
       transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 
       @media ${devices.laptopM} {
@@ -66,7 +85,7 @@ export const ProductsWrapper = styled.section`
       height: 100%;
       object-fit: cover;
       transform: scale(1);
-      filter: brightness(0.6);
+      filter: brightness(0.9);
       transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
       @media ${devices.laptopM} {
@@ -77,12 +96,12 @@ export const ProductsWrapper = styled.section`
 
     .item-wrapper:hover img {
       transform: scale(1);
-      filter: brightness(0.6);
+      filter: brightness(0.8);
     }
 
     .item-copy {
       position: absolute;
-      top: 0;
+      top: 40%;
       width: 100%;
       /* height: 100%; */
       margin-top: 20vh;
@@ -101,9 +120,11 @@ export const ProductsWrapper = styled.section`
 
       @media ${devices.laptopL} {
         line-height: 4rem;
+        top: 25%;
       }
 
       .item-name {
+        word-break: break-word;
         position: relative;
         font-size: 3em;
         font-family: "Cochin Bold";

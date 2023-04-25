@@ -87,7 +87,7 @@ function App() {
             /> */}
 
             {/* NAVIGATION */}
-            <Suspense fallback={<>Loading nav content...</>}>
+            <Suspense fallback={<></>}>
               <MainNav />
               <SocialsNav />
             </Suspense>

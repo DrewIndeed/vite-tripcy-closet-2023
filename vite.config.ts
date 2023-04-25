@@ -6,7 +6,7 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 // https://github.com/FatehAK/vite-plugin-image-optimizer
 const DEFAULT_IMG_OPTIONS = {
-  test: /\.(jpe?g|png|gif|tiff|webp|svg|avif)$/i,
+  test: /\.(jpe?g|png|gif|tiff|svg|avif)$/i, // excluded webp
   exclude: undefined,
   include: undefined,
   includePublic: true,
