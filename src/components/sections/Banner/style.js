@@ -166,7 +166,7 @@ export const BannerWrapper = styled.section`
       }
 
       #inner-desc {
-        color: ${(props) => props.theme.colors.typo2};
+        color: ${(props) => props.theme.colors.typo1};
         margin-top: 0.5rem;
         z-index: 40;
 
@@ -196,7 +196,7 @@ export const BannerWrapper = styled.section`
 
       button {
         color: #fff;
-        background-color: ${(props) => props.theme.colors.out2};
+        background-color: ${(props) => props.theme.colors.out3};
         width: 10rem;
         padding: 15px 0;
         margin-left: 2rem;

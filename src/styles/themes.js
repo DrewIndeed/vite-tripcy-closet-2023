@@ -42,6 +42,7 @@ export const common = {
     sup3: "#c1b6a3",
     out1: "#d7b891",
     out2: "#8c8477",
+    out3: "#605b52",
   },
 };
 
