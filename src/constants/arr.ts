@@ -8,14 +8,6 @@ export const navItemsData = [
     imgSrcSet: "",
   },
   {
-    text: "About us.",
-    isOpen: true,
-    href: "#about",
-    imgSrc: "/imgs/samples/sample3.jpg",
-    imgSizes: "",
-    imgSrcSet: "",
-  },
-  {
     text: "Products.",
     isOpen: true,
     href: "#products",

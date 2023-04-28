@@ -1,11 +1,3 @@
-const MAIN_CURSOR = {
-  dimensionValue: 30, // change this if needed
-};
-
-const SECOND_CURSOR = {
-  dimensionValue: MAIN_CURSOR.dimensionValue * 2,
-};
-
 // screen sizes
 export const sizes = {
   mobileS: "320px",
@@ -39,11 +31,6 @@ export const common = {
   fontxxl: "3em",
   fontxxxl: "5em",
   fontBig: "10em",
-  cursor: {
-    main: MAIN_CURSOR.dimensionValue,
-    second: SECOND_CURSOR.dimensionValue,
-    third: MAIN_CURSOR.dimensionValue / 10,
-  },
   colors: {
     bg1: "#ffffff",
     bg2: "#f6f5f0",

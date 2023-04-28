@@ -22,7 +22,7 @@ const Banner = () => {
       opacity: [0, 1],
       easing: "easeInOutSine",
       duration: 2000,
-      delay: 5000,
+      delay: 3600,
     });
     anime({
       targets: "#stylish",
@@ -30,47 +30,26 @@ const Banner = () => {
       opacity: [0, 1],
       easing: "easeInOutSine",
       duration: 2200,
-      delay: 5000,
+      delay: 3600,
     });
     anime({
       targets: ".model-img",
       translateX: [-60, 10, 0],
       easing: "easeInOutSine",
       duration: 3000,
-      delay: 5000,
+      delay: 3600,
     });
     anime({
       targets: ".small-product-img",
       translateX: [60, -10, 0],
       easing: "easeInOutSine",
       duration: 3000,
-      delay: 5000,
-    });
-    anime({
-      targets: ".right-none",
-      translateX: [-60, 10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 5000,
-    });
-    anime({
-      targets: ".right-medium",
-      translateX: [-60, 10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 5500,
-    });
-    anime({
-      targets: ".right-hard",
-      translateX: [-60, 10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 6000,
+      delay: 3600,
     });
   }, []);
 
   return (
-    <BannerWrapper data-scroll-section id="home">
+    <BannerWrapper data-scroll-section data-scroll-id="home" id="home">
       <div className="content">
         <div className="text">
           <p id="text-container">

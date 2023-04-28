@@ -26,3 +26,13 @@ export const imgAttributes = {
     },
   },
 };
+
+export const locoOptions = {
+  smooth: true,
+  tablet: {
+    smooth: false,
+  },
+  smartphone: {
+    smooth: false,
+  },
+};

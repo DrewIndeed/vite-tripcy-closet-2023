@@ -38,7 +38,7 @@ const ProductCard = ({
 
 const Products = () => {
   return (
-    <ProductsWrapper data-scroll-section id="products">
+    <ProductsWrapper data-scroll-section data-scroll-id="products">
       <div className="title">
         <p
           className="title-content"
@@ -49,9 +49,9 @@ const Products = () => {
           {[...new Array(7).keys()].map(() => "Our products.").join(" - ")}
         </p>
       </div>
-      <div className="cards noselect">
+      <div className="cards noselect" id="products">
         {productCardsData.map(({ image, name, subname }, idx) => {
-          return <ProductCard {...{ image, name, subname, idx }} />;
+          return <ProductCard key={name} {...{ image, name, subname, idx }} />;
         })}
       </div>
     </ProductsWrapper>

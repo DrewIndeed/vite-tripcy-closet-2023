@@ -48,8 +48,8 @@ export const MainNavWrapper = styled.div`
       transform: scale(0.8);
 
       #logo {
-        width: 100%;
-        height: 100%;
+        width: 150%;
+        height: 150%;
         object-fit: cover;
         object-position: center;
       }

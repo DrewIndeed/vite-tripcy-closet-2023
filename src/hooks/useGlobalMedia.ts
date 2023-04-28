@@ -3,6 +3,7 @@ import { devices } from "@styles/themes";
 
 const useGlobalMedia = () => {
   // responsive hooks
+  const useMobileSmall = () => useMediaQuery({ query: devices.mobileS });
   const useMobileMedium = () => useMediaQuery({ query: devices.mobileM });
   const useTablet = () => useMediaQuery({ query: devices.tablet });
   const useLaptop = () => useMediaQuery({ query: devices.laptop });
@@ -10,6 +11,7 @@ const useGlobalMedia = () => {
   const useLaptopLarge = () => useMediaQuery({ query: devices.laptopL });
 
   // responsive booleans
+  const isMobileSmall = useMobileSmall();
   const isMobileMedium = useMobileMedium();
   const isTablet = useTablet();
   const isLaptop = useLaptop();
@@ -17,6 +19,8 @@ const useGlobalMedia = () => {
   const isLaptopLarge = useLaptopLarge();
 
   // responsive wrappers
+  const MobileSmall = ({ children }: { children: any }) =>
+    isMobileMedium ? children : null;
   const MobileMedium = ({ children }: { children: any }) =>
     isMobileMedium ? children : null;
   const Tablet = ({ children }: { children: any }) =>
@@ -30,6 +34,7 @@ const useGlobalMedia = () => {
 
   // this hook's objects
   const hooks = {
+    useMobileSmall,
     useMobileMedium,
     useTablet,
     useLaptop,
@@ -37,6 +42,7 @@ const useGlobalMedia = () => {
     useLaptopLarge,
   };
   const booleans = {
+    isMobileSmall,
     isMobileMedium,
     isTablet,
     isLaptop,
@@ -44,6 +50,7 @@ const useGlobalMedia = () => {
     isLaptopLarge,
   };
   const MediaWrappers = {
+    MobileSmall,
     MobileMedium,
     Tablet,
     Laptop,

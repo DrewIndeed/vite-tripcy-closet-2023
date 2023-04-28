@@ -50,7 +50,11 @@ const MainNav = () => {
       <div id="nav-content">
         {/* LOGO TO OPEN MENU */}
         <div className="logo-container" onClick={onMenuOpen}>
-          <img id="logo" src="/imgs/logo.svg" alt="Main navigation bar logo" />
+          <img
+            id="logo"
+            src="/imgs/logo-opt.svg"
+            alt="Main navigation bar logo"
+          />
         </div>
 
         {/* HIDDEN MENU CONTENT */}
@@ -78,6 +82,7 @@ const MainNav = () => {
                     className="menu__item"
                     key={text}
                     onClick={() => {
+                      console.log(href);
                       onMenuClose();
                       scroll.scrollTo(href);
                     }}
