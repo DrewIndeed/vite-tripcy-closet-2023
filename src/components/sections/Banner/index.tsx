@@ -69,8 +69,9 @@ const Banner = () => {
         delay: 4000,
       });
     };
-    
-    // animBanner();
+
+    // anim ahihi
+    animBanner();
   }, []);
 
   return (
@@ -113,30 +114,6 @@ const Banner = () => {
         </div>
 
         <div className="model">
-          <svg
-            id="svg-hard"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill={commonTheme.colors.out2}
-              d={bannerBlobHardD}
-              transform="translate(100 100)"
-            />
-          </svg>
-
-          <svg
-            id="svg-light"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill={commonTheme.colors.sup3}
-              d={bannerBlobLightD}
-              transform="translate(100 100)"
-            />
-          </svg>
-
           <MediaQuery minWidth={1100}>
             <div className="model-img" data-scroll data-scroll-speed="-4">
               <LazyLoadImage {...imgAttributes.banner.brandCardsPack} />
@@ -148,6 +125,7 @@ const Banner = () => {
           </MediaQuery>
         </div>
       </div>
+
       <div className="brandname">
         <div className="text-container">
           <p>TRIPCY CLOSET</p>

@@ -28,11 +28,11 @@ export const BannerWrapper = styled.section`
 
       p {
         color: ${(props) => props.theme.colors.sup2};
-        opacity: 0.2;
+        opacity: 0.3;
         position: absolute;
         width: max-content;
         transform-origin: 0 0;
-        transform: rotate(90deg) scale(1.3);
+        transform: rotate(90deg) scale(1.3) scaleY(1.1);
 
         font-size: 6em;
         left: 120%;
@@ -44,17 +44,17 @@ export const BannerWrapper = styled.section`
         }
 
         @media (min-width: 1091px) {
-          opacity: 0.35;
-          left: 50%;
-          font-size: 5em;
-          margin-top: 5vh;
+          opacity: 0.5;
+          left: 40%;
+          font-size: 4.5em;
+          margin-top: 12vh;
         }
 
         @media ${devices.laptopL} {
           display: block;
           font-size: 10em;
-          left: calc(100% - 2rem);
-          top: 110px;
+          left: calc(100% - 1.75rem);
+          top: 90px;
           opacity: 0.5;
           margin-top: 0;
         }
@@ -133,6 +133,8 @@ export const BannerWrapper = styled.section`
           /* background: green; */
           font-family: "Cochin Bold";
           font-weight: bold;
+
+          /* can try typo3 */
           color: ${(props) => props.theme.colors.sup3};
           font-size: 6em;
 
@@ -241,51 +243,6 @@ export const BannerWrapper = styled.section`
       justify-content: center;
       align-items: center;
 
-      #svg-hard {
-        display: none;
-        width: 650px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        transform: translate3d(20rem, 14rem, 0) scaleY(1.1) scale(1.1)
-          rotate(20deg);
-        z-index: 2;
-
-        @media ${devices.tablet} {
-          display: block;
-        }
-
-        @media ${devices.laptop} {
-          width: 720px;
-        }
-
-        @media ${devices.laptopL} {
-          width: 900px;
-        }
-      }
-
-      #svg-light {
-        display: none;
-        width: 650px;
-        opacity: 0.95;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        transform: translate3d(10rem, 16rem, 0) rotate(-30deg);
-        z-index: 1;
-
-        @media ${devices.tablet} {
-          display: block;
-        }
-
-        @media ${devices.laptop} {
-          width: 720px;
-        }
-        @media ${devices.laptopL} {
-          width: 900px;
-        }
-      }
-
       img {
         width: 100%;
         height: 100%;
@@ -294,7 +251,7 @@ export const BannerWrapper = styled.section`
         transform: scale(1.08);
 
         :hover {
-          filter: brightness(0.8);
+          filter: brightness(1.15);
           transform: scale(1);
         }
       }
@@ -320,6 +277,7 @@ export const BannerWrapper = styled.section`
       }
 
       .small-product-img {
+        filter: brightness(0.9);
         position: absolute;
         width: 200px;
         height: 240px;

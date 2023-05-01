@@ -20,17 +20,6 @@ export const imgAttributes = {
   },
 };
 
-/*
-sizes="(max-width: 976px) 100vw, 976px"
-srcset="
-vertrical-tag_eqahk9_c_scale,w_320.webp 320w,
-vertrical-tag_eqahk9_c_scale,w_976.webp 976w"
-src="vertrical-tag_eqahk9_c_scale,w_976.webp"
-alt="">
-
-
-*/
-
 export const locoOptions = {
   smooth: true,
   tablet: {

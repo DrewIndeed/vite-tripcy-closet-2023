@@ -18,7 +18,8 @@ const SocialsNav = () => {
         delay: anime.stagger(150, { start: 5500 }),
       });
     };
-    
+
+    // anim ahihi
     animSocialsNav();
   }, []);
 

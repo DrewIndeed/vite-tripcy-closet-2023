@@ -69,6 +69,7 @@ const Intro = (props: Props) => {
       });
     };
 
+    // anim ahihi
     animIntro();
   }, []);
 
