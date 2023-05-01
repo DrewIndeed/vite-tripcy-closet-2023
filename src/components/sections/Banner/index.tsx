@@ -2,8 +2,8 @@ import {
   actionBtnText,
   innerDesc,
   slogan,
-  svgHardD,
-  svgLightD,
+  bannerBlobHardD,
+  bannerBlobLightD,
 } from "@constants/text";
 import { imgAttributes } from "@constants/obj";
 import { common as commonTheme } from "@styles/themes";
@@ -16,36 +16,61 @@ import { BannerWrapper } from "./style";
 
 const Banner = () => {
   useEffect(() => {
-    anime({
-      targets: "#stay",
-      translateX: [0, 50, -10, 0],
-      opacity: [0, 1],
-      easing: "easeInOutSine",
-      duration: 2000,
-      delay: 3600,
-    });
-    anime({
-      targets: "#stylish",
-      translateX: [0, 50, -10, 0],
-      opacity: [0, 1],
-      easing: "easeInOutSine",
-      duration: 2200,
-      delay: 3600,
-    });
-    anime({
-      targets: ".model-img",
-      translateX: [-60, 10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 3600,
-    });
-    anime({
-      targets: ".small-product-img",
-      translateX: [60, -10, 0],
-      easing: "easeInOutSine",
-      duration: 3000,
-      delay: 3600,
-    });
+    const animBanner = () => {
+      anime({
+        targets: ".text",
+        translateX: [100, 0],
+        opacity: [0, 1],
+        easing: "easeInOutSine",
+        duration: 1500,
+        delay: 3200,
+      });
+      anime({
+        targets: ".brandname",
+        translateX: [100, 0],
+        opacity: [0, 1],
+        easing: "easeInOutSine",
+        duration: 1500,
+        delay: 3200,
+      });
+      anime({
+        targets: ".model-img",
+        opacity: [0, 1],
+        rotate: [15, 0],
+        translateX: [100, 0],
+        translateY: [-100, 0],
+        easing: "easeInOutSine",
+        duration: 1500,
+        delay: 3200,
+      });
+      anime({
+        targets: ".small-product-img",
+        opacity: [0, 1],
+        rotate: [15, 0],
+        translateX: [100, 0],
+        translateY: [-100, 0],
+        easing: "easeInOutSine",
+        duration: 1500,
+        delay: 3600,
+      });
+
+      anime({
+        targets: "#svg-hard",
+        opacity: [0, 1],
+        easing: "easeInOutSine",
+        duration: 1500,
+        delay: 4000,
+      });
+      anime({
+        targets: "#svg-light",
+        opacity: [0, 1],
+        easing: "easeInOutSine",
+        duration: 1500,
+        delay: 4000,
+      });
+    };
+    
+    // animBanner();
   }, []);
 
   return (
@@ -95,7 +120,7 @@ const Banner = () => {
           >
             <path
               fill={commonTheme.colors.out2}
-              d={svgHardD}
+              d={bannerBlobHardD}
               transform="translate(100 100)"
             />
           </svg>
@@ -107,18 +132,18 @@ const Banner = () => {
           >
             <path
               fill={commonTheme.colors.sup3}
-              d={svgLightD}
+              d={bannerBlobLightD}
               transform="translate(100 100)"
             />
           </svg>
 
           <MediaQuery minWidth={1100}>
             <div className="model-img" data-scroll data-scroll-speed="-4">
-              <LazyLoadImage {...imgAttributes.banner.mainModel} />
+              <LazyLoadImage {...imgAttributes.banner.brandCardsPack} />
             </div>
 
             <div className="small-product-img">
-              <LazyLoadImage {...imgAttributes.banner.subModel} />
+              <LazyLoadImage {...imgAttributes.banner.verticalTag} />
             </div>
           </MediaQuery>
         </div>

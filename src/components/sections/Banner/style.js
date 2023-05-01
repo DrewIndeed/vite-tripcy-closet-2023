@@ -7,7 +7,7 @@ export const BannerWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${(props) => props.theme.colors.bg1};
+  background-color: ${(props) => props.theme.colors.bg2};
   overflow: hidden;
 
   .brandname {
@@ -35,7 +35,7 @@ export const BannerWrapper = styled.section`
         transform: rotate(90deg) scale(1.3);
 
         font-size: 6em;
-        left: calc(120%);
+        left: 120%;
         margin-bottom: 50vh;
         /* border: 2px solid purple; */
 
@@ -45,7 +45,7 @@ export const BannerWrapper = styled.section`
 
         @media (min-width: 1091px) {
           opacity: 0.35;
-          left: calc(60%);
+          left: 50%;
           font-size: 5em;
           margin-top: 5vh;
         }
@@ -71,11 +71,11 @@ export const BannerWrapper = styled.section`
     .text,
     .model {
       flex: 1;
-      padding-top: 64px;
     }
 
     .text {
       display: flex;
+      padding-top: 64px;
       flex-direction: column;
       justify-content: center;
 
@@ -83,8 +83,9 @@ export const BannerWrapper = styled.section`
       padding-left: 0;
       margin-bottom: 0;
 
+      /* important padding */
       @media ${devices.tablet} {
-        padding-left: calc(2rem + 64px);
+        padding-left: 5rem;
         margin-bottom: 8rem;
       }
 
@@ -98,7 +99,7 @@ export const BannerWrapper = styled.section`
         }
 
         @media ${devices.laptop} {
-          padding: 0 4rem;
+          padding: 0 2rem;
         }
       }
 
@@ -222,7 +223,7 @@ export const BannerWrapper = styled.section`
         @media ${devices.laptop} {
           width: 14rem;
           font-size: 1.3em;
-          margin-left: 4rem;
+          margin-left: 2rem;
 
           :hover {
             opacity: 0.75;
@@ -289,24 +290,26 @@ export const BannerWrapper = styled.section`
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: all 0.6s ease-in-out;
+        transition: all 1s ease-in-out;
+        transform: scale(1.08);
 
         :hover {
           filter: brightness(0.8);
-          transform: scale(1.08);
+          transform: scale(1);
         }
       }
 
       .model-img {
+        filter: brightness(0.85);
+        transform-origin: bottom left;
         position: relative;
-        width: 80%;
-        width: 80%;
+        width: 75%;
         height: 75%;
         overflow: hidden;
-        border-radius: 1rem;
+        border-radius: 0.25rem;
         z-index: 20;
         margin-right: 7rem;
-        margin-bottom: 3rem;
+        /* margin-bottom: 3rem; */
         background-color: #8b8a8740;
         box-shadow: #8b8a8740 -5px 5px, #8b8a8730 -10px 10px,
           #8b8a8720 -15px 15px, #8b8a8710 -20px 20px, #8b8a8705 -25px 25px;
@@ -318,10 +321,10 @@ export const BannerWrapper = styled.section`
 
       .small-product-img {
         position: absolute;
-        width: 190px;
+        width: 200px;
         height: 240px;
         overflow: hidden;
-        border-radius: 1rem;
+        border-radius: 0.25rem;
         z-index: 20;
         bottom: 5rem;
         left: -5rem;
@@ -330,10 +333,10 @@ export const BannerWrapper = styled.section`
           #8b8a8720 -15px 15px, #8b8a8710 -20px 20px, #8b8a8705 -25px 25px;
 
         @media (min-width: 1200px) {
-          width: 190px;
+          width: 200px;
           height: 240px;
           bottom: 4rem;
-          left: -4rem;
+          left: -2rem;
         }
       }
     }

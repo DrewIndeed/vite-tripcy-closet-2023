@@ -19,57 +19,51 @@ export const MainNavWrapper = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    /* justify-content: flex-end; */
     align-items: center;
-    padding-top: 1.5rem;
+    /* padding-top: 1.5rem; */
     padding-inline: 1rem;
 
     @media ${devices.mobileL} {
-      padding-top: 2rem;
-      padding-inline: 2rem;
+      /* padding-top: 1rem; */
+      padding-inline: 1rem;
     }
 
     .logo-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 80px;
-      height: 80px;
+      width: 55px;
+      height: 55px;
       overflow: hidden;
       border-radius: 50%;
       padding: 10px;
       cursor: pointer;
-      transition: all 1s ease-in-out;
-      /* border-left: 1px solid #fff;
-      border-bottom: 1px solid #fff; */
-      backdrop-filter: blur(1rem);
-      background-color: #ffffff90;
-      box-shadow: 5px 5px 10px 5px #332f2a10;
-      transform: scale(0.8);
-
-      #logo {
-        width: 150%;
-        height: 150%;
-        object-fit: cover;
-        object-position: center;
-      }
-
-      @media ${devices.mobileL} {
-        transform: scale(1);
-      }
+      transition: all 0.6s ease;
+      border: 1px solid #332f2a00;
 
       :hover {
-        transform: rotate(90deg);
-        box-shadow: -5px -5px 10px 5px #332f2a12;
+        border: 1px solid #332f2a90;
       }
     }
 
     .menu-close {
       position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       top: 0;
       right: 0;
-      padding: 1rem;
+      padding: 5px;
+      margin: 1.5rem;
+      border-radius: 50%;
       cursor: pointer;
+      transition: all 0.6s ease;
+      border: 1px solid #332f2a00;
+
+      :hover {
+        border: 1px solid #332f2a90;
+      }
     }
 
     .socials {

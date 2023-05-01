@@ -1,5 +1,5 @@
 import { navItemsData } from "@constants/arr";
-import { XMarkIcon } from "@heroicons/react/24/solid";
+import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
 import anime from "animejs";
 import { motion, useAnimation } from "framer-motion";
 import { useCallback, useState } from "react";
@@ -24,10 +24,10 @@ const MainNav = () => {
       anime({
         targets: ".menu__item",
         opacity: [0, 1],
-        translateY: [-30, 10, 0],
+        translateY: [-30, 0],
         easing: "easeInOutSine",
-        duration: 1200,
-        delay: anime.stagger(100, { start: 800 }),
+        duration: 1000,
+        delay: anime.stagger(100, { start: 500 }),
       });
       setIsOpen(true);
     }
@@ -50,11 +50,7 @@ const MainNav = () => {
       <div id="nav-content">
         {/* LOGO TO OPEN MENU */}
         <div className="logo-container" onClick={onMenuOpen}>
-          <img
-            id="logo"
-            src="/imgs/logo-opt.svg"
-            alt="Main navigation bar logo"
-          />
+          <Bars3Icon style={{ mixBlendMode: "difference" }} />
         </div>
 
         {/* HIDDEN MENU CONTENT */}
@@ -82,7 +78,6 @@ const MainNav = () => {
                     className="menu__item"
                     key={text}
                     onClick={() => {
-                      console.log(href);
                       onMenuClose();
                       scroll.scrollTo(href);
                     }}
