@@ -8,13 +8,21 @@ export const navItemsData = [
     imgSrcSet: "",
   },
   {
-    text: "Products.",
+    text: "Collections.",
     isOpen: true,
-    href: "#products",
+    href: "#collections",
     imgSrc: "/imgs/samples/sample4.jpg",
     imgSizes: "",
     imgSrcSet: "",
   },
+  // {
+  //   text: "Products.",
+  //   isOpen: true,
+  //   href: "#products",
+  //   imgSrc: "/imgs/samples/sample4.jpg",
+  //   imgSizes: "",
+  //   imgSrcSet: "",
+  // },
   {
     text: "Reviews.",
     isOpen: false,
@@ -73,5 +81,37 @@ export const productCardsData = [
     },
     name: "FLOWING TOP",
     subname: "#INDIVIDUAL",
+  },
+];
+
+export const collections = [
+  {
+    id: "col1-athena-sprsum23",
+    name: "Athena Collection",
+    subname: "",
+    description: `The name Anthea has the meaning of "blooming", and "flowery". 
+    The collection draws its design inspiration from the lightness of 
+    flower petals meticulously expressed in organza silk. Our collection is designed to 
+    make you feel confident, and empowered, and make you know that the most gorgeous 
+    flower here is yourself. Whether you're dressing up for a special occasion or just
+     running errands, our pieces are versatile enough to be worn in any setting`,
+    season: "spring/summer 2023",
+    isActive: true,
+    previewPhotos: [{}, {}, {}],
+  },
+
+  {
+    id: "col2-athena-sprsum23",
+    name: "Andrew Collection",
+    subname: "THIS IS ANOTHER COLLECTION",
+    description: `The name Anthea has the meaning of "blooming", and "flowery". 
+    The collection draws its design inspiration from the lightness of 
+    flower petals meticulously expressed in organza silk. Our collection is designed to 
+    make you feel confident, and empowered, and make you know that the most gorgeous 
+    flower here is yourself. Whether you're dressing up for a special occasion or just
+     running errands, our pieces are versatile enough to be worn in any setting`,
+    season: "spring/summer 2023",
+    isActive: true,
+    previewPhotos: [{}, {}, {}],
   },
 ];

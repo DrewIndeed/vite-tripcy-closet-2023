@@ -6,6 +6,7 @@ import { useCallback, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import { MainNavWrapper } from "./style";
+import { stringRepeat } from "@utils";
 
 const MainNav = () => {
   const { scroll } = useLocomotiveScroll();
@@ -95,9 +96,7 @@ const MainNav = () => {
                     <div className="marquee">
                       <div className="marquee__inner">
                         <span>
-                          {[...new Array(7).keys()]
-                            .map(() => (isOpen ? text : "Coming Soon"))
-                            .join(" - ")}
+                          {stringRepeat(7, isOpen ? text : "Coming Soon")}
                         </span>
                       </div>
                     </div>

@@ -1,17 +1,10 @@
-import {
-  actionBtnText,
-  innerDesc,
-  slogan,
-  bannerBlobHardD,
-  bannerBlobLightD,
-} from "@constants/text";
 import { imgAttributes } from "@constants/obj";
-import { common as commonTheme } from "@styles/themes";
-import { Tooltip } from "react-tooltip";
+import { actionBtnText, innerDesc, slogan } from "@constants/text";
 import anime from "animejs";
 import { useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import MediaQuery from "react-responsive";
+import { Tooltip } from "react-tooltip";
 import { BannerWrapper } from "./style";
 
 const Banner = () => {
@@ -34,7 +27,7 @@ const Banner = () => {
         delay: 3200,
       });
       anime({
-        targets: ".model-img",
+        targets: ".cards-pack-img",
         opacity: [0, 1],
         rotate: [15, 0],
         translateX: [100, 0],
@@ -44,7 +37,7 @@ const Banner = () => {
         delay: 3200,
       });
       anime({
-        targets: ".small-product-img",
+        targets: ".card-tag-img",
         opacity: [0, 1],
         rotate: [15, 0],
         translateX: [100, 0],
@@ -52,21 +45,6 @@ const Banner = () => {
         easing: "easeInOutSine",
         duration: 1500,
         delay: 3600,
-      });
-
-      anime({
-        targets: "#svg-hard",
-        opacity: [0, 1],
-        easing: "easeInOutSine",
-        duration: 1500,
-        delay: 4000,
-      });
-      anime({
-        targets: "#svg-light",
-        opacity: [0, 1],
-        easing: "easeInOutSine",
-        duration: 1500,
-        delay: 4000,
       });
     };
 
@@ -115,11 +93,11 @@ const Banner = () => {
 
         <div className="model">
           <MediaQuery minWidth={1100}>
-            <div className="model-img" data-scroll data-scroll-speed="-4">
+            <div className="cards-pack-img">
               <LazyLoadImage {...imgAttributes.banner.brandCardsPack} />
             </div>
 
-            <div className="small-product-img">
+            <div className="card-tag-img">
               <LazyLoadImage {...imgAttributes.banner.verticalTag} />
             </div>
           </MediaQuery>

@@ -1,7 +1,8 @@
 import { productCardsData } from "@constants/arr";
+import useGlobalMedia from "@hooks/useGlobalMedia";
+import { stringRepeat } from "@utils";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ProductsWrapper } from "./style";
-import useGlobalMedia from "@hooks/useGlobalMedia";
 
 const ProductCard = ({
   image,
@@ -46,7 +47,7 @@ const Products = () => {
           data-scroll-speed="10"
           data-scroll-direction="horizontal"
         >
-          {[...new Array(7).keys()].map(() => "Our products.").join(" - ")}
+          {stringRepeat(7, "Our products.")}
         </p>
       </div>
       <div className="cards noselect" id="products">

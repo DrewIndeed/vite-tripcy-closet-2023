@@ -256,7 +256,7 @@ export const BannerWrapper = styled.section`
         }
       }
 
-      .model-img {
+      .cards-pack-img {
         filter: brightness(0.85);
         transform-origin: bottom left;
         position: relative;
@@ -276,7 +276,7 @@ export const BannerWrapper = styled.section`
         }
       }
 
-      .small-product-img {
+      .card-tag-img {
         filter: brightness(0.9);
         position: absolute;
         width: 200px;

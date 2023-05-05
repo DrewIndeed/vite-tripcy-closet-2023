@@ -1,3 +1,4 @@
+import Collection from "@components/sections/Collection";
 import Banner from "@components/sections/Banner";
 import Intro from "@components/sections/Intro";
 import Products from "@components/sections/Products";
@@ -11,6 +12,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "react-tooltip/dist/react-tooltip.css";
 import { ThemeProvider } from "styled-components";
+import { collections } from "@constants/arr";
 
 const MainNav = lazy(() => import("@components/common/MainNav"));
 const SocialsNav = lazy(() => import("@components/common/SocialsNav"));
@@ -56,9 +58,19 @@ function App() {
                 <MainNav />
                 <SocialsNav />
               </Suspense>
+
               <div className="App" data-scroll-container ref={containerRef}>
                 <Banner />
-                {/* <Products /> */}
+
+                {/* Collections */}
+                <div id="collections" />
+                {collections.map((collect, idx) => {
+                  return (
+                    <Collection key={collect.id} {...collect} count={idx} />
+                  );
+                })}
+
+                <Products />
               </div>
             </AppWrapper>
           </LocomotiveScrollProvider>

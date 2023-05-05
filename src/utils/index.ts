@@ -26,3 +26,9 @@ export const stringToStyle = (style: string) => {
   });
   return styles;
 };
+
+export const stringRepeat = (
+  repNum: number = 1,
+  repStr: string = "Default String",
+  joinBy: string = " - "
+) => [...new Array(repNum).keys()].map(() => repStr).join(joinBy);
