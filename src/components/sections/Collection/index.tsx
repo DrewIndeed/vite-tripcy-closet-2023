@@ -2,6 +2,7 @@ import { stringRepeat } from "@utils";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { CollectionWrapper } from "./style";
+import { Tooltip } from "react-tooltip";
 
 type CollectionProps = {
   id: string;
@@ -59,7 +60,10 @@ const Collection = ({
           transition={{ duration: 1.2 }}
         >
           <div className="img-container">
-            <LazyLoadImage {...firstSetOfCollection.photos[0]} />
+            <LazyLoadImage
+              {...firstSetOfCollection.photos[0]}
+              visibleByDefault
+            />
           </div>
         </motion.div>
 
@@ -88,7 +92,18 @@ const Collection = ({
       </div>
 
       <p className="season">{season}</p>
-      <div className="see-more"></div>
+      <div className="see-more">
+        <Tooltip id="collection-showmore-btn" />
+        <button
+          data-tooltip-id="collection-showmore-btn"
+          data-tooltip-content="Coming Soon"
+          data-tooltip-place="right"
+          data-tooltip-delay-hide={500}
+          className="arrow-button"
+        >
+          See More<span className="arrow"></span>
+        </button>
+      </div>
     </CollectionWrapper>
   );
 };

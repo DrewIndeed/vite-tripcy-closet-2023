@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { devices } from "@styles/themes";
+import { common as commonTheme } from "@styles/themes";
+const colors = commonTheme.colors;
 
 export const CollectionWrapper = styled.section`
   width: 100%;
@@ -112,5 +113,63 @@ export const CollectionWrapper = styled.section`
   }
 
   .see-more {
+    .arrow-button {
+      display: flex;
+      padding: 0.8rem 1.5rem;
+      /* border-radius: 20px; */
+      transition: all 0.3s ease;
+      font-weight: bold;
+      cursor: pointer;
+      align-items: center;
+      font-size: 1.2em;
+      border-radius: 2px;
+
+      color: ${colors.out3};
+      background-color: transparent;
+      border: 2px solid ${colors.out3};
+      outline: none;
+    }
+
+    .arrow-button > .arrow {
+      width: 12px;
+      height: 12px;
+      border-right: 2px solid ${colors.out3};
+      border-bottom: 2px solid ${colors.out3};
+      position: relative;
+      transform: rotate(-45deg);
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .arrow-button > .arrow::before {
+      display: block;
+      background-color: currentColor;
+      width: 3px;
+      transform-origin: bottom right;
+      height: 2px;
+      position: absolute;
+      opacity: 0;
+      bottom: calc(-2px / 2);
+      transform: rotate(45deg);
+      transition: all 0.15s ease;
+      content: "";
+      right: 0;
+    }
+
+    .arrow-button:hover > .arrow {
+      transform: rotate(-45deg) translate(4px, 4px);
+      border-color: #fff;
+      margin-left: 1.3rem;
+    }
+
+    .arrow-button:hover > .arrow::before {
+      opacity: 1;
+      width: 1.3em;
+    }
+
+    .arrow-button:hover {
+      background-color: ${colors.out3};
+      color: #fff;
+    }
   }
 `;
