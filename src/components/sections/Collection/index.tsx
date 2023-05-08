@@ -1,4 +1,3 @@
-import { imgAttributes } from "@constants/obj";
 import { stringRepeat } from "@utils";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -12,6 +11,7 @@ type CollectionProps = {
   season: string;
   isActive: boolean;
   count: number;
+  allSets: any;
 };
 
 const Collection = ({
@@ -22,22 +22,27 @@ const Collection = ({
   season,
   isActive,
   count,
+  allSets,
 }: CollectionProps) => {
   const isEven = count % 2 === 0;
+  const firstSetOfCollection = Object.values(allSets)[0] as Record<string, any>;
+
+  if (!isActive) return <></>;
   return (
     <CollectionWrapper data-scroll-section data-scroll-id={id} id={id}>
       <motion.p
+        id="subtitle"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: -10, opacity: 1 }}
         transition={{ duration: 0.8 }}
         // viewport={{ once: true }}
-        id="subtitle"
       >
         {subname || "DISCOVER OUR NEW COLLECTION"}
       </motion.p>
+
       <p
-        style={{ transform: isEven ? `translateX(-1000px)` : "none" }}
         id="title"
+        style={{ transform: isEven ? `translateX(-1000px)` : "none" }}
         data-scroll
         data-scroll-speed={isEven ? "8" : "-4"}
         data-scroll-direction="horizontal"
@@ -54,7 +59,7 @@ const Collection = ({
           transition={{ duration: 1.2 }}
         >
           <div className="img-container">
-            <LazyLoadImage {...imgAttributes.banner.brandCardsPack} />
+            <LazyLoadImage {...firstSetOfCollection.photos[0]} />
           </div>
         </motion.div>
 
@@ -65,7 +70,7 @@ const Collection = ({
           transition={{ duration: 0.8 }}
         >
           <div className="img-container center">
-            <LazyLoadImage {...imgAttributes.banner.brandCardsPack} />
+            <LazyLoadImage {...firstSetOfCollection.photos[1]} />
           </div>
         </motion.div>
 
@@ -77,10 +82,13 @@ const Collection = ({
           transition={{ duration: 1.2 }}
         >
           <div className="img-container">
-            <LazyLoadImage {...imgAttributes.banner.brandCardsPack} />
+            <LazyLoadImage {...firstSetOfCollection.photos[2]} />
           </div>
         </motion.div>
       </div>
+
+      <p className="season">{season}</p>
+      <div className="see-more"></div>
     </CollectionWrapper>
   );
 };

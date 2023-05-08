@@ -1,7 +1,7 @@
-import Collection from "@components/sections/Collection";
 import Banner from "@components/sections/Banner";
+import Collection from "@components/sections/Collection";
 import Intro from "@components/sections/Intro";
-import Products from "@components/sections/Products";
+import { collections } from "@constants/arr";
 import { locoOptions } from "@constants/obj";
 import useGlobalMedia from "@hooks/useGlobalMedia";
 import { AppWrapper, MobileMainContent } from "@styles/global";
@@ -12,7 +12,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "react-tooltip/dist/react-tooltip.css";
 import { ThemeProvider } from "styled-components";
-import { collections } from "@constants/arr";
 
 const MainNav = lazy(() => import("@components/common/MainNav"));
 const SocialsNav = lazy(() => import("@components/common/SocialsNav"));
@@ -64,13 +63,9 @@ function App() {
 
                 {/* Collections */}
                 <div id="collections" />
-                {collections.map((collect, idx) => {
-                  return (
-                    <Collection key={collect.id} {...collect} count={idx} />
-                  );
-                })}
-
-                <Products />
+                {collections.map((collect, idx) => (
+                  <Collection key={collect.id} {...collect} count={idx} />
+                ))}
               </div>
             </AppWrapper>
           </LocomotiveScrollProvider>

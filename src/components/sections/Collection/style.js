@@ -3,7 +3,7 @@ import { devices } from "@styles/themes";
 
 export const CollectionWrapper = styled.section`
   width: 100%;
-  height: 120vh;
+  height: 140vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +23,14 @@ export const CollectionWrapper = styled.section`
     height: 100%;
     object-fit: cover;
     background-color: ${(props) => props.theme.colors.out2};
+    transition: all 1s ease-in-out;
+    filter: brightness(1);
+    transform: scale(1.08);
+
+    :hover {
+      filter: brightness(0.9);
+      transform: scale(1);
+    }
   }
 
   #title {
@@ -94,5 +102,15 @@ export const CollectionWrapper = styled.section`
       box-shadow: #8b8a8740 0px 5px, #8b8a8730 0px 10px, #8b8a8720 0px 15px,
         #8b8a8710 0px 20px, #8b8a8705 0px 25px;
     }
+  }
+
+  .season {
+    text-align: center;
+    font-style: italic;
+    font-size: 3.5em;
+    transform: translateY(-40px) scaleY(1.5);
+  }
+
+  .see-more {
   }
 `;

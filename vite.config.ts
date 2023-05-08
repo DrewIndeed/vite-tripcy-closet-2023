@@ -6,7 +6,7 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 // https://github.com/FatehAK/vite-plugin-image-optimizer
 const DEFAULT_IMG_OPTIONS = {
-  test: /\.(jpe?g|png|gif|tiff|svg|avif)$/i, // excluded webp
+  test: /\.(jpe?g|png|gif|tiff|svg|avif|webp)$/i, // excluded webp
   exclude: undefined,
   include: undefined,
   includePublic: true,
@@ -58,7 +58,7 @@ const DEFAULT_IMG_OPTIONS = {
   gif: {},
   webp: {
     // https://sharp.pixelplumbing.com/api-output#webp
-    lossless: true,
+    quality: 25,
   },
   avif: {
     // https://sharp.pixelplumbing.com/api-output#avif
