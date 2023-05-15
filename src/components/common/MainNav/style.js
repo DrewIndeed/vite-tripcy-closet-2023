@@ -32,8 +32,8 @@ export const MainNavWrapper = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 55px;
-      height: 55px;
+      width: 3.4rem;
+      height: 3.4rem;
       overflow: hidden;
       border-radius: 50%;
       padding: 10px;
@@ -44,6 +44,11 @@ export const MainNavWrapper = styled.div`
 
       :hover {
         border: 1px solid #332f2a90;
+      }
+
+      .menu-open-icon {
+        width: 3.4rem;
+        height: 3.4rem;
       }
     }
 

@@ -1,5 +1,5 @@
 import { navItemsData } from "@constants/arr";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { stringRepeat } from "@utils";
 import anime from "animejs";
 import { motion, useAnimation } from "framer-motion";
@@ -55,7 +55,7 @@ const MainNav = ({ isMobile }: Props) => {
       <div id="nav-content">
         {/* LOGO TO OPEN MENU */}
         <div className="logo-container" onClick={onMenuOpen}>
-          <Bars3Icon color="#332f2a" />
+          <Bars3Icon className="menu-open-icon" />
         </div>
 
         {/* HIDDEN MENU CONTENT */}
