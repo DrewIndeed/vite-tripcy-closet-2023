@@ -34,19 +34,20 @@ function App() {
           bgColorHex={commonTheme.colors.bg2}
         />
 
+        {!booleans.isLaptopMedium && (
+          <Suspense fallback={<></>}>
+            <MainNav isMobile />
+          </Suspense>
+        )}
+
         {/* mobile content */}
         {!booleans.isLaptopMedium && (
-          <>
-            <Suspense fallback={<></>}>
-              <MainNav isMobile />
-            </Suspense>
-            <MobileMainContent>
-              <MobileBanner />
-              <div style={{ height: "100vh", opacity: 0.4 }}>Andrew Mobile</div>
-              <div style={{ height: "100vh", opacity: 0.6 }}>Andrew Mobile</div>
-              <div style={{ height: "100vh", opacity: 0.8 }}>Andrew Mobile</div>
-            </MobileMainContent>
-          </>
+          <MobileMainContent>
+            <MobileBanner />
+            <div style={{ height: "100vh", opacity: 0.4 }}>Andrew Mobile</div>
+            <div style={{ height: "100vh", opacity: 0.6 }}>Andrew Mobile</div>
+            <div style={{ height: "100vh", opacity: 0.8 }}>Andrew Mobile</div>
+          </MobileMainContent>
         )}
 
         {/* desktop content */}

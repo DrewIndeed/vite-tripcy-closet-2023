@@ -12,8 +12,8 @@ export const MobileMainContent = styled.div`
   @media (max-width: 1207px) {
     height: 100vh;
     overflow-y: hidden;
-    animation: scrollable 200ms linear forwards;
-    animation-delay: 3100ms;
+    animation: scrollable 400ms ease forwards;
+    animation-delay: 2500ms;
   }
 
   @keyframes scrollable {

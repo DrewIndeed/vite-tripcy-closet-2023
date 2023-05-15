@@ -55,7 +55,7 @@ const MainNav = ({ isMobile }: Props) => {
       <div id="nav-content">
         {/* LOGO TO OPEN MENU */}
         <div className="logo-container" onClick={onMenuOpen}>
-          <Bars3Icon style={{ mixBlendMode: "difference" }} />
+          <Bars3Icon />
         </div>
 
         {/* HIDDEN MENU CONTENT */}
