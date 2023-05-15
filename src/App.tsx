@@ -28,11 +28,11 @@ function App() {
       </Helmet>
       <ThemeProvider theme={commonTheme}>
         {/* website reveal */}
-        <Intro
+        {/* <Intro
           svgColorHex={commonTheme.colors.typo1}
           textColorHex={commonTheme.colors.typo1}
           bgColorHex={commonTheme.colors.bg2}
-        />
+        /> */}
 
         {!booleans.isLaptopMedium && (
           <Suspense fallback={<></>}>
@@ -44,8 +44,6 @@ function App() {
         {!booleans.isLaptopMedium && (
           <MobileMainContent>
             <MobileBanner />
-            <div style={{ height: "100vh", opacity: 0.4 }}>Andrew Mobile</div>
-            <div style={{ height: "100vh", opacity: 0.6 }}>Andrew Mobile</div>
             <div style={{ height: "100vh", opacity: 0.8 }}>Andrew Mobile</div>
           </MobileMainContent>
         )}

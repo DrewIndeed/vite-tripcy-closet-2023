@@ -1,40 +1,72 @@
+import { imgAttributes } from "@constants/obj";
 import { actionBtnText, innerDesc, slogan } from "@constants/text";
 import { useSmoothScrollTo } from "@hooks/useSmoothScrollTo";
-import { useEffect } from "react";
+import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import MediaQuery from "react-responsive";
 import toast from "react-simple-toasts";
 import { MobileBannerWrapper } from "./style";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import { imgAttributes } from "@constants/obj";
-import MediaQuery from "react-responsive";
 
 const MobileBanner = () => {
   const bind = useSmoothScrollTo("#home");
-  useEffect(() => {
-    const animMobileBanner = () => {};
-
-    // anim ahihi
-    animMobileBanner();
-  }, []);
 
   return (
     <MobileBannerWrapper {...bind} id="home">
-      <div className="content">
-        <span id="stay">Stay</span>
-        <span id="stylish">Stylish.</span>
-        <p id="chic">{slogan}.</p>
-        <p id="inner-desc">{innerDesc}</p>
-        <button
+      <div className="content noselect">
+        <motion.span
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          id="stay"
+        >
+          Stay
+        </motion.span>
+        <motion.span
+          initial={{ y: -30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          id="stylish"
+        >
+          Stylish.
+        </motion.span>
+        <motion.p
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeInOut", delay: 0.6 }}
+          viewport={{ once: true }}
+          id="chic"
+        >
+          {slogan}.
+        </motion.p>
+        <motion.p
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 0.6 }}
+          viewport={{ once: true }}
+          id="inner-desc"
+        >
+          {innerDesc}
+        </motion.p>
+        <motion.button
+          initial={{ x: 30, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.4, ease: "easeInOut", delay: 0.6 }}
+          viewport={{ once: true }}
           id="show-more-btn-mobile"
           onClick={() => {
             toast("Coming Soon!", {
+              duration: 2500,
               clickable: true,
               clickClosable: true,
+              maxVisibleToasts: 1,
               render: (message) => <p>{message}</p>,
             });
           }}
         >
           {actionBtnText}
-        </button>
+        </motion.button>
       </div>
 
       <MediaQuery minWidth={1024} maxWidth={1207}>

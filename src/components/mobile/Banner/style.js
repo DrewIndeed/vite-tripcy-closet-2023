@@ -10,6 +10,7 @@ export const MobileBannerWrapper = styled.section`
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  border-left: 1rem double ${(props) => props.theme.colors.out3};
 
   .content {
     width: 100%;
