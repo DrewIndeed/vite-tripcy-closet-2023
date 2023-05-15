@@ -91,11 +91,6 @@ export const MobileBannerWrapper = styled.section`
       background-color: ${(props) => props.theme.colors.out3};
       transition: opacity 0.2s ease-in-out, font-size 0.4s ease-in-out;
 
-      :hover {
-        opacity: 0.75;
-        font-size: 0.7rem;
-      }
-
       .btn-text {
         font-style: 0.2rem;
         background-color: ${(props) => props.theme.colors.out3};

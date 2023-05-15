@@ -40,6 +40,7 @@ export const MainNavWrapper = styled.div`
       cursor: pointer;
       transition: all 0.6s ease;
       border: 1px solid #332f2a00;
+      z-index: 1000;
 
       :hover {
         border: 1px solid #332f2a90;

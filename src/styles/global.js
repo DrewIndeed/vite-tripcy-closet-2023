@@ -7,13 +7,13 @@ export const AppWrapper = styled.main`
 
 export const MobileMainContent = styled.div`
   width: 100%;
+  scroll-behavior: smooth;
 
   @media (max-width: 1207px) {
     height: 100vh;
     overflow-y: hidden;
     animation: scrollable 200ms linear forwards;
-    scroll-behavior: smooth;
-    animation-delay: 3300ms;
+    animation-delay: 3100ms;
   }
 
   @keyframes scrollable {
