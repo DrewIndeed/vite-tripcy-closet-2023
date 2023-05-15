@@ -61,7 +61,7 @@ export const MobileBannerWrapper = styled.section`
     }
 
     #inner-desc {
-      color: #332f2a90;
+      color: #332f2a;
       text-align: justify;
       margin-top: 0.5rem;
       line-height: 1.2rem;
