@@ -55,7 +55,7 @@ const MainNav = ({ isMobile }: Props) => {
       <div id="nav-content">
         {/* LOGO TO OPEN MENU */}
         <div className="logo-container" onClick={onMenuOpen}>
-          <Bars3Icon />
+          <Bars3Icon color="#332f2a" />
         </div>
 
         {/* HIDDEN MENU CONTENT */}
