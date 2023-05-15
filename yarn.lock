@@ -1317,6 +1317,11 @@ react-router@^6.9.0:
   dependencies:
     "@remix-run/router" "1.4.0"
 
+react-simple-toasts@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/react-simple-toasts/-/react-simple-toasts-3.6.0.tgz#5d3df8a924be19fdff79e224ed515400b1261ca8"
+  integrity sha512-zslljHteMXvHutZ7ZKBXMxyn6GbZA2W902kxNY329tIvE8t9VHX0PeacURB5oFwjr0/p9ZfWE6TLDE6W9Lao/Q==
+
 react-social-icons@^5.15.0:
   version "5.15.0"
   resolved "https://registry.yarnpkg.com/react-social-icons/-/react-social-icons-5.15.0.tgz#6b815aab9eff210e1f6e8a4ca420684aa72c154a"

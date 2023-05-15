@@ -1,14 +1,18 @@
 import { navItemsData } from "@constants/arr";
-import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { stringRepeat } from "@utils";
 import anime from "animejs";
 import { motion, useAnimation } from "framer-motion";
 import { useCallback, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useLocomotiveScroll } from "react-locomotive-scroll";
 import { MainNavWrapper } from "./style";
-import { stringRepeat } from "@utils";
 
-const MainNav = () => {
+type Props = {
+  isMobile?: boolean;
+};
+
+const MainNav = ({ isMobile }: Props) => {
   const { scroll } = useLocomotiveScroll();
   const [isOpen, setIsOpen] = useState(false);
   const navContainerControls = useAnimation();
@@ -55,19 +59,10 @@ const MainNav = () => {
         </div>
 
         {/* HIDDEN MENU CONTENT */}
-        <motion.div
-          className="nav-container noselect"
-          animate={navContainerControls}
-        >
+        <motion.div className="nav-container" animate={navContainerControls}>
           {/* MENU CLOSE BTN */}
           <div className="menu-close" onClick={onMenuClose}>
-            <XMarkIcon style={{ width: "40px", height: "40px" }} />
-          </div>
-
-          {/* MENU FOOTER */}
-          <div className="socials">
-            <span>facebook</span>
-            <span>instagram</span>
+            <XMarkIcon className="menu-close-icon" />
           </div>
 
           {/* MENU ITEMS */}
@@ -76,14 +71,22 @@ const MainNav = () => {
               ({ text, href, imgSrc, imgSrcSet, imgSizes, isOpen }) => {
                 return (
                   <div
-                    className="menu__item"
                     key={text}
+                    className="menu__item noselect"
                     onClick={() => {
                       onMenuClose();
-                      scroll.scrollTo(href);
+                      scroll && scroll?.scrollTo(href);
                     }}
                   >
-                    <p className="menu__item-link">{text}</p>
+                    {isMobile && (
+                      <a
+                        href={isMobile ? href : ""}
+                        className="menu__item-link"
+                      >
+                        {text}
+                      </a>
+                    )}
+                    {!isMobile && <p className="menu__item-link">{text}</p>}
                     <LazyLoadImage
                       width="100px"
                       height="200px"
@@ -104,6 +107,9 @@ const MainNav = () => {
                 );
               }
             )}
+            <div className="menu-footer">
+              #TRIPCYCLOSET{new Date().getFullYear()}
+            </div>
           </nav>
         </motion.div>
       </div>

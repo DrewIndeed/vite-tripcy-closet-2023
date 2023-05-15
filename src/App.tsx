@@ -1,3 +1,4 @@
+import MobileBanner from "@components/mobile/Banner";
 import Banner from "@components/sections/Banner";
 import Collection from "@components/sections/Collection";
 import Intro from "@components/sections/Intro";
@@ -35,14 +36,17 @@ function App() {
 
         {/* mobile content */}
         {!booleans.isLaptopMedium && (
-          <MobileMainContent>
-            <div style={{ opacity: 0.1 }}>Andrew Mobile</div>
-            <div style={{ opacity: 0.2 }}>Andrew Mobile</div>
-            <div style={{ opacity: 0.3 }}>Andrew Mobile</div>
-            <div style={{ opacity: 0.4 }}>Andrew Mobile</div>
-            <div style={{ opacity: 0.5 }}>Andrew Mobile</div>
-            <div style={{ opacity: 0.6 }}>Andrew Mobile</div>
-          </MobileMainContent>
+          <>
+            <Suspense fallback={<></>}>
+              <MainNav isMobile />
+            </Suspense>
+            <MobileMainContent>
+              <MobileBanner />
+              <div style={{ height: "100vh", opacity: 0.4 }}>Andrew Mobile</div>
+              <div style={{ height: "100vh", opacity: 0.6 }}>Andrew Mobile</div>
+              <div style={{ height: "100vh", opacity: 0.8 }}>Andrew Mobile</div>
+            </MobileMainContent>
+          </>
         )}
 
         {/* desktop content */}

@@ -12,15 +12,8 @@ export const MobileMainContent = styled.div`
     height: 100vh;
     overflow-y: hidden;
     animation: scrollable 200ms linear forwards;
+    scroll-behavior: smooth;
     animation-delay: 3300ms;
-  }
-
-  div {
-    width: 100%;
-    height: 100vh;
-    color: cyan;
-    background-color: #000;
-    font-size: 6em;
   }
 
   @keyframes scrollable {
