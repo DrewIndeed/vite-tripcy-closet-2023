@@ -84,7 +84,8 @@ export const MobileBannerWrapper = styled.section`
       height: 2.5rem;
       border: none;
       outline: none;
-      margin-top: 1.5rem;
+      margin: 0 auto;
+      margin-top: 3rem;
       font-size: 0.8rem;
       /* padding: 0.8rem 0; */
       border-radius: 2px;
@@ -97,6 +98,7 @@ export const MobileBannerWrapper = styled.section`
       }
 
       @media ${devices.mobileL} {
+        margin-inline: 0;
         width: 10rem;
         height: 3.5rem;
         margin-top: 2rem;

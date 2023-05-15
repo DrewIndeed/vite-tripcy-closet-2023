@@ -16,8 +16,8 @@ export const IntroWrapper = styled.div`
   top: 0;
   overflow: hidden;
 
-  animation: noheight 600ms linear forwards;
-  animation-delay: 4s;
+  animation: noheight 400ms linear forwards;
+  animation-delay: 3.8s;
 
   @media (min-width: 376px) {
     padding-bottom: 10vh;
