@@ -16,7 +16,7 @@ const MobileBanner = () => {
         <motion.span
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
+          transition={{ duration: 0.6, ease: "easeInOut", delay: 3 }}
           viewport={{ once: true }}
           id="stay"
         >
@@ -25,34 +25,34 @@ const MobileBanner = () => {
         <motion.span
           initial={{ y: -30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
+          transition={{ duration: 0.6, ease: "easeInOut", delay: 3 }}
           viewport={{ once: true }}
           id="stylish"
         >
           Stylish.
         </motion.span>
         <motion.p
-          initial={{ x: 30, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeInOut", delay: 0.6 }}
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.4, ease: "easeInOut", delay: 3.6 }}
           viewport={{ once: true }}
           id="chic"
         >
           {slogan}.
         </motion.p>
         <motion.p
-          initial={{ x: 30, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut", delay: 0.6 }}
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeInOut", delay: 3.6 }}
           viewport={{ once: true }}
           id="inner-desc"
         >
           {innerDesc}
         </motion.p>
         <motion.button
-          initial={{ x: 30, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.4, ease: "easeInOut", delay: 0.6 }}
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeInOut", delay: 3.6 }}
           viewport={{ once: true }}
           id="show-more-btn-mobile"
           onClick={() => {

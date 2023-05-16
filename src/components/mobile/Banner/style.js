@@ -53,6 +53,7 @@ export const MobileBannerWrapper = styled.section`
     #chic {
       display: flex;
       white-space: pre-wrap;
+      margin-top: 1rem;
       color: ${(props) => props.theme.colors.typo1};
       font-size: 6vw;
 
