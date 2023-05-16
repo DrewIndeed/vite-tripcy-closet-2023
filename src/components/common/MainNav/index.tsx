@@ -73,9 +73,9 @@ const MainNav = ({ isMobile }: Props) => {
         </div>
 
         {/* HIDDEN MENU CONTENT */}
-        <motion.div className="nav-container safari_only" animate={navContainerControls}>
+        <motion.div className="nav-container" animate={navContainerControls}>
           {/* MENU CLOSE BTN */}
-          <div className="menu-close safari_only" onClick={onMenuClose}>
+          <div className="menu-close" onClick={onMenuClose}>
             <XMarkIcon className="menu-close-icon" />
           </div>
 

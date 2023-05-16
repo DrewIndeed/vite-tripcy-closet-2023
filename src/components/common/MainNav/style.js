@@ -62,13 +62,6 @@ export const MainNavWrapper = styled.div`
       right: 0;
       padding: 5px;
       margin: 1.5rem 1rem 0 0;
-      @media not all and (min-resolution: 0.001dpcm) {
-        @supports (-webkit-appearance: none) {
-          .safari_only {
-            margin: 6.5rem 1rem 0 0;
-          }
-        }
-      }
       border-radius: 50%;
       cursor: pointer;
       transition: all 0.6s ease;
@@ -92,15 +85,6 @@ export const MainNavWrapper = styled.div`
       height: 100vh;
       background: #fff;
       z-index: 100;
-
-      /* Safari 10.1+ (alternate method) */
-      @media not all and (min-resolution: 0.001dpcm) {
-        @supports (-webkit-appearance: none) {
-          .safari_only {
-            padding-top: 5rem;
-          }
-        }
-      }
 
       a {
         text-decoration: none;
