@@ -34,15 +34,12 @@ function App() {
           bgColorHex={commonTheme.colors.bg2}
         />
 
-        {!booleans.isLaptopMedium && (
-          <Suspense fallback={<></>}>
-            <MainNav isMobile />
-          </Suspense>
-        )}
-
         {/* mobile content */}
         {!booleans.isLaptopMedium && (
           <MobileMainContent>
+            <Suspense fallback={<></>}>
+              <MainNav isMobile />
+            </Suspense>
             <MobileBanner />
             <div style={{ height: "100vh", opacity: 0.8 }}>Andrew Mobile</div>
           </MobileMainContent>
