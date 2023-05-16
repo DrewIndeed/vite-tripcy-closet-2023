@@ -5,7 +5,8 @@ import Intro from "@components/sections/Intro";
 import { collections } from "@constants/arr";
 import { locoOptions } from "@constants/obj";
 import useGlobalMedia from "@hooks/useGlobalMedia";
-import { AppWrapper, MobileMainContent } from "@styles/global";
+import { AppMainContent, MobileMainContent } from "@styles/global";
+import "@styles/global.css";
 import { common as commonTheme } from "@styles/themes";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { Suspense, lazy, useRef } from "react";
@@ -52,22 +53,20 @@ function App() {
             options={locoOptions}
             containerRef={containerRef}
           >
-            <AppWrapper>
-              <Suspense fallback={<></>}>
-                <MainNav />
-                <SocialsNav />
-              </Suspense>
+            <Suspense fallback={<></>}>
+              <MainNav />
+              <SocialsNav />
+            </Suspense>
 
-              <div className="App" data-scroll-container ref={containerRef}>
-                <Banner />
+            <AppMainContent data-scroll-container ref={containerRef}>
+              <Banner />
 
-                {/* Collections */}
-                <div id="collections" />
-                {collections.map((collect, idx) => (
-                  <Collection key={collect.id} {...collect} count={idx} />
-                ))}
-              </div>
-            </AppWrapper>
+              {/* Collections */}
+              <div id="collections" />
+              {collections.map((collect, idx) => (
+                <Collection key={collect.id} {...collect} count={idx} />
+              ))}
+            </AppMainContent>
           </LocomotiveScrollProvider>
         )}
       </ThemeProvider>

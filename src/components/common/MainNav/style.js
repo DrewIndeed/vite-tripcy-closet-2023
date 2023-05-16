@@ -75,7 +75,7 @@ export const MainNavWrapper = styled.div`
         top: 0;
         right: 0;
         padding: 5px;
-        margin: 1.5rem 1rem 0 0;
+        margin: 1.2rem 1.1rem 0 0;
         border-radius: 50%;
         cursor: pointer;
         transition: all 0.6s ease;
