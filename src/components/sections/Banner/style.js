@@ -247,7 +247,7 @@ export const BannerWrapper = styled.section`
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: all 1s ease-in-out;
+        transition: all 0.4s ease-in-out;
         transform: scale(1.08);
 
         :hover {

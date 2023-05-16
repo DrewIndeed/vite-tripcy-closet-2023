@@ -20,10 +20,15 @@ const MainNav = ({ isMobile }: Props) => {
     if (!isOpen) {
       navContainerControls.start({
         left: 0,
+        transition: {
+          duration: 0.2,
+        },
+      });
+      navContainerControls.start({
         opacity: [0, 1],
         transition: {
           duration: 0.4,
-          delay: 0.4,
+          delay: 0.2,
         },
       });
       anime({
@@ -31,24 +36,33 @@ const MainNav = ({ isMobile }: Props) => {
         opacity: [0, 1],
         translateY: [-30, 0],
         easing: "easeInOutSine",
-        duration: 1000,
+        duration: 600,
         delay: anime.stagger(100, { start: 500 }),
       });
       setIsOpen(true);
     }
   }, [isOpen]);
-  const onMenuClose = () => {
+  const onMenuClose = useCallback(() => {
     if (isOpen) {
-      navContainerControls.start({
-        left: "-100%",
-        opacity: [1, 0],
-        transition: {
-          duration: 0.4,
-        },
-      });
+      {
+        navContainerControls.start({
+          opacity: [1, 0],
+          transition: {
+            duration: 0.4,
+          },
+        });
+        navContainerControls.start({
+          left: "-100%",
+          transition: {
+            duration: 0.2,
+            delay: 0.4,
+          },
+        });
+      }
+
       setIsOpen(false);
     }
-  };
+  }, [isOpen]);
 
   return (
     <MainNavWrapper>
@@ -69,7 +83,7 @@ const MainNav = ({ isMobile }: Props) => {
           <nav className="menu">
             {navItemsData.map(
               ({ text, href, imgSrc, imgSrcSet, imgSizes, isOpen }) => {
-                return (
+                return !isMobile ? (
                   <div
                     key={text}
                     className="menu__item noselect"
@@ -78,15 +92,7 @@ const MainNav = ({ isMobile }: Props) => {
                       scroll && scroll?.scrollTo(href);
                     }}
                   >
-                    {isMobile && (
-                      <a
-                        href={isMobile ? href : ""}
-                        className="menu__item-link"
-                      >
-                        {text}
-                      </a>
-                    )}
-                    {!isMobile && <p className="menu__item-link">{text}</p>}
+                    <p className="menu__item-link">{text}</p>
                     <LazyLoadImage
                       width="100px"
                       height="200px"
@@ -104,6 +110,15 @@ const MainNav = ({ isMobile }: Props) => {
                       </div>
                     </div>
                   </div>
+                ) : (
+                  <a
+                    href={href}
+                    key={text}
+                    className="menu__item"
+                    onClick={onMenuClose}
+                  >
+                    <p className="menu__item-link">{text}</p>
+                  </a>
                 );
               }
             )}

@@ -11,6 +11,7 @@ export const MainNavWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   /* TEMP */
   /* border: 1px solid brown; */
@@ -61,6 +62,13 @@ export const MainNavWrapper = styled.div`
       right: 0;
       padding: 5px;
       margin: 1.5rem 1rem 0 0;
+      @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) {
+          .safari_only {
+            margin: 6.5rem 1rem 0 0;
+          }
+        }
+      }
       border-radius: 50%;
       cursor: pointer;
       transition: all 0.6s ease;
@@ -83,7 +91,16 @@ export const MainNavWrapper = styled.div`
       width: 100vw;
       height: 100vh;
       background: #fff;
-      z-index: 10000;
+      z-index: 100;
+
+      /* Safari 10.1+ (alternate method) */
+      @media not all and (min-resolution: 0.001dpcm) {
+        @supports (-webkit-appearance: none) {
+          .safari_only {
+            padding-top: 5rem;
+          }
+        }
+      }
 
       a {
         text-decoration: none;
@@ -94,7 +111,7 @@ export const MainNavWrapper = styled.div`
     .menu {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1rem;
       padding: 10vh 0 0 0;
       --offset: 20vw;
       --move-initial: calc(-25% + var(--offset));
@@ -115,7 +132,8 @@ export const MainNavWrapper = styled.div`
 
       .menu__item {
         position: relative;
-        padding: 0 6vw;
+        padding: 5px 6vw;
+        /* background-color: cyan; */
         /* margin: 1.5rem 0; */
       }
 

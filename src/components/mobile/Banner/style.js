@@ -10,7 +10,6 @@ export const MobileBannerWrapper = styled.section`
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  border-left: 1rem double ${(props) => props.theme.colors.out3};
 
   .content {
     width: 100%;
@@ -32,7 +31,7 @@ export const MobileBannerWrapper = styled.section`
 
     #stay {
       color: ${(props) => props.theme.colors.typo1};
-      font-size: 14vw;
+      font-size: 15vw;
 
       @media ${devices.laptop} {
         font-size: 12vw;
@@ -43,7 +42,7 @@ export const MobileBannerWrapper = styled.section`
       font-weight: bold;
       font-family: "Cochin Bold";
       color: ${(props) => props.theme.colors.sup3};
-      font-size: 20vw;
+      font-size: 22vw;
 
       @media ${devices.laptop} {
         font-size: 14vw;
@@ -89,10 +88,8 @@ export const MobileBannerWrapper = styled.section`
       margin: 0 auto;
       margin-top: 3rem;
       font-size: 0.8rem;
-      /* padding: 0.8rem 0; */
       border-radius: 2px;
       background-color: ${(props) => props.theme.colors.out3};
-      transition: opacity 0.2s ease-in-out, font-size 0.4s ease-in-out;
 
       .btn-text {
         font-style: 0.2rem;
@@ -105,7 +102,6 @@ export const MobileBannerWrapper = styled.section`
         height: 3.5rem;
         margin-top: 2rem;
         font-size: 1.1rem;
-        /* padding: 1.25rem 0; */
 
         :hover {
           opacity: 0.75;
@@ -115,7 +111,7 @@ export const MobileBannerWrapper = styled.section`
     }
   }
 
-  .andrew {
+  .special-right-side {
     position: absolute;
     top: 0;
     right: 0;
@@ -128,7 +124,7 @@ export const MobileBannerWrapper = styled.section`
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: all 1s ease-in-out;
+      transition: all 0.4s ease-in-out;
       transform: scale(1.08);
       filter: brightness(0.8) blur(1px);
 

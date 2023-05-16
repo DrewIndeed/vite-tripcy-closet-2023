@@ -24,7 +24,7 @@ export const CollectionWrapper = styled.section`
     height: 100%;
     object-fit: cover;
     background-color: ${(props) => props.theme.colors.out2};
-    transition: all 1s ease-in-out;
+    transition: all 0.4s ease-in-out;
     filter: brightness(1);
     transform: scale(1.08);
 

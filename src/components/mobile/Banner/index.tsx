@@ -34,7 +34,7 @@ const MobileBanner = () => {
         <motion.p
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.4, ease: "easeInOut", delay: 3.6 }}
+          transition={{ duration: 0.6, ease: "easeInOut", delay: 3.6 }}
           viewport={{ once: true }}
           id="chic"
         >
@@ -43,7 +43,7 @@ const MobileBanner = () => {
         <motion.p
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut", delay: 3.6 }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 3.6 }}
           viewport={{ once: true }}
           id="inner-desc"
         >
@@ -52,7 +52,7 @@ const MobileBanner = () => {
         <motion.button
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeInOut", delay: 3.6 }}
+          transition={{ duration: 1.4, ease: "easeInOut", delay: 3.6 }}
           viewport={{ once: true }}
           id="show-more-btn-mobile"
           onClick={() => {
@@ -70,7 +70,7 @@ const MobileBanner = () => {
       </div>
 
       <MediaQuery minWidth={1024} maxWidth={1207}>
-        <div className="andrew">
+        <div className="special-right-side">
           <LazyLoadImage {...imgAttributes.banner.brandCardsPack} />
         </div>
       </MediaQuery>
