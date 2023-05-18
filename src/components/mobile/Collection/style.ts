@@ -18,6 +18,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
   margin-top: ${({ count }) => (count > 0 ? "1rem" : 0)};
 
   .bg-container {
+    flex-shrink: 0;
     width: 100%;
     min-height: 100vh;
     position: absolute;
@@ -39,7 +40,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
 
     img {
       width: 100%;
-      height: 100%;
+      min-height: 100%;
       object-fit: cover;
     }
   }
