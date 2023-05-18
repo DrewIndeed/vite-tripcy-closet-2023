@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { devices } from "@styles/themes";
 
 export const MobileBannerWrapper = styled.section`
+  scroll-snap-align: start;
   position: relative;
   width: 100%;
   height: 100vh;

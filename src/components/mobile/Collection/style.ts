@@ -7,6 +7,7 @@ type MobileCollectionWrapperType = {
 };
 
 export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperType>`
+  scroll-snap-align: start;
   position: relative;
   width: 100%;
   min-height: 100vh;
