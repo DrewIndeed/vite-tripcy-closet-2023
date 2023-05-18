@@ -6,7 +6,7 @@ export const AppMainContent = styled.main`
 export const MobileMainContent = styled.main`
   width: 100%;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   scroll-snap-type: y mandatory;
   background-color: ${(props) => props.theme.colors.bg2};
 `;
