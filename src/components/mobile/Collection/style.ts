@@ -9,7 +9,7 @@ type MobileCollectionWrapperType = {
 export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperType>`
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: ${(props) => props.theme.colors.bg2};
   display: flex;
   flex-direction: column;
