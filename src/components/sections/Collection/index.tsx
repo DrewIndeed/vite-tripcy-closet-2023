@@ -19,11 +19,11 @@ const Collection = ({
   id,
   name,
   subname,
-  description,
   season,
   isActive,
   count,
   allSets,
+  description,
 }: CollectionProps) => {
   const isEven = count % 2 === 0;
   const firstSetOfCollection = Object.values(allSets)[0] as Record<string, any>;

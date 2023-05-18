@@ -17,10 +17,6 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
   overflow: hidden;
   margin-top: ${({ count }) => (count > 0 ? "1rem" : 0)};
 
-  @media ${devices.tablet} {
-    margin-top: ${({ count }) => (count > 0 ? "2rem" : 0)};
-  }
-
   .bg-container {
     width: 100%;
     height: 100%;
@@ -29,7 +25,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     margin: auto;
     overflow: hidden;
     border-top-left-radius: 25vw;
-    border-bottom-right-radius: 25vw;
+    /* border-bottom-right-radius: 25vw; */
 
     /* border-top-left-radius: ${({ isEven }) => (!isEven ? 0 : "25vw")}; */
     /* border-bottom-right-radius: ${({ isEven }) => (!isEven ? 0 : "25vw")}; */
@@ -70,7 +66,6 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     left: 0;
     color: #fff;
     padding-inline: 10%;
-    /* background-color: cyan; */
 
     @media ${devices.tablet} {
       top: 60%;
@@ -84,11 +79,10 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
       word-spacing: 100vw;
       font-size: 4.5em;
       line-height: 10vh;
-      transform: scaleY(1.2);
 
       @media ${devices.tablet} {
-        font-size: 10em;
-        line-height: 12vh;
+        font-size: 9em;
+        line-height: 10vh;
       }
       @media ${devices.laptop} {
         font-size: 10em;
@@ -97,10 +91,10 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     }
 
     .season {
-      margin-top: 1rem;
+      margin-top: 5%;
+      font-style: italic;
       text-align: right;
       font-size: 1.2em;
-      transform: scaleY(1.2);
 
       @media ${devices.tablet} {
         font-size: 2.5em;

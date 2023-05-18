@@ -125,5 +125,50 @@ export const collections = [
       },
     },
   },
+  // {
+  //   id: "col1-athena-sprsum24",
+  //   name: "Athena Collection",
+  //   subname: "",
+  //   description: `The name Anthea has the meaning of "blooming", and "flowery". 
+  //   The collection draws its design inspiration from the lightness of 
+  //   flower petals meticulously expressed in organza silk. Our collection is designed to 
+  //   make you feel confident, and empowered, and make you know that the most gorgeous 
+  //   flower here is yourself. Whether you're dressing up for a special occasion or just
+  //    running errands, our pieces are versatile enough to be worn in any setting`,
+  //   season: "2023 spring/summer",
+  //   isActive: true,
+  //   allSets: {
+  //     kayla: {
+  //       name: "",
+  //       description: "",
+  //       photos: athenaAllSetsPhotos.kayla,
+  //     },
+  //     envy: {
+  //       name: "",
+  //       description: "",
+  //       photos: athenaAllSetsPhotos.envy,
+  //     },
+  //     cici: {
+  //       name: "",
+  //       description: "",
+  //       photos: athenaAllSetsPhotos.cici,
+  //     },
+  //     doly: {
+  //       name: "",
+  //       description: "",
+  //       photos: athenaAllSetsPhotos.doly,
+  //     },
+  //     bloom: {
+  //       name: "",
+  //       description: "",
+  //       photos: athenaAllSetsPhotos.bloom,
+  //     },
+  //     flow: {
+  //       name: "",
+  //       description: "",
+  //       photos: athenaAllSetsPhotos.flow,
+  //     },
+  //   },
+  // },
 ];
   
