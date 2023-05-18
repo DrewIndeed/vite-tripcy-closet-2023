@@ -29,7 +29,9 @@ const MobileCollection = ({
   if (!isActive) return <></>;
   return (
     <MobileCollectionWrapper isEven={isEven} count={count} id={id}>
-      <div className="bg-container" />
+      <div className="bg-container">
+        <LazyLoadImage {...firstSetOfCollection.photos[1]} visibleByDefault />
+      </div>
 
       <motion.div
         className="corner-blur-blob"

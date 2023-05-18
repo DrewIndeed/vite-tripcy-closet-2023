@@ -42,12 +42,12 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     /* border-top-right-radius: ${({ isEven }) => (isEven ? 0 : "25vw")}; */
     /* border-bottom-left-radius: ${({ isEven }) => (isEven ? 0 : "25vw")}; */
 
-    /* img {
+    img {
       width: 100%;
-      min-height: -webkit-fill-available;
-      min-height: 100%;
+      height: -webkit-fill-available;
+      height: 100vh;
       object-fit: cover;
-    } */
+    }
   }
 
   .corner-blur-blob {
