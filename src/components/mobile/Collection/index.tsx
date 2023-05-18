@@ -35,15 +35,15 @@ const MobileCollection = ({
         whileInView={{ y: 0, filter: "brightness(0.95) blur(0)" }}
         transition={{ duration: 1, ease: "easeInOut" }}
         viewport={{ once: true }}
-      >
-        <img {...firstSetOfCollection.photos[1]}/>
-      </motion.div>
+      />
+
       <motion.div
         className="corner-blur-blob"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       />
+
       <div className="text-content">
         <motion.p
           initial={{ y: 50, opacity: 0, scaleY: 1.2 }}

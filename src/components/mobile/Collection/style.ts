@@ -24,6 +24,12 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     inset: 0;
     margin: auto;
     overflow: hidden;
+
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    background-image: url("/imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1057.webp");
+    
     border-top-left-radius: 25vw;
     /* border-bottom-right-radius: 25vw; */
 
