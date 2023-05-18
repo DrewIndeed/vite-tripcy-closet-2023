@@ -29,13 +29,7 @@ const MobileCollection = ({
   if (!isActive) return <></>;
   return (
     <MobileCollectionWrapper isEven={isEven} count={count} id={id}>
-      <motion.div
-        className="bg-container"
-        initial={{ y: 30, filter: "brightness(0.7) blur(2px)" }}
-        whileInView={{ y: 0, filter: "brightness(0.95) blur(0)" }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        viewport={{ once: true }}
-      />
+      <div className="bg-container" />
 
       <motion.div
         className="corner-blur-blob"
