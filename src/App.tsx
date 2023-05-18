@@ -30,11 +30,11 @@ function App() {
       </Helmet>
       <ThemeProvider theme={commonTheme}>
         {/* website reveal */}
-        {/* <Intro
+        <Intro
           svgColorHex={commonTheme.colors.typo1}
           textColorHex={commonTheme.colors.typo1}
           bgColorHex={commonTheme.colors.bg2}
-        /> */}
+        />
 
         {/* mobile content */}
         {!booleans.isLaptopMedium && (
