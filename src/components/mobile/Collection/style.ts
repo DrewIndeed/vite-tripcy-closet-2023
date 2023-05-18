@@ -30,11 +30,6 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     right: 0;
     overflow: hidden;
 
-    background: url("/imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1057.webp");
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: 100% 100vh;
-
     border-top-left-radius: 25vw;
     /* border-bottom-right-radius: 25vw; */
     /* border-top-left-radius: ${({ isEven }) => (!isEven ? 0 : "25vw")}; */
@@ -42,12 +37,12 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     /* border-top-right-radius: ${({ isEven }) => (isEven ? 0 : "25vw")}; */
     /* border-bottom-left-radius: ${({ isEven }) => (isEven ? 0 : "25vw")}; */
 
-    /* img {
+    img {
       width: 100%;
       min-height: -webkit-fill-available;
       min-height: 100%;
       object-fit: cover;
-    } */
+    }
   }
 
   .corner-blur-blob {

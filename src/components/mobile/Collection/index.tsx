@@ -31,13 +31,15 @@ const MobileCollection = ({
     <MobileCollectionWrapper isEven={isEven} count={count} id={id}>
       <motion.div
         className="bg-container"
-        // initial={{ y: 30, filter: "brightness(0.7) blur(2px)" }}
-        // whileInView={{ y: 0, filter: "brightness(0.95) blur(0)" }}
-        // transition={{ duration: 1, ease: "easeInOut" }}
-        // viewport={{ once: true }}
-      />
+        initial={{ y: 30, filter: "brightness(0.7) blur(2px)" }}
+        whileInView={{ y: 0, filter: "brightness(0.95) blur(0)" }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        viewport={{ once: true }}
+      >
+        <LazyLoadImage {...firstSetOfCollection.photos[1]} visibleByDefault />
+      </motion.div>
 
-      {/* <motion.div
+      <motion.div
         className="corner-blur-blob"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -61,7 +63,7 @@ const MobileCollection = ({
         >
           __ {season}
         </motion.p>
-      </div> */}
+      </div>
     </MobileCollectionWrapper>
   );
 };
