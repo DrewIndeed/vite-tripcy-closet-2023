@@ -21,7 +21,8 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
   .bg-container {
     flex-shrink: 0;
     width: 100%;
-    min-height: 100%;
+    height: -webkit-fill-available;
+    height: 100vh;
     position: absolute;
     inset: 0;
     margin: auto;
@@ -29,7 +30,8 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
 
     background-repeat: none;
     background-size: cover;
-    background-position: center center;
+    background-position: 100% 100%;
+    background-attachment: fixed;
     background-image: url("/imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1057.webp");
 
     border-top-left-radius: 25vw;
@@ -41,6 +43,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
 
     img {
       width: 100%;
+      min-height: -webkit-fill-available;
       min-height: 100%;
       object-fit: cover;
     }

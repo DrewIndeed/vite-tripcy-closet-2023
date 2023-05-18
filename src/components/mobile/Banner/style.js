@@ -5,6 +5,7 @@ export const MobileBannerWrapper = styled.section`
   scroll-snap-align: start;
   position: relative;
   width: 100%;
+  height: -webkit-fill-available;
   height: 100vh;
   background-color: ${(props) => props.theme.colors.bg2};
   display: flex;
