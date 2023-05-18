@@ -35,7 +35,7 @@ const MobileCollection = ({
         whileInView={{ y: 0, filter: "brightness(0.95) blur(0)" }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <LazyLoadImage {...firstSetOfCollection.photos[1]} />
+        <LazyLoadImage {...firstSetOfCollection.photos[1]} visibleByDefault />
       </motion.div>
       <motion.div
         className="corner-blur-blob"
