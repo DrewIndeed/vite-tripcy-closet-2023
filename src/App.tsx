@@ -1,4 +1,5 @@
 import MobileBanner from "@components/mobile/Banner";
+import MobileCollection from "@components/mobile/Collection";
 import Banner from "@components/sections/Banner";
 import Collection from "@components/sections/Collection";
 import Intro from "@components/sections/Intro";
@@ -42,7 +43,12 @@ function App() {
               <MainNav isMobile />
             </Suspense>
             <MobileBanner />
-            <div style={{ height: "100vh", opacity: 0.8 }}>Andrew Mobile</div>
+
+            {/* Collections */}
+            <div id="collections" />
+            {collections.map((collect, idx) => (
+              <MobileCollection key={collect.id} {...collect} count={idx} />
+            ))}
           </MobileMainContent>
         )}
 

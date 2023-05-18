@@ -1,8 +1,8 @@
 import { stringRepeat } from "@utils";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { CollectionWrapper } from "./style";
 import { Tooltip } from "react-tooltip";
+import { CollectionWrapper } from "./style";
 
 type CollectionProps = {
   id: string;
