@@ -24,8 +24,10 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     height: -webkit-fill-available;
     height: 100vh;
     position: absolute;
-    inset: 0;
-    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     overflow: hidden;
 
     background: url("/imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1057.webp");
