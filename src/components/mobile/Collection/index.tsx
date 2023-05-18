@@ -36,7 +36,7 @@ const MobileCollection = ({
         transition={{ duration: 1, ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        <LazyLoadImage {...firstSetOfCollection.photos[1]} visibleByDefault />
+        <LazyLoadImage {...firstSetOfCollection.photos[1]} threshold={1000} />
       </motion.div>
       <motion.div
         className="corner-blur-blob"
