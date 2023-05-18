@@ -19,7 +19,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
 
   .bg-container {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     position: absolute;
     inset: 0;
     margin: auto;
@@ -29,10 +29,9 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     background-size: cover;
     background-position: center center;
     background-image: url("/imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1057.webp");
-    
+
     border-top-left-radius: 25vw;
     /* border-bottom-right-radius: 25vw; */
-
     /* border-top-left-radius: ${({ isEven }) => (!isEven ? 0 : "25vw")}; */
     /* border-bottom-right-radius: ${({ isEven }) => (!isEven ? 0 : "25vw")}; */
     /* border-top-right-radius: ${({ isEven }) => (isEven ? 0 : "25vw")}; */
