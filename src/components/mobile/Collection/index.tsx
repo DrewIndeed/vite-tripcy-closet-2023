@@ -9,6 +9,7 @@ type CollectionProps = {
   description: string;
   season: string;
   isActive: boolean;
+  isNew: boolean;
   count: number;
   allSets: any;
 };
@@ -21,6 +22,7 @@ const MobileCollection = ({
   season,
   count,
   isActive,
+  isNew,
   allSets,
 }: CollectionProps) => {
   const isEven = count % 2 === 0;
@@ -41,6 +43,16 @@ const MobileCollection = ({
       />
 
       <div className="text-content">
+        {isNew && (
+          <motion.p
+            initial={{ y: 50, opacity: 0, scaleY: 1.2 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="new-status"
+          >
+            Brand New
+          </motion.p>
+        )}
         <motion.p
           initial={{ y: 50, opacity: 0, scaleY: 1.2 }}
           whileInView={{ y: 0, opacity: 1 }}

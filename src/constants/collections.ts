@@ -20,7 +20,7 @@ export const athenaAllSetsPhotos = {
 /imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1057.webp 1057w,
 /imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1398.webp 1398w,
 /imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1440.webp 1440w`,
-      src: "/imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1440.webp", 
+      src: "/imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1440.webp",
       alt: "Athena Collection - Kayla Set - Photo 2",
     },
 
@@ -295,5 +295,5 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/flow/flow_4_i4bqis_c_scale,w_1440.webp",
       alt: "",
     },
-  ]
+  ],
 };
