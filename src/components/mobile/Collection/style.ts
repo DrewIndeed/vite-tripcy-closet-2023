@@ -10,7 +10,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
   scroll-snap-align: start;
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background-color: ${(props) => props.theme.colors.bg2};
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
   .bg-container {
     flex-shrink: 0;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     position: absolute;
     inset: 0;
     margin: auto;
