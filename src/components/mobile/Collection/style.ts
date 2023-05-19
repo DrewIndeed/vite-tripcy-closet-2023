@@ -1,5 +1,7 @@
+import { common, devices } from "@styles/themes";
 import styled from "styled-components";
-import { devices } from "@styles/themes";
+
+const colors = common.colors;
 
 type MobileCollectionWrapperType = {
   isEven: boolean;
@@ -47,7 +49,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
       height: 100vh;
       object-fit: cover;
 
-      @media screen and (min-width: 830px) {
+      @media screen and (min-width: 1024px) and (max-width: 1207px) {
         object-fit: scale-down;
       }
       filter: brightness(0.9);
@@ -56,43 +58,54 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
 
   .corner-blur-blob {
     position: absolute;
-    bottom: 0;
     left: 0;
-    clip-path: circle(50% at 50% 50%);
-
-    width: 120%;
+    right: 0;
+    width: 100%;
     aspect-ratio: 1 / 1;
     background-color: #ffffff40;
     backdrop-filter: blur(0.2rem);
-    transform: translate(-50%, 50%) scaleX(1.2);
+    clip-path: ellipse(50% 38% at 50% 50%);
+  }
 
-    @media ${devices.tablet} {
-      transform: translate(-50%, 60%) scaleX(1.2);
-    }
-    @media ${devices.laptop} {
-      transform: translate(-50%, 65%) scaleX(1.2);
-    }
+  .top-left {
+    top: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .top-right {
+    top: 0;
+    transform: translate(50%, -50%);
+  }
+
+  .bottom-left {
+    bottom: 0;
+    transform: translate(-50%, 50%);
+  }
+
+  .bottom-right {
+    bottom: 0;
+    transform: translate(50%, 50%);
   }
 
   .text-content {
     width: 100%;
     position: absolute;
-    top: 58%;
     left: 0;
     color: #fff;
     padding-inline: 10%;
+    top: 45%;
 
     @media ${devices.tablet} {
-      top: 55%;
+      top: 35%;
     }
     @media ${devices.laptop} {
-      top: 32%;
+      top: 22%;
     }
 
     .new-status {
       font-size: 1.2em;
       font-style: italic;
-      margin-bottom: 8%;
+      margin-bottom: 2rem;
       padding-left: 0.5rem;
       text-decoration: underline;
       text-underline-offset: 0.5rem;
@@ -100,8 +113,10 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
 
       @media ${devices.tablet} {
         font-size: 2.5em;
+        margin-bottom: 4rem;
       }
       @media ${devices.laptop} {
+        margin-bottom: 4rem;
         font-size: 2.5em;
       }
     }
@@ -112,15 +127,15 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
       text-align: left;
       word-spacing: 100vw;
       font-size: 4.5em;
-      line-height: 10vh;
+      line-height: 9.5vh;
 
       @media ${devices.tablet} {
         font-size: 9em;
-        line-height: 10vh;
+        line-height: 13vh;
       }
       @media ${devices.laptop} {
         font-size: 10em;
-        line-height: 16vh;
+        line-height: 14vh;
       }
     }
 
@@ -136,6 +151,71 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
       @media ${devices.laptop} {
         font-size: 2.5em;
       }
+    }
+  }
+
+  .see-more {
+    margin-top: auto;
+    margin-bottom: 2rem;
+    z-index: 100;
+
+    .arrow-button {
+      display: flex;
+      padding: 0.8rem 1.5rem;
+      /* border-radius: 20px; */
+      transition: all 0.3s ease;
+      font-weight: bold;
+      cursor: pointer;
+      align-items: center;
+      font-size: 1.2em;
+      border-radius: 2px;
+
+      color: #fff;
+      background-color: transparent;
+      border: 2px solid transparent;
+      outline: none;
+    }
+
+    .arrow-button > .arrow {
+      width: 12px;
+      height: 12px;
+      border-right: 2px solid ${colors.bg1};
+      border-bottom: 2px solid ${colors.bg1};
+      position: relative;
+      transform: rotate(-45deg);
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .arrow-button > .arrow::before {
+      display: block;
+      background-color: currentColor;
+      width: 3px;
+      transform-origin: bottom right;
+      height: 2px;
+      position: absolute;
+      opacity: 0;
+      bottom: calc(-2px / 2);
+      transform: rotate(45deg);
+      transition: all 0.15s ease;
+      content: "";
+      right: 0;
+    }
+
+    .arrow-button:hover > .arrow {
+      transform: rotate(-45deg) translate(4px, 4px);
+      border-color: #fff;
+      margin-left: 1.3rem;
+    }
+
+    .arrow-button:hover > .arrow::before {
+      opacity: 1;
+      width: 1.3em;
+    }
+
+    .arrow-button:hover {
+      background-color: ${colors.out3};
+      color: #fff;
     }
   }
 `;

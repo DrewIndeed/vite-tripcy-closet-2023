@@ -1,5 +1,7 @@
+import useGlobalMedia from "@hooks/useGlobalMedia";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Tooltip } from "react-tooltip";
 import { MobileCollectionWrapper } from "./style";
 
 type CollectionProps = {
@@ -25,6 +27,7 @@ const MobileCollection = ({
   isNew,
   allSets,
 }: CollectionProps) => {
+  const { booleans } = useGlobalMedia();
   const isEven = count % 2 === 0;
   const firstSetOfCollection = Object.values(allSets)[0] as Record<string, any>;
 
@@ -35,12 +38,19 @@ const MobileCollection = ({
         <LazyLoadImage {...firstSetOfCollection.photos[1]} visibleByDefault />
       </div>
 
-      <motion.div
-        className="corner-blur-blob"
+      {/* <motion.div
+        className="corner-blur-blob bottom-left"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       />
+
+      <motion.div
+        className="corner-blur-blob bottom-right"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      /> */}
 
       <div className="text-content">
         {isNew && (
@@ -69,6 +79,19 @@ const MobileCollection = ({
         >
           __ {season}
         </motion.p>
+      </div>
+
+      <div className="see-more">
+        {booleans.isLaptop && <Tooltip id="collection-showmore-btn" />}
+        <button
+          data-tooltip-id="collection-showmore-btn"
+          data-tooltip-content="Coming Soon"
+          data-tooltip-place="right"
+          // data-tooltip-delay-hide={500}
+          className="arrow-button"
+        >
+          See More<span className="arrow"></span>
+        </button>
       </div>
     </MobileCollectionWrapper>
   );
