@@ -21,6 +21,7 @@
       "@hooks/*": ["hooks/*"],
       "@styles/*": ["styles/*"],
       "@assets/*": ["assets/*"],
+      "@context/*": ["context/*"],
       "@utils": ["utils/index.ts"],
       "@constants/*": ["constants/*"],
       "@components/*": ["components/*"]
