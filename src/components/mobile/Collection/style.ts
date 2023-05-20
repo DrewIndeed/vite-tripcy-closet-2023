@@ -157,7 +157,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
   .see-more {
     margin-top: auto;
     margin-bottom: 2rem;
-    z-index: 100;
+    z-index: 40;
 
     .arrow-button {
       display: flex;

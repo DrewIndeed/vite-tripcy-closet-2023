@@ -49,32 +49,32 @@ export const collections = {
     isNew: true,
     allSets: {
       kayla: {
-        name: "",
+        name: "Testing",
         description: "",
         photos: athenaAllSetsPhotos.kayla,
       },
       envy: {
-        name: "",
+        name: "Testing",
         description: "",
         photos: athenaAllSetsPhotos.envy,
       },
       cici: {
-        name: "",
+        name: "Testing",
         description: "",
         photos: athenaAllSetsPhotos.cici,
       },
       doly: {
-        name: "",
+        name: "Testing",
         description: "",
         photos: athenaAllSetsPhotos.doly,
       },
       bloom: {
-        name: "",
+        name: "Testing",
         description: "",
         photos: athenaAllSetsPhotos.bloom,
       },
       flow: {
-        name: "",
+        name: "Testing",
         description: "",
         photos: athenaAllSetsPhotos.flow,
       },

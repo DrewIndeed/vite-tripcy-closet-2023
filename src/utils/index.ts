@@ -32,3 +32,6 @@ export const stringRepeat = (
   repStr: string = "Default String",
   joinBy: string = " - "
 ) => [...new Array(repNum).keys()].map(() => repStr).join(joinBy);
+
+export const isObjEmpty = (obj: Record<string, any>) =>
+  Object.keys(obj).length === 0;

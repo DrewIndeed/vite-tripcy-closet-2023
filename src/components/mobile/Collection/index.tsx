@@ -1,3 +1,4 @@
+import { useData } from "@hooks/useData";
 import useGlobalMedia from "@hooks/useGlobalMedia";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -27,9 +28,15 @@ const MobileCollection = ({
   isNew,
   allSets,
 }: CollectionProps) => {
-  const { booleans } = useGlobalMedia();
   const isEven = count % 2 === 0;
   const firstSetOfCollection = Object.values(allSets)[0] as Record<string, any>;
+
+  // hooks
+  const { booleans } = useGlobalMedia();
+  const { getCollectionDataById } = useData();
+
+  // methods
+  const handleClick = () => getCollectionDataById(id);
 
   if (!isActive) return <></>;
   return (
@@ -89,6 +96,7 @@ const MobileCollection = ({
           data-tooltip-place="right"
           // data-tooltip-delay-hide={500}
           className="arrow-button"
+          onClick={handleClick}
         >
           See More<span className="arrow"></span>
         </button>

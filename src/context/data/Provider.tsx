@@ -17,19 +17,14 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
   const getCollectionDataById = async (colId: string) => {
     // loading is true
     dispatch({ type: LOADING });
-
-    // if colId is empty, reset current collection data
-    if (colId.length === 0) {
-      dispatch({
-        type: GET_COLLECTION_BY_ID,
-        payload: { data: dataInitState.currentCol },
-      });
-      return;
-    }
-    // else, save the currentl;y chosen collection
     dispatch({
       type: GET_COLLECTION_BY_ID,
-      payload: { data: collections[colId as keyof typeof collections] },
+      payload: {
+        data:
+          colId.length > 0
+            ? collections[colId as keyof typeof collections]
+            : {},
+      },
     });
   };
 

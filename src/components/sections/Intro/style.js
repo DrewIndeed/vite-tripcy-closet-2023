@@ -38,7 +38,7 @@ export const IntroWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 300;
     font-size: 2em;
 
     @media (min-width: 500px) {
