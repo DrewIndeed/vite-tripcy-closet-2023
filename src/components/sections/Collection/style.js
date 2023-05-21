@@ -1,17 +1,21 @@
 import styled from "styled-components";
-import { common as commonTheme } from "@styles/themes";
+import { common as commonTheme, devices } from "@styles/themes";
 const colors = commonTheme.colors;
 
 export const CollectionWrapper = styled.section`
   width: 100%;
-  height: 140vh;
+  min-height: 130vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: ${(props) => props.theme.colors.bg2};
   overflow: hidden;
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 0;
+
+  @media ${devices.laptopL} {
+    padding-bottom: 4rem;
+  }
 
   p {
     width: 100%;
@@ -109,7 +113,7 @@ export const CollectionWrapper = styled.section`
     text-align: center;
     font-style: italic;
     font-size: 3.5em;
-    transform: translateY(-40px) scaleY(1.5);
+    transform: translateY(-30px) scaleY(1.5);
   }
 
   .see-more {

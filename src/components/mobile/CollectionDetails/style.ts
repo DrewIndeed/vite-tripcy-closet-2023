@@ -14,18 +14,6 @@ export const CollectionDetailsWrapper = styled(motion.section)`
   overflow-y: auto;
   scroll-snap-type: y mandatory;
 
-  ::-webkit-scrollbar {
-    width: 1rem;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: #e4e4e4;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: #d4aa70;
-  }
-
   .product-row {
     scroll-snap-align: start;
     width: 100%;
@@ -44,18 +32,6 @@ export const CollectionDetailsWrapper = styled(motion.section)`
       scroll-snap-type: x mandatory;
       display: flex;
       margin-top: auto;
-
-      ::-webkit-scrollbar {
-        width: 1rem;
-      }
-
-      ::-webkit-scrollbar-track {
-        background-color: #e4e4e4;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background-color: #d4aa70;
-      }
 
       .product-card {
         scroll-snap-align: start;

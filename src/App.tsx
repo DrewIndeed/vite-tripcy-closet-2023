@@ -35,15 +35,15 @@ function App() {
       </Helmet>
 
       {/* website reveal */}
-      <Intro
+      {/* <Intro
         svgColorHex={commonTheme.colors.typo1}
         textColorHex={commonTheme.colors.typo1}
         bgColorHex={commonTheme.colors.bg2}
-      />
+      /> */}
 
       {/* mobile content */}
       {!booleans.isLaptopMedium && (
-        <MobileMainContent>
+        <MobileMainContent className="scrollbar-hide">
           {/* nav bars */}
           <Suspense fallback={<></>}>
             <MainNav isMobile />
@@ -84,7 +84,7 @@ function App() {
             ))}
 
             {/* Selected collection's details and Products preview- COMING SOON */}
-            <Products />
+            {/* <Products /> */}
           </AppMainContent>
         </LocomotiveScrollProvider>
       )}

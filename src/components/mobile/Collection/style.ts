@@ -214,8 +214,6 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     }
 
     .arrow-button:hover {
-      /* background-color: ${colors.out3};
-      color: #fff; */
       background-color: #8b8a8750;
       border: 1px solid #fff;
     }

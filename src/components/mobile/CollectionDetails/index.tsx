@@ -52,7 +52,12 @@ const CollectionDetails = () => {
 
   if (isObjEmpty(currentCol)) return <></>;
   return (
-    <CollectionDetailsWrapper animate={collectionDetailsControl}>
+    <CollectionDetailsWrapper
+      animate={collectionDetailsControl}
+      className="scrollbar-thin
+        scrollbar-track-sup3 
+        scrollbar-thumb-out3"
+    >
       <motion.div
         initial={{ opacity: 0, x: -100, rotate: 90 }}
         animate={{ opacity: 1, x: 0, rotate: 0 }}
@@ -65,7 +70,12 @@ const CollectionDetails = () => {
 
       {Object.entries(currentCol?.allSets).map(([key, value]) => (
         <div key={key} className="product-row">
-          <div className="scroll">
+          <div
+            className="scroll     
+            scrollbar-thin
+            scrollbar-track-sup3 
+            scrollbar-thumb-out3"
+          >
             {(value as Record<string, any>).photos.map(
               (photo: Record<string, string>, idx: number) => (
                 <motion.div
