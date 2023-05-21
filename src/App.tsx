@@ -4,6 +4,7 @@ import CollectionDetails from "@components/mobile/CollectionDetails";
 import Banner from "@components/sections/Banner";
 import Collection from "@components/sections/Collection";
 import Intro from "@components/sections/Intro";
+import Products from "@components/sections/Products";
 
 import { collections, locoOptions } from "@constants/obj";
 import { useData } from "@hooks/useData";
@@ -13,7 +14,7 @@ import "@styles/global.css";
 import { common as commonTheme } from "@styles/themes";
 import { isObjEmpty } from "@utils";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import { Suspense, lazy, useEffect, useRef, useState } from "react";
+import { Suspense, lazy, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "react-tooltip/dist/react-tooltip.css";
@@ -34,15 +35,16 @@ function App() {
       </Helmet>
 
       {/* website reveal */}
-      {/* <Intro
+      <Intro
         svgColorHex={commonTheme.colors.typo1}
         textColorHex={commonTheme.colors.typo1}
         bgColorHex={commonTheme.colors.bg2}
-      /> */}
+      />
 
       {/* mobile content */}
       {!booleans.isLaptopMedium && (
         <MobileMainContent>
+          {/* nav bars */}
           <Suspense fallback={<></>}>
             <MainNav isMobile />
           </Suspense>
@@ -66,6 +68,7 @@ function App() {
           options={locoOptions}
           containerRef={containerRef}
         >
+          {/* nav bars */}
           <Suspense fallback={<></>}>
             <MainNav />
             <SocialsNav />
@@ -81,6 +84,7 @@ function App() {
             ))}
 
             {/* Selected collection's details and Products preview- COMING SOON */}
+            <Products />
           </AppMainContent>
         </LocomotiveScrollProvider>
       )}

@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { isObjEmpty } from "@utils";
 import { useData } from "@hooks/useData";
 import { useEffect } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const CollectionDetails = () => {
   const { currentCol, getCollectionDataById } = useData();
@@ -64,7 +65,23 @@ const CollectionDetails = () => {
 
       {Object.entries(currentCol?.allSets).map(([key, value]) => (
         <div key={key} className="product-row">
-          {key}
+          <div className="scroll">
+            {(value as Record<string, any>).photos.map(
+              (photo: Record<string, string>, idx: number) => (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                  key={key + idx}
+                  className="product-card"
+                >
+                  <div className="img-container">
+                    <LazyLoadImage {...photo} />
+                  </div>
+                </motion.div>
+              )
+            )}
+          </div>
         </div>
       ))}
     </CollectionDetailsWrapper>
