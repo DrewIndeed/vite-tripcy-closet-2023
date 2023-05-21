@@ -86,9 +86,8 @@ const CollectionDetails = () => {
                 >
                   <div className="img-container">
                     <LazyLoadImage
-                      effect="black-and-white"
                       placeholderSrc={photo.src}
-                      visibleByDefault={idx === 0}
+                      visibleByDefault
                       {...photo}
                     />
                   </div>
