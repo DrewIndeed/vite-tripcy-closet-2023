@@ -17,6 +17,7 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 import { Suspense, lazy, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import MediaQuery from "react-responsive";
 import "react-tooltip/dist/react-tooltip.css";
 
 const MainNav = lazy(() => import("@components/common/MainNav"));
@@ -57,7 +58,9 @@ function App() {
           ))}
 
           {/* Selected collection's details and Products preview */}
-          {!isObjEmpty(currentCol) && <CollectionDetails />}
+          <MediaQuery maxWidth={1027}>
+            {!isObjEmpty(currentCol) && <CollectionDetails />}
+          </MediaQuery>
         </MobileMainContent>
       )}
 

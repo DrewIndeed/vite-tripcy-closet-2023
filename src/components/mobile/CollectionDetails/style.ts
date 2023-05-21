@@ -39,8 +39,7 @@ export const CollectionDetailsWrapper = styled(motion.section)`
         width: 100%;
         height: 100%;
         /* border: 2px solid green; */
-        padding: 2rem;
-        padding-top: 0.5rem;
+        padding: 2rem 2rem 6rem 2rem;
 
         .img-container {
           width: 100%;

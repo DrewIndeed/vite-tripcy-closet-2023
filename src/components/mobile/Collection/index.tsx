@@ -96,7 +96,7 @@ const MobileCollection = ({
           data-tooltip-place="right"
           // data-tooltip-delay-hide={500}
           className="arrow-button"
-          onClick={handleClick}
+          onClick={!booleans.isLaptop ? handleClick : () => {}}
         >
           See More<span className="arrow"></span>
         </button>

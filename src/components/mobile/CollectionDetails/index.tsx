@@ -54,9 +54,7 @@ const CollectionDetails = () => {
   return (
     <CollectionDetailsWrapper
       animate={collectionDetailsControl}
-      className="scrollbar-thin
-        scrollbar-track-sup3 
-        scrollbar-thumb-out3"
+      className="scrollbar-hide"
     >
       <motion.div
         initial={{ opacity: 0, x: -100, rotate: 90 }}

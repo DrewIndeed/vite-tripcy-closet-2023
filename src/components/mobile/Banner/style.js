@@ -34,6 +34,11 @@ export const MobileBannerWrapper = styled.section`
     #stay {
       color: ${(props) => props.theme.colors.typo1};
       font-size: 15vw;
+      line-height: 10vh;
+
+      @media ${devices.tablet} {
+        line-height: 14vh;
+      }
 
       @media ${devices.laptop} {
         font-size: 12vw;
@@ -45,6 +50,11 @@ export const MobileBannerWrapper = styled.section`
       font-family: "Cochin Bold";
       color: ${(props) => props.theme.colors.sup3};
       font-size: 22vw;
+      line-height: 12vh;
+
+      @media ${devices.tablet} {
+        line-height: 16vh;
+      }
 
       @media ${devices.laptop} {
         font-size: 14vw;
