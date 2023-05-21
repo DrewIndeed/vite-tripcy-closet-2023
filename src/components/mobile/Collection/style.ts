@@ -93,10 +93,10 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     left: 0;
     color: #fff;
     padding-inline: 10%;
-    top: 45%;
+    top: 35%;
 
     @media ${devices.tablet} {
-      top: 35%;
+      top: 32%;
     }
     @media ${devices.laptop} {
       top: 22%;
@@ -156,7 +156,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
 
   .see-more {
     margin-top: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     z-index: 40;
 
     .arrow-button {
