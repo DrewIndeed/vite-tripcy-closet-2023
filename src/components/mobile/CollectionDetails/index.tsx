@@ -80,11 +80,17 @@ const CollectionDetails = () => {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 1 }}
+                  viewport={{ once: true }}
                   key={key + idx}
                   className="product-card"
                 >
                   <div className="img-container">
-                    <LazyLoadImage {...photo} />
+                    <LazyLoadImage
+                      {...photo}
+                      placeholder={
+                        <div className="img-loader">Loading ...</div>
+                      }
+                    />
                   </div>
                 </motion.div>
               )
