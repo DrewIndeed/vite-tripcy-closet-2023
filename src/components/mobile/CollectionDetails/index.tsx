@@ -1,16 +1,17 @@
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
-import { CollectionDetailsWrapper } from "./style";
-import { motion, useAnimation } from "framer-motion";
-import { isObjEmpty } from "@utils";
 import { useData } from "@hooks/useData";
+import { isObjEmpty } from "@utils";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import ProductRow from "../ProductRow";
+import { CollectionDetailsWrapper } from "./style";
 
 const CollectionDetails = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const { currentCol, getCollectionDataById } = useData();
   const collectionDetailsControl = useAnimation();
 
+  // track current colleciton data to animate
   useEffect(() => {
     if (!isObjEmpty(currentCol)) {
       collectionDetailsControl.start({
@@ -30,6 +31,7 @@ const CollectionDetails = () => {
     }
   }, [currentCol]);
 
+  // track vertical scrolling progress
   useEffect(() => {
     // target gallery from DOM
     const collectionVerticalScroll = document.querySelector(
@@ -57,6 +59,7 @@ const CollectionDetails = () => {
       collectionVerticalScroll?.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // handle back button is clicked
   const handleBack = () => {
     collectionDetailsControl.start({
       opacity: [1, 0],
@@ -84,6 +87,7 @@ const CollectionDetails = () => {
       className="scrollbar-hide"
       id="collection-details"
     >
+      {/* back button */}
       <motion.div
         initial={{ opacity: 0, x: -100, rotate: 90 }}
         animate={{ opacity: 1, x: 0, rotate: 0 }}
@@ -94,6 +98,7 @@ const CollectionDetails = () => {
         <ArrowLeftIcon className="menu-close-icon" />
       </motion.div>
 
+      {/* vertical page dots */}
       <div className="page-dots">
         {Object.keys(currentCol?.allSets).map((_, dotIdx) => {
           const dotPage = dotIdx + 1;
@@ -106,32 +111,12 @@ const CollectionDetails = () => {
         })}
       </div>
 
-      {Object.entries(currentCol?.allSets).map(([key, value]) => (
-        <div key={key} className="product-row">
-          <div className="scroll scrollbar-hide">
-            {(value as Record<string, any>).photos.map(
-              (photo: Record<string, string>, idx: number) => (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 1 }}
-                  viewport={{ once: true }}
-                  key={key + idx}
-                  className="product-card"
-                >
-                  <div className="img-container">
-                    <LazyLoadImage
-                      placeholderSrc={photo.src}
-                      visibleByDefault
-                      {...photo}
-                    />
-                  </div>
-                </motion.div>
-              )
-            )}
-          </div>
-        </div>
-      ))}
+      {/* rows of product photos */}
+      {Object.entries(currentCol?.allSets).map(([setName, value]) => {
+        return (
+          <ProductRow key={setName} value={value as Record<string, any>} />
+        );
+      })}
     </CollectionDetailsWrapper>
   );
 };

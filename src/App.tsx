@@ -4,7 +4,6 @@ import CollectionDetails from "@components/mobile/CollectionDetails";
 import Banner from "@components/sections/Banner";
 import Collection from "@components/sections/Collection";
 import Intro from "@components/sections/Intro";
-import Products from "@components/sections/Products";
 
 import { collections, locoOptions } from "@constants/obj";
 import { useData } from "@hooks/useData";
@@ -36,11 +35,11 @@ function App() {
       </Helmet>
 
       {/* website reveal */}
-      {/* <Intro
+      <Intro
         svgColorHex={commonTheme.colors.typo1}
         textColorHex={commonTheme.colors.typo1}
         bgColorHex={commonTheme.colors.bg2}
-      /> */}
+      />
 
       {/* mobile content */}
       {!booleans.isLaptopMedium && (
