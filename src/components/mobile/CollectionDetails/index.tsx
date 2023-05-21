@@ -86,10 +86,11 @@ const CollectionDetails = () => {
                 >
                   <div className="img-container">
                     <LazyLoadImage
-                      {...photo}
+                      visibleByDefault={idx === 0}
                       placeholder={
-                        <div className="img-loader">Loading ...</div>
+                        <span className="img-loader">Loading ...</span>
                       }
+                      {...photo}
                     />
                   </div>
                 </motion.div>
