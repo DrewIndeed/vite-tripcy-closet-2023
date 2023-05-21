@@ -40,7 +40,13 @@ export const CollectionDetailsWrapper = styled(motion.section)`
         width: 100%;
         height: 100%;
         /* border: 2px solid green; */
-        padding: 2rem 2rem 6rem 2rem;
+        padding-inline: 2.5rem;
+        padding-top: 2rem;
+        padding-bottom: 6rem;
+
+        @media ${devices.tablet} {
+          padding-inline: 6rem;
+        }
 
         .img-container {
           width: 100%;
@@ -85,7 +91,7 @@ export const CollectionDetailsWrapper = styled(motion.section)`
     transition: all 0.6s ease;
     border: 1px solid #332f2a00;
     z-index: 100;
-    background-color: #8b8a8720;
+    background-color: #d7b89120;
     backdrop-filter: blur(0.5rem);
 
     :hover {
@@ -113,7 +119,7 @@ export const CollectionDetailsWrapper = styled(motion.section)`
     height: 100%;
 
     @media ${devices.tablet} {
-      width: 12vw;
+      width: 10vw;
     }
 
     .dot {

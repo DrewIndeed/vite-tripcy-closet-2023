@@ -12,7 +12,6 @@ const CollectionDetails = () => {
   const collectionDetailsControl = useAnimation();
 
   useEffect(() => {
-    // console.log("Here", currentCol);
     if (!isObjEmpty(currentCol)) {
       collectionDetailsControl.start({
         left: 0,
@@ -109,12 +108,7 @@ const CollectionDetails = () => {
 
       {Object.entries(currentCol?.allSets).map(([key, value]) => (
         <div key={key} className="product-row">
-          <div
-            className="scroll     
-            scrollbar-thin
-            scrollbar-track-sup3 
-            scrollbar-thumb-out3"
-          >
+          <div className="scroll scrollbar-hide">
             {(value as Record<string, any>).photos.map(
               (photo: Record<string, string>, idx: number) => (
                 <motion.div
