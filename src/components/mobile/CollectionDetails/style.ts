@@ -26,7 +26,7 @@ export const CollectionDetailsWrapper = styled(motion.section)`
     .scroll {
       padding-top: 1rem;
       width: 100%;
-      height: 100vh;
+      height: 90vh;
       /* border: 2px solid #000; */
       overflow-x: auto;
       scroll-snap-type: x mandatory;
@@ -34,7 +34,7 @@ export const CollectionDetailsWrapper = styled(motion.section)`
       margin-top: auto;
 
       ::-webkit-scrollbar {
-        height: 5px; /* Remove scrollbar space */
+        height: 1rem; /* Remove scrollbar space */
         background: ${(props) =>
           props.theme.colors
             .sup2}; /* Optional: just make scrollbar invisible */
@@ -51,7 +51,7 @@ export const CollectionDetailsWrapper = styled(motion.section)`
         height: 100%;
         /* border: 2px solid green; */
         padding: 2rem;
-        padding-top: 1rem;
+        padding-top: 0.5rem;
 
         .img-container {
           width: 100%;
