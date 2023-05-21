@@ -94,7 +94,6 @@ const MobileCollection = ({
           data-tooltip-id="collection-showmore-btn"
           data-tooltip-content="Coming Soon"
           data-tooltip-place="right"
-          // data-tooltip-delay-hide={500}
           className="arrow-button"
           onClick={!booleans.isLaptop ? handleClick : () => {}}
         >
