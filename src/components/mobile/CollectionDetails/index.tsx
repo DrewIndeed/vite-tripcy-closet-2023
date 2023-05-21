@@ -3,10 +3,11 @@ import { CollectionDetailsWrapper } from "./style";
 import { motion, useAnimation } from "framer-motion";
 import { isObjEmpty } from "@utils";
 import { useData } from "@hooks/useData";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const CollectionDetails = () => {
+  const [currentPage, setCurrentPage] = useState(1);
   const { currentCol, getCollectionDataById } = useData();
   const collectionDetailsControl = useAnimation();
 
@@ -29,6 +30,33 @@ const CollectionDetails = () => {
       return;
     }
   }, [currentCol]);
+
+  useEffect(() => {
+    // target gallery from DOM
+    const collectionVerticalScroll = document.querySelector(
+      "#collection-details"
+    );
+
+    // calculate progress of snap scroll
+    const handleScroll = () => {
+      const sh = collectionVerticalScroll?.scrollHeight as number;
+      const st = Math.floor(collectionVerticalScroll?.scrollTop as number);
+      const ch = collectionVerticalScroll?.clientHeight as number;
+
+      // if snap scroll has completed, calculate current page
+      if (st % ch === 0) {
+        // console.log({ sh, st, ch, test: st / ch + 1 });
+        setCurrentPage(st / ch + 1);
+      }
+    };
+
+    // add scroll event listener
+    collectionVerticalScroll?.addEventListener("scroll", handleScroll);
+
+    // clean up
+    return () =>
+      collectionVerticalScroll?.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleBack = () => {
     collectionDetailsControl.start({
@@ -55,6 +83,7 @@ const CollectionDetails = () => {
     <CollectionDetailsWrapper
       animate={collectionDetailsControl}
       className="scrollbar-hide"
+      id="collection-details"
     >
       <motion.div
         initial={{ opacity: 0, x: -100, rotate: 90 }}
@@ -65,6 +94,18 @@ const CollectionDetails = () => {
       >
         <ArrowLeftIcon className="menu-close-icon" />
       </motion.div>
+
+      <div className="page-dots">
+        {Object.keys(currentCol?.allSets).map((_, dotIdx) => {
+          const dotPage = dotIdx + 1;
+          return (
+            <span
+              key={`page-${dotPage}`}
+              className={`dot ${currentPage === dotPage ? "active" : ""}`}
+            />
+          );
+        })}
+      </div>
 
       {Object.entries(currentCol?.allSets).map(([key, value]) => (
         <div key={key} className="product-row">

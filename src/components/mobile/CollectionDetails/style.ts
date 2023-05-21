@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import { devices } from "@styles/themes";
 
 export const CollectionDetailsWrapper = styled(motion.section)`
   width: 100%;
@@ -94,6 +95,41 @@ export const CollectionDetailsWrapper = styled(motion.section)`
     .menu-close-icon {
       width: 2rem;
       height: 2rem;
+    }
+  }
+
+  .page-dots {
+    color: ${(props) => props.theme.colors.out3};
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    right: 0;
+    z-index: 100;
+    width: 8vw;
+    height: 100%;
+
+    @media ${devices.tablet} {
+      width: 12vw;
+    }
+
+    .dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background-color: #8b8a8750;
+
+      @media ${devices.tablet} {
+        width: 0.75rem;
+        height: 0.75rem;
+      }
+    }
+
+    .active {
+      background-color: #8b8a87;
     }
   }
 `;
