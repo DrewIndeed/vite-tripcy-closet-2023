@@ -148,7 +148,7 @@ export const ProductRowWrapper = styled.section`
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(1.02) saturate(1.02);
+            /* filter: saturate(1.02); */
           }
 
           .img-loader {

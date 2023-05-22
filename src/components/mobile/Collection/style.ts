@@ -52,7 +52,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
       @media screen and (min-width: 1024px) and (max-width: 1207px) {
         object-fit: scale-down;
       }
-      filter: brightness(0.9);
+      filter: brightness(0.95);
     }
   }
 
