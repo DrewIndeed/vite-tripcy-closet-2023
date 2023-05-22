@@ -18,11 +18,11 @@ export const ProductRowWrapper = styled.section`
       z-index: 50;
       transform: rotate(-90deg);
 
-      top: 17vh;
+      top: 18vh;
       right: 3rem;
 
       @media ${devices.tablet} {
-        top: 16vh;
+        top: 17vh;
         right: 7rem;
       }
 
