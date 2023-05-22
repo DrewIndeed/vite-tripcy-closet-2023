@@ -59,8 +59,8 @@ export const ProductRowWrapper = styled.section`
       bottom: 18vh;
       left: 3.5rem;
       @media ${devices.tablet} {
-        bottom: 17vh;
-        left: 6rem;
+        bottom: 15vh;
+        left: 8rem;
       }
 
       .title-text {
