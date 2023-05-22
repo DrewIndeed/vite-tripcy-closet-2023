@@ -126,6 +126,7 @@ export const BannerWrapper = styled.section`
 
           @media ${devices.laptopL} {
             font-size: 9em;
+            line-height: 8rem;
           }
         }
 
@@ -144,6 +145,7 @@ export const BannerWrapper = styled.section`
 
           @media ${devices.laptop} {
             font-size: 12em;
+            line-height: 13rem;
           }
         }
       }

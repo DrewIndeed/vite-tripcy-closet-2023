@@ -10,6 +10,7 @@ type CollectionProps = {
   name: string;
   subname: string;
   description: string;
+  favPhotoIndex: number;
   season: string;
   isActive: boolean;
   isNew: boolean;
@@ -21,6 +22,7 @@ const MobileCollection = ({
   id,
   subname,
   description,
+  favPhotoIndex,
   name,
   season,
   count,
@@ -42,7 +44,7 @@ const MobileCollection = ({
   return (
     <MobileCollectionWrapper isEven={isEven} count={count} id={id}>
       <div className="bg-container">
-        <LazyLoadImage {...firstSetOfCollection.photos[1]} visibleByDefault />
+        <LazyLoadImage {...firstSetOfCollection.photos[favPhotoIndex]} visibleByDefault />
       </div>
 
       {/* <motion.div

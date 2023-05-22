@@ -7,17 +7,17 @@ type Props = { value: Record<string, any> };
 
 const ProductRow = ({ value }: Props) => {
   const ref = useRef(null);
-  const { scrollXProgress } = useScroll({ container: ref });
+  const { scrollXProgress } = useScroll({ container: ref }); 
 
   return (
     <ProductRowWrapper>
       <div className="product-row">
         <svg className="progress" width="50" height="50" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="35" pathLength="1" className="bg" />
+          <circle cx="50" cy="50" r="40" pathLength="1" className="bg" />
           <motion.circle
             cx="50"
             cy="50"
-            r="35"
+            r="40"
             pathLength="1"
             className="indicator"
             style={{ pathLength: scrollXProgress }}

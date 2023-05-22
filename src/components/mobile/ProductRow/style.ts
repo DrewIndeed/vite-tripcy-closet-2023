@@ -15,23 +15,27 @@ export const ProductRowWrapper = styled.section`
 
     .progress {
       position: absolute;
-      top: 0.8rem;
-      right: 0.6rem;
+      top: 14%;
+      right: 0.8rem;
       z-index: 50;
       transform: rotate(-90deg);
 
+      background-color: #8b8a8715;
+      backdrop-filter: blur(0.5rem);
+      border-radius: 50%;
+
       circle {
         stroke-dashoffset: 0;
-        stroke-width: 0.5rem;
+        stroke-width: 0.8rem;
         fill: none;
       }
 
       .bg {
-        stroke: #8b8a8750;
+        stroke: #c1b6a340;
       }
 
       .indicator {
-        stroke: #8b8a87;
+        stroke: #c1b6a3;
       }
     }
 
