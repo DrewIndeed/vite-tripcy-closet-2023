@@ -2,9 +2,10 @@ import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { useData } from "@hooks/useData";
 import { isObjEmpty } from "@utils";
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
-import ProductRow from "../ProductRow";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { CollectionDetailsWrapper } from "./style";
+
+const ProductRow = lazy(() => import("../ProductRow"));
 
 const CollectionDetails = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -124,7 +125,9 @@ const CollectionDetails = () => {
       {/* rows of product photos */}
       {Object.entries(currentCol?.allSets).map(([setName, value]) => {
         return (
-          <ProductRow key={setName} value={value as Record<string, any>} />
+          <Suspense fallback={<></>}>
+            <ProductRow key={setName} value={value as Record<string, any>} />
+          </Suspense>
         );
       })}
     </CollectionDetailsWrapper>
