@@ -12,6 +12,7 @@ export const ProductRowWrapper = styled.section`
     align-items: center;
 
     position: relative;
+    overflow-x: hidden;
 
     .progress {
       position: absolute;
