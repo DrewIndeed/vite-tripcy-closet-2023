@@ -47,7 +47,7 @@ export const ProductRowWrapper = styled.section`
     }
 
     .title {
-      width: 100%;
+      max-width: min-content;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -57,22 +57,16 @@ export const ProductRowWrapper = styled.section`
       transform-origin: bottom left;
 
       bottom: 18vh;
-      padding-inline: 2.5rem;
+      left: 3.5rem;
       @media ${devices.tablet} {
         bottom: 17vh;
-        padding-inline: 6rem;
+        left: 6rem;
       }
 
       .title-text {
-        flex: 2;
-        padding-left: 1rem;
-        /* text-align: center; */
-
         color: #fff;
+        white-space: pre-line;
         text-shadow: 0.5vw 0.5vw 0 #8b8a8760;
-        /* font-weight: bold; */
-        word-spacing: 100vw;
-        margin: auto;
 
         font-family: "Cochin Bold";
         font-weight: bold;
