@@ -1,13 +1,17 @@
-import { motion, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { ProductRowWrapper } from "./style";
 
 type Props = { value: Record<string, any> };
 
 const ProductRow = ({ value }: Props) => {
+  const [curScrollX, setCurScrollX] = useState(0);
   const ref = useRef(null);
-  const { scrollXProgress } = useScroll({ container: ref }); 
+  const { scrollXProgress, scrollX } = useScroll({ container: ref });
+  useMotionValueEvent(scrollX, "change", (latest) => {
+    setCurScrollX(latest);
+  });
 
   return (
     <ProductRowWrapper>
@@ -20,7 +24,9 @@ const ProductRow = ({ value }: Props) => {
             r="40"
             pathLength="1"
             className="indicator"
-            style={{ pathLength: scrollXProgress }}
+            style={{
+              pathLength: curScrollX >= 0 ? scrollXProgress : 0,
+            }}
           />
         </svg>
 
