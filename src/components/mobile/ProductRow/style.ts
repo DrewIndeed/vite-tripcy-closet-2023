@@ -41,7 +41,7 @@ export const ProductRowWrapper = styled.section`
       }
 
       .indicator {
-        stroke: #ffffff;
+        stroke: #8b8a8795;
       }
     }
 
@@ -53,18 +53,13 @@ export const ProductRowWrapper = styled.section`
 
       position: absolute;
       z-index: 50;
+      transform-origin: bottom left;
 
       bottom: 18vh;
       padding-inline: 2.5rem;
       @media ${devices.tablet} {
         bottom: 17vh;
         padding-inline: 6rem;
-      }
-
-      .lines {
-        flex: 1;
-        height: 3px;
-        background-color: ${(props) => props.theme.colors.typo2};
       }
 
       .title-text {
@@ -118,7 +113,6 @@ export const ProductRowWrapper = styled.section`
         }
 
         .swipe-more {
-          width: 100%;
           display: flex;
           align-items: center;
           justify-content: flex-end;
@@ -127,14 +121,12 @@ export const ProductRowWrapper = styled.section`
 
           position: absolute;
           z-index: 50;
-          left: 0;
-          right: 0;
 
           bottom: 18vh;
-          padding-inline: 3rem;
+          right: 3rem;
           @media ${devices.tablet} {
             bottom: 16vh;
-            padding-inline: 7rem;
+            right: 7rem;
           }
 
           .icon {

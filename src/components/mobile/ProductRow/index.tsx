@@ -16,7 +16,16 @@ const ProductRow = ({ value }: Props) => {
   return (
     <ProductRowWrapper>
       <div className="product-row">
-        <svg className="progress" width="40" height="40" viewBox="0 0 100 100">
+        <motion.svg
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="progress"
+          width="40"
+          height="40"
+          viewBox="0 0 100 100"
+        >
           <circle cx="50" cy="50" r="35" pathLength="1" className="bg" />
           <motion.circle
             cx="50"
@@ -28,13 +37,17 @@ const ProductRow = ({ value }: Props) => {
               pathLength: scrollXProgress,
             }}
           />
-        </svg>
+        </motion.svg>
 
-        <div className="title">
-          {/* <div className="lines" /> */}
+        <motion.div
+          initial={{ opacity: 0, y: -50, x: 50, rotate: 20 }}
+          whileInView={{ opacity: 1, y: 0, x: 0, rotate: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="title"
+        >
           <p className="title-text">{value.name}</p>
-          {/* <div className="lines" /> */}
-        </div>
+        </motion.div>
 
         <div className="scroll scrollbar-hide" ref={ref}>
           {value.photos.map((photo: Record<string, string>, idx: number) => (
