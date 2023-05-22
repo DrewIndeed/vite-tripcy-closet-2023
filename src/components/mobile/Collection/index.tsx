@@ -83,7 +83,7 @@ const MobileCollection = ({
         <motion.p
           initial={{ y: 50, opacity: 0, scaleY: 1.2 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           className="season"
         >
           __ {season}

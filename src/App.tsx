@@ -1,23 +1,24 @@
 import MobileBanner from "@components/mobile/Banner";
 import MobileCollection from "@components/mobile/Collection";
 import CollectionDetails from "@components/mobile/CollectionDetails";
+import Footer from "@components/mobile/Footer";
 import Banner from "@components/sections/Banner";
 import Collection from "@components/sections/Collection";
 import Intro from "@components/sections/Intro";
-import Products from "@components/sections/Products";
 
 import { collections, locoOptions } from "@constants/obj";
 import { useData } from "@hooks/useData";
 import useGlobalMedia from "@hooks/useGlobalMedia";
-import { AppMainContent, MobileMainContent } from "@styles/global";
-import "@styles/global.css";
-import { common as commonTheme } from "@styles/themes";
 import { isObjEmpty } from "@utils";
-import "locomotive-scroll/dist/locomotive-scroll.css";
 import { Suspense, lazy, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import MediaQuery from "react-responsive";
+
+import { AppMainContent, MobileMainContent } from "@styles/global";
+import "@styles/global.css";
+import { common as commonTheme } from "@styles/themes";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 import "react-tooltip/dist/react-tooltip.css";
 
 const MainNav = lazy(() => import("@components/common/MainNav"));
@@ -61,6 +62,8 @@ function App() {
           <MediaQuery maxWidth={1027}>
             {!isObjEmpty(currentCol) && <CollectionDetails />}
           </MediaQuery>
+
+          <Footer />
         </MobileMainContent>
       )}
 

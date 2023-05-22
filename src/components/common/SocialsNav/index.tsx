@@ -1,12 +1,10 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import useGlobalMedia from "@hooks/useGlobalMedia";
 import anime from "animejs";
 import { useEffect } from "react";
 import { SocialIcon } from "react-social-icons";
 import { SocialsNavWrapper } from "./style";
 
 const SocialsNav = () => {
-  const { MediaWrappers } = useGlobalMedia();
   useEffect(() => {
     const animSocialsNav = () => {
       anime({
