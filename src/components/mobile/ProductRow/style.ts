@@ -118,15 +118,16 @@ export const ProductRowWrapper = styled.section`
           justify-content: flex-end;
           gap: 0.2rem;
           color: #fff;
+          text-shadow: 0.5vw 0.5vw 0 #8b8a8760;
 
           position: absolute;
           z-index: 50;
 
-          bottom: 18vh;
-          right: 3rem;
+          top: 6vh;
+          left: 3.2rem;
           @media ${devices.tablet} {
-            bottom: 16vh;
-            right: 7rem;
+            top: 5vh;
+            left: 7.2rem;
           }
 
           .icon {

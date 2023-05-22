@@ -98,6 +98,16 @@ const CollectionDetails = () => {
         <ArrowLeftIcon className="menu-close-icon" />
       </motion.div>
 
+      {/* back button */}
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="collection-name"
+      >
+        {currentCol.name}
+      </motion.div>
+
       {/* vertical page dots */}
       <div className="page-dots">
         {Object.keys(currentCol?.allSets).map((_, dotIdx) => {

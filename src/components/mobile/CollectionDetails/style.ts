@@ -43,6 +43,18 @@ export const CollectionDetailsWrapper = styled(motion.section)`
     }
   }
 
+  .collection-name {
+    color: ${(props) => props.theme.colors.out3};
+    font-size: 1.75em;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1.2rem;
+    left: 5rem;
+    z-index: 100;
+  }
+
   .page-dots {
     color: ${(props) => props.theme.colors.out3};
     position: fixed;
