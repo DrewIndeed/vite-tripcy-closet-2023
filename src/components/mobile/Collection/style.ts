@@ -48,11 +48,11 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
       height: -webkit-fill-available;
       height: 100vh;
       object-fit: cover;
+      filter: brightness(0.92);
 
       @media screen and (min-width: 1024px) and (max-width: 1207px) {
         object-fit: scale-down;
       }
-      filter: brightness(0.95);
     }
   }
 

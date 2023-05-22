@@ -1,3 +1,7 @@
+import {
+  ChevronDoubleLeftIcon,
+  ChevronDoubleRightIcon,
+} from "@heroicons/react/24/solid";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -36,12 +40,24 @@ const ProductRow = ({ value }: Props) => {
           {value.photos.map((photo: Record<string, string>, idx: number) => (
             <motion.div
               className="product-card"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
+              initial={{ opacity: 0, filter: "grayscale(1)" }}
+              whileInView={{ opacity: 1, filter: "grayscale(0)" }}
+              transition={{ duration: 1.2 }}
               viewport={{ once: true }}
               key={"product-card-" + idx}
             >
+              {idx !== value.photos.length - 1 && (
+                <div className="swipe-more">
+                  <ChevronDoubleLeftIcon className="icon" />
+                  <p className="text">Swipe</p>
+                </div>
+              )}
+              {idx === value.photos.length - 1 && (
+                <div className="swipe-more">
+                  <p className="text">Back</p>
+                  <ChevronDoubleRightIcon className="icon" />
+                </div>
+              )}
               <div className="img-container">
                 <LazyLoadImage
                   placeholderSrc={photo.src}

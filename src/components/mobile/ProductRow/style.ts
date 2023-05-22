@@ -101,7 +101,6 @@ export const ProductRowWrapper = styled.section`
       scroll-snap-type: x mandatory;
       display: flex;
       margin-top: auto;
-      position: relative;
 
       .product-card {
         scroll-snap-align: start;
@@ -112,9 +111,47 @@ export const ProductRowWrapper = styled.section`
         padding-inline: 2.5rem;
         padding-top: 2rem;
         padding-bottom: 6rem;
+        position: relative;
 
         @media ${devices.tablet} {
           padding-inline: 6rem;
+        }
+
+        .swipe-more {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 0.2rem;
+          color: #fff;
+
+          position: absolute;
+          z-index: 50;
+          left: 0;
+          right: 0;
+
+          bottom: 18vh;
+          padding-inline: 3rem;
+          @media ${devices.tablet} {
+            bottom: 16vh;
+            padding-inline: 7rem;
+          }
+
+          .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            @media ${devices.tablet} {
+              width: 2.5rem;
+              height: 2.5rem;
+            }
+          }
+
+          .text {
+            font-size: 1.25em;
+            @media ${devices.tablet} {
+              font-size: 2em;
+            }
+          }
         }
 
         .img-container {
