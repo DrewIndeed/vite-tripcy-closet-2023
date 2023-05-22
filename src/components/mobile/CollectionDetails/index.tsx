@@ -40,7 +40,7 @@ const CollectionDetails = () => {
 
     // calculate progress of snap scroll
     const handleScroll = () => {
-      const sh = collectionVerticalScroll?.scrollHeight as number;
+      // const sh = collectionVerticalScroll?.scrollHeight as number;
       const st = Math.floor(collectionVerticalScroll?.scrollTop as number);
       const ch = collectionVerticalScroll?.clientHeight as number;
 
