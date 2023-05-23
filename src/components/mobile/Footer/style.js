@@ -46,6 +46,7 @@ export const FooterWrapper = styled.footer`
           cursor: pointer;
           font-size: 1.1em;
           color: ${(props) => props.theme.colors.bg2};
+          text-underline-offset: 2vh;
           transition: all 0.4s ease-in-out;
           @media ${devices.tablet} {
             font-size: 2em;
