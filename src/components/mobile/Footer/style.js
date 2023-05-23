@@ -46,7 +46,6 @@ export const FooterWrapper = styled.footer`
           cursor: pointer;
           font-size: 1.1em;
           color: ${(props) => props.theme.colors.bg2};
-          text-underline-offset: 2vh;
           transition: all 0.4s ease-in-out;
           @media ${devices.tablet} {
             font-size: 2em;
@@ -55,10 +54,7 @@ export const FooterWrapper = styled.footer`
             font-size: 1.5em;
           }
           :hover {
-            text-decoration: underline;
-            text-underline-offset: 2vh;
-            text-decoration-style: wavy;
-            margin-block: 2vh;
+            margin-left: 2vh;
           }
         }
       }

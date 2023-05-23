@@ -1,6 +1,7 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import { SocialIcon } from "react-social-icons";
 import { FooterWrapper } from "./style";
+import { motion } from "framer-motion";
 
 const FOOTER_SECTIONS = [
   {
@@ -66,13 +67,19 @@ const Footer = () => {
     <FooterWrapper>
       {/* footer sections */}
       <section id="content">
-        {FOOTER_SECTIONS.map((section: Record<string, any>) => {
+        {FOOTER_SECTIONS.map((section: Record<string, any>, idx: number) => {
           return (
-            <div key={section.id} id={section.id}>
+            <motion.div
+              initial={{ opacity: 0, x: -150 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.2 + (0.05 * idx + 1) }}
+              key={section.id}
+              id={section.id}
+            >
               <p className="title">{section.title}</p>
               <div className="divider" />
               {section.contentRender()}
-            </div>
+            </motion.div>
           );
         })}
       </section>
