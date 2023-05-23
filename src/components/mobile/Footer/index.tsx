@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="divider" />
           <div className="content">
             <p>Delivery Service</p>
-            <p>Replace & Return</p>
+            <p>Exchange & Return</p>
           </div>
         </div>
 
@@ -21,33 +21,44 @@ const Footer = () => {
           <p className="title">Contact Us</p>
           <div className="divider" />
           <div className="socials">
-            <a
-              className="icon-wrapper"
-              aria-label="Envelope icon wrapper"
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=tripcycloset@gmail.com"
-              target="_blank"
-            >
+            <div className="contact-row">
+              {/* <div className="icon-wrapper" aria-label="Envelope icon wrapper"> */}
               <EnvelopeIcon className="icons" />
-            </a>
-            <a
-              className="icon-wrapper"
-              aria-label="Telephone icon wrapper"
-              target="_blank"
-              href="tel:+84383430553"
-            >
+              {/* </div> */}
+              <p>tripcycloset@gmail.com</p>
+            </div>
+
+            <div className="contact-row">
+              {/* <div className="icon-wrapper" aria-label="Telephone icon wrapper"> */}
               <PhoneIcon className="icons" />
-            </a>
-            <div className="icon-wrapper" aria-label="Instagram icon wrapper">
-              <SocialIcon
-                url="https://www.instagram.com/tripcycloset/"
-                target="_blank"
-                id="insta-icon"
-                network="instagram"
-                label="Tripcy Closet's Instagram"
-                fgColor="#ffffff"
-                bgColor="#ffffff00"
-                style={{ borderRadius: "50%" }}
-              />
+              {/* </div> */}
+              <p>+84 38-343-0553</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Follow Us */}
+        <div id="contact-us">
+          <p className="title">Follow Us</p>
+          <div className="divider" />
+          <div className="socials">
+            <div className="contact-row">
+              <div
+                className="icon-wrapper pointer"
+                aria-label="Instagram icon wrapper"
+              >
+                <SocialIcon
+                  url="https://www.instagram.com/tripcycloset/"
+                  target="_blank"
+                  id="insta-icon"
+                  network="instagram"
+                  label="Tripcy Closet's Instagram"
+                  fgColor="#ffffff"
+                  bgColor="#ffffff00"
+                  style={{ borderRadius: "50%" }}
+                />
+              </div>
+              <p>@tripcycloset</p>
             </div>
           </div>
         </div>

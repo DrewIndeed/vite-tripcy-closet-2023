@@ -63,6 +63,7 @@ function App() {
             {!isObjEmpty(currentCol) && <CollectionDetails />}
           </MediaQuery>
 
+          <div id="contacts" />
           <Footer />
         </MobileMainContent>
       )}

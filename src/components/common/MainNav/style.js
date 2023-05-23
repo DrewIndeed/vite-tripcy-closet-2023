@@ -50,7 +50,7 @@ export const MainNavWrapper = styled.div`
       .menu-open-icon {
         width: 3.4rem;
         height: 3.4rem;
-        color: ${(props) => props.theme.colors.out3};
+        color: ${(props) => props.theme.colors.typo1};
       }
     }
 

@@ -10,10 +10,18 @@ export const FooterWrapper = styled.footer`
   flex-direction: column;
   justify-content: center;
   scroll-snap-align: start;
-  background-color: ${(props) => props.theme.colors.out3};
+  background-color: ${(props) => props.theme.colors.out2};
 
   section {
     width: 100%;
+  }
+
+  .pointer {
+    cursor: pointer;
+
+    :hover {
+      background-color: ${(props) => props.theme.colors.bg2};
+    }
   }
 
   #content {
@@ -40,6 +48,7 @@ export const FooterWrapper = styled.footer`
         flex-direction: column;
 
         p {
+          cursor: pointer;
           font-size: 1.1em;
           color: ${(props) => props.theme.colors.bg2};
           @media ${devices.tablet} {
@@ -58,11 +67,24 @@ export const FooterWrapper = styled.footer`
       .socials {
         gap: 1rem;
         display: flex;
-        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .contact-row {
+          display: flex;
+          gap: 0.75rem;
+          p {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 1.1em;
+            color: ${(props) => props.theme.colors.bg2};
+          }
+        }
 
         .icon-wrapper {
-          width: 3rem;
-          height: 3rem;
+          width: 2.5rem;
+          height: 2.5rem;
           @media ${devices.tablet} {
             width: 6rem;
             height: 6rem;
@@ -72,13 +94,12 @@ export const FooterWrapper = styled.footer`
           justify-content: center;
           align-items: center;
 
-          cursor: pointer;
           border-radius: 50%;
           background-color: #332f2a60;
 
-          :hover {
+          /* :hover {
             background-color: ${(props) => props.theme.colors.out2};
-          }
+          } */
         }
 
         #insta-icon,
@@ -96,8 +117,8 @@ export const FooterWrapper = styled.footer`
         }
 
         .icons {
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 1.25rem;
+          height: 1.25rem;
           color: ${(props) => props.theme.colors.bg2};
           @media ${devices.tablet} {
             width: 2.5rem;
