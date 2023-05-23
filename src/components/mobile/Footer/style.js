@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { devices } from "@styles/themes";
+import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
   width: 100%;
@@ -14,14 +14,6 @@ export const FooterWrapper = styled.footer`
 
   section {
     width: 100%;
-  }
-
-  .pointer {
-    cursor: pointer;
-
-    :hover {
-      background-color: ${(props) => props.theme.colors.bg2};
-    }
   }
 
   #content {
@@ -58,7 +50,8 @@ export const FooterWrapper = styled.footer`
       }
     }
 
-    #contact-us {
+    #contact-us,
+    #follow-us {
       width: 100%;
       display: flex;
       justify-content: center;
@@ -72,8 +65,14 @@ export const FooterWrapper = styled.footer`
 
         .contact-row {
           display: flex;
+          align-items: center;
           gap: 0.75rem;
+
           p {
+            user-select: all;
+            --webkit-user-select: all;
+            --moz-user-select: all;
+            --ms-user-select: all;
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -97,9 +96,9 @@ export const FooterWrapper = styled.footer`
           border-radius: 50%;
           background-color: #332f2a60;
 
-          /* :hover {
-            background-color: ${(props) => props.theme.colors.out2};
-          } */
+          :hover {
+            background-color: ${(props) => props.theme.colors.typo1};
+          }
         }
 
         #insta-icon,
