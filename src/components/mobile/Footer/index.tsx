@@ -44,7 +44,7 @@ const FOOTER_SECTIONS = [
           <div className="contact-row">
             <div className="icon-wrapper pointer">
               <SocialIcon
-                url="https://www.instagram.com/tripcycloset/"
+                url="https://www.instagram.com/_u/tripcycloset/"
                 target="_blank"
                 id="insta-icon"
                 network="instagram"
