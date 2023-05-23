@@ -23,14 +23,14 @@ export const navItemsData = [
     imgSizes: "",
     imgSrcSet: "",
   },
-  {
-    text: "Best Sellers.",
-    isOpen: false,
-    href: "",
-    imgSrc: "/imgs/samples/sample5.jpg",
-    imgSizes: "",
-    imgSrcSet: "",
-  },
+  // {
+  //   text: "Best Sellers.",
+  //   isOpen: false,
+  //   href: "",
+  //   imgSrc: "/imgs/samples/sample5.jpg",
+  //   imgSizes: "",
+  //   imgSrcSet: "",
+  // },
 ];
 
 export const productCardsData = [

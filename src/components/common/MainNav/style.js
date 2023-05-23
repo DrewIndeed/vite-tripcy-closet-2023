@@ -43,6 +43,12 @@ export const MainNavWrapper = styled.div`
       border: 1px solid #332f2a00;
       margin-left: 1rem;
 
+      @media ${devices.tablet} {
+        margin-top: 1rem;
+        width: 4.4rem;
+        height: 4.4rem;
+      }
+
       :hover {
         border: 1px solid #332f2a90;
       }
@@ -51,6 +57,10 @@ export const MainNavWrapper = styled.div`
         width: 3.4rem;
         height: 3.4rem;
         color: ${(props) => props.theme.colors.typo1};
+        @media ${devices.tablet} {
+          width: 4.4rem;
+          height: 4.4rem;
+        }
       }
     }
 
@@ -90,6 +100,10 @@ export const MainNavWrapper = styled.div`
         .menu-close-icon {
           width: 2.5rem;
           height: 2.5rem;
+          @media ${devices.tablet} {
+            width: 3.5rem;
+            height: 3.5rem;
+          }
         }
       }
 

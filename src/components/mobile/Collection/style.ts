@@ -13,7 +13,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: ${(props) => props.theme.colors.out2};
+  background-color: ${(props) => props.theme.colors.typo3};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -158,6 +158,13 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     margin-top: auto;
     margin-bottom: 7rem;
     z-index: 40;
+
+    @media ${devices.tablet} {
+      transform: scale(1.4);
+    }
+    @media ${devices.laptop} {
+      transform: scale(1);
+    }
 
     .arrow-button {
       display: flex;

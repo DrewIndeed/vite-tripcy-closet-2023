@@ -26,6 +26,9 @@ export const FooterWrapper = styled.footer`
     @media ${devices.tablet} {
       padding: 4rem;
     }
+    @media ${devices.laptop} {
+      padding: 6rem;
+    }
 
     #legal {
       width: 100%;
@@ -45,6 +48,9 @@ export const FooterWrapper = styled.footer`
           color: ${(props) => props.theme.colors.bg2};
           @media ${devices.tablet} {
             font-size: 2em;
+          }
+          @media ${devices.laptop} {
+            font-size: 1.5em;
           }
         }
       }
@@ -67,6 +73,12 @@ export const FooterWrapper = styled.footer`
           display: flex;
           align-items: center;
           gap: 0.75rem;
+          @media ${devices.tablet} {
+            gap: 2rem;
+          }
+          @media ${devices.laptop} {
+            gap: 1.5rem;
+          }
 
           p {
             user-select: all;
@@ -78,6 +90,12 @@ export const FooterWrapper = styled.footer`
             flex-direction: column;
             font-size: 1.1em;
             color: ${(props) => props.theme.colors.bg2};
+            @media ${devices.tablet} {
+              font-size: 2em;
+            }
+            @media ${devices.laptop} {
+              font-size: 1.5em;
+            }
           }
         }
 
@@ -87,6 +105,10 @@ export const FooterWrapper = styled.footer`
           @media ${devices.tablet} {
             width: 6rem;
             height: 6rem;
+          }
+          @media ${devices.laptop} {
+            width: 4rem;
+            height: 4rem;
           }
 
           display: flex;
@@ -110,8 +132,10 @@ export const FooterWrapper = styled.footer`
           width: 1.5rem;
           height: 1.5rem;
           @media ${devices.tablet} {
-            width: 2.5rem;
-            height: 2.5rem;
+            transform: scale(1.7);
+          }
+          @media ${devices.laptop} {
+            transform: scale(1.2);
           }
         }
 
@@ -122,6 +146,10 @@ export const FooterWrapper = styled.footer`
           @media ${devices.tablet} {
             width: 2.5rem;
             height: 2.5rem;
+          }
+          @media ${devices.laptop} {
+            width: 1.75rem;
+            height: 1.75rem;
           }
         }
       }
@@ -134,6 +162,9 @@ export const FooterWrapper = styled.footer`
 
       @media ${devices.tablet} {
         font-size: 3em;
+      }
+      @media ${devices.laptop} {
+        font-size: 1.75em;
       }
     }
 
