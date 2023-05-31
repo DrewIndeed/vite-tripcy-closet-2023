@@ -55,7 +55,7 @@ const ProductRow = ({ value }: Props) => {
               className="product-card"
               initial={{ opacity: 0, filter: "grayscale(1)" }}
               whileInView={{ opacity: 1, filter: "grayscale(0)" }}
-              transition={{ duration: 1.2 }}
+              transition={{ duration: 0.75 }}
               viewport={{ once: true }}
               key={"product-card-" + idx}
             >

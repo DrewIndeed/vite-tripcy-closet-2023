@@ -212,12 +212,12 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     .arrow-button:hover > .arrow {
       transform: rotate(-45deg) translate(4px, 4px);
       border-color: #fff;
-      margin-left: 1.3rem;
+      margin-left: 0.75rem;
     }
 
     .arrow-button:hover > .arrow::before {
       opacity: 1;
-      width: 1.3em;
+      width: 0.75em;
     }
 
     /* .arrow-button:hover {
