@@ -191,7 +191,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
       position: relative;
       transform: rotate(-45deg);
       margin: 0 0.5rem;
-      transition: all 0.2s ease;
+      transition: all 0.3s ease;
     }
 
     .arrow-button > .arrow::before {
@@ -204,7 +204,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
       opacity: 0;
       bottom: calc(-2px / 2);
       transform: rotate(45deg);
-      transition: all 0.1s ease;
+      transition: all 0.15s ease;
       content: "";
       right: 0;
     }

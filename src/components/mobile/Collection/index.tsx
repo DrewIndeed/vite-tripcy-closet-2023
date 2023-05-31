@@ -38,7 +38,10 @@ const MobileCollection = ({
   const { getCollectionDataById } = useData();
 
   // methods
-  const handleClick = () => getCollectionDataById(id);
+  const handleClick = () =>
+    setTimeout(() => {
+      getCollectionDataById(id);
+    }, 500);
 
   if (!isActive) return <></>;
   return (

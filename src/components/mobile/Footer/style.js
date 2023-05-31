@@ -54,7 +54,7 @@ export const FooterWrapper = styled.footer`
             font-size: 1.5em;
           }
           :hover {
-            margin-left: 2vh;
+            margin-left: 1vh;
           }
         }
       }

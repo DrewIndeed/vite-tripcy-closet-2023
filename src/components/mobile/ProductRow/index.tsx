@@ -19,7 +19,7 @@ const ProductRow = ({ value }: Props) => {
         <motion.svg
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: true }}
           className="progress"
           width="40"
@@ -42,7 +42,7 @@ const ProductRow = ({ value }: Props) => {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: true }}
           className="title"
         >
