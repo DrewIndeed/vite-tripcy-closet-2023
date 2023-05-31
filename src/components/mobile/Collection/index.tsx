@@ -1,6 +1,7 @@
 import { useData } from "@hooks/useData";
 import useGlobalMedia from "@hooks/useGlobalMedia";
 import { motion } from "framer-motion";
+import throttle from "lodash.throttle";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Tooltip } from "react-tooltip";
 import { MobileCollectionWrapper } from "./style";
@@ -38,10 +39,13 @@ const MobileCollection = ({
   const { getCollectionDataById } = useData();
 
   // methods
-  const handleClick = () =>
-    setTimeout(() => {
+  const handleClick = throttle(
+    () => {
       getCollectionDataById(id);
-    }, 500);
+    },
+    600,
+    { trailing: true }
+  );
 
   if (!isActive) return <></>;
   return (
