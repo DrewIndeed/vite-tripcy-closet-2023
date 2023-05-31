@@ -1,8 +1,9 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import { SocialIcon } from "react-social-icons";
-import { FooterWrapper } from "./style";
+import { getOS } from "@utils";
 import { motion } from "framer-motion";
 import { useCallback } from "react";
+import { SocialIcon } from "react-social-icons";
+import { FooterWrapper } from "./style";
 
 const FOOTER_SECTIONS = [
   {
@@ -40,7 +41,8 @@ const FOOTER_SECTIONS = [
     id: "follow-us",
     title: "Follow Us",
     contentRender: () => {
-      const getOS = useCallback((): string => getOS(), []);
+      const getOSString = useCallback(getOS, []);
+      console.log(getOSString());
       return (
         <div className="socials">
           <div className="contact-row">
@@ -59,7 +61,7 @@ const FOOTER_SECTIONS = [
             <div className="icon-wrapper pointer">
               <SocialIcon
                 url={
-                  getOS() === "iOS"
+                  getOSString() === "iOS"
                     ? "fb://profile/110148568698120"
                     : "fb://page/110148568698120"
                 }
