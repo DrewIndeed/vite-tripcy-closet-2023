@@ -59,7 +59,7 @@ const DEFAULT_IMG_OPTIONS = {
   gif: {},
   webp: {
     // https://sharp.pixelplumbing.com/api-output#webp
-    quality: 25,
+    quality: 80,
   },
   avif: {
     // https://sharp.pixelplumbing.com/api-output#avif
