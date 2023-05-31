@@ -52,7 +52,7 @@ const Intro = (props: Props) => {
     anime({
       targets: ".header .letter",
       opacity: [0, 1],
-      translateY: [50, 0],
+      translateY: [40, 0],
       translateZ: 0,
       easing: "easeOutExpo",
       duration: 2000,

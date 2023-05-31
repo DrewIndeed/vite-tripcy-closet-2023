@@ -70,8 +70,8 @@ const Footer = () => {
         {FOOTER_SECTIONS.map((section: Record<string, any>, idx: number) => {
           return (
             <motion.div
-              initial={{ opacity: 0, x: -150 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ duration: 0.2 + (0.05 * idx + 1) }}
               key={section.id}
               id={section.id}

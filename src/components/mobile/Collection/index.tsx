@@ -44,7 +44,10 @@ const MobileCollection = ({
   return (
     <MobileCollectionWrapper isEven={isEven} count={count} id={id}>
       <div className="bg-container">
-        <LazyLoadImage {...firstSetOfCollection.photos[favPhotoIndex]} visibleByDefault />
+        <LazyLoadImage
+          {...firstSetOfCollection.photos[favPhotoIndex]}
+          visibleByDefault
+        />
       </div>
 
       {/* <motion.div
@@ -64,26 +67,29 @@ const MobileCollection = ({
       <div className="text-content">
         {isNew && (
           <motion.p
-            initial={{ y: 50, opacity: 0, scaleY: 1.2 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ opacity: 0, scaleY: 1.2 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: true }}
             className="new-status"
           >
             Brand New
           </motion.p>
         )}
         <motion.p
-          initial={{ y: 50, opacity: 0, scaleY: 1.2 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ opacity: 0, scaleY: 1.2 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: true }}
           className="title"
         >
           {name}
         </motion.p>
         <motion.p
-          initial={{ y: 50, opacity: 0, scaleY: 1.2 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={{ opacity: 0, scaleY: 1.2 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
+          viewport={{ once: true }}
           className="season"
         >
           __ {season}

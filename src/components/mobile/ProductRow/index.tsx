@@ -17,8 +17,8 @@ const ProductRow = ({ value }: Props) => {
     <ProductRowWrapper>
       <div className="product-row">
         <motion.svg
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
           viewport={{ once: true }}
           className="progress"
@@ -40,8 +40,8 @@ const ProductRow = ({ value }: Props) => {
         </motion.svg>
 
         <motion.div
-          initial={{ opacity: 0, y: -50, x: 50, rotate: 20 }}
-          whileInView={{ opacity: 1, y: 0, x: 0, rotate: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
           viewport={{ once: true }}
           className="title"
