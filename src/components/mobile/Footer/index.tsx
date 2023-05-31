@@ -42,7 +42,6 @@ const FOOTER_SECTIONS = [
     title: "Follow Us",
     contentRender: () => {
       const getOSString = useCallback(getOS, []);
-      console.log(getOSString());
       return (
         <div className="socials">
           <div className="contact-row">

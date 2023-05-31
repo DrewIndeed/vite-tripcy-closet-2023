@@ -1,3 +1,4 @@
+import { nodeResolve } from "@rollup/plugin-node-resolve";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
@@ -86,8 +87,12 @@ export default defineConfig({
   preview: {
     port: 8888,
   },
+  build: {
+    chunkSizeWarningLimit: 600,
+  },
   plugins: [
     react(),
+    nodeResolve(),
     chunkSplitPlugin(),
     viteCompression({ algorithm: "gzip" }),
     ViteImageOptimizer({
