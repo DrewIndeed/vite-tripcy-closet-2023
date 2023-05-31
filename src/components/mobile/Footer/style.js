@@ -68,7 +68,7 @@ export const FooterWrapper = styled.footer`
       flex-direction: column;
 
       .socials {
-        gap: 1rem;
+        gap: 0.5rem;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -107,8 +107,8 @@ export const FooterWrapper = styled.footer`
           width: 2.5rem;
           height: 2.5rem;
           @media ${devices.tablet} {
-            width: 6rem;
-            height: 6rem;
+            width: 5rem;
+            height: 5rem;
           }
           @media ${devices.laptop} {
             width: 4rem;
@@ -128,11 +128,13 @@ export const FooterWrapper = styled.footer`
         }
 
         #insta-icon,
+        #facebook-icon,
         .icon-wrapper {
           transition: all 0.4s ease-in-out;
         }
 
-        #insta-icon {
+        #insta-icon,
+        #facebook-icon {
           width: 1.5rem;
           height: 1.5rem;
           @media ${devices.tablet} {
@@ -165,7 +167,7 @@ export const FooterWrapper = styled.footer`
       color: ${(props) => props.theme.colors.bg2};
 
       @media ${devices.tablet} {
-        font-size: 3em;
+        font-size: 2em;
       }
       @media ${devices.laptop} {
         font-size: 1.75em;
@@ -175,19 +177,20 @@ export const FooterWrapper = styled.footer`
     .divider {
       width: 5rem;
       height: 0.2rem;
-      margin-block: 1.25rem;
+      margin-block: 0.75rem;
       background-color: ${(props) => props.theme.colors.bg2};
 
       @media ${devices.tablet} {
         width: 12rem;
         height: 0.4rem;
+        margin-block: 1.75rem;
       }
     }
   }
 
   #copyright {
     display: flex;
-    font-size: 1em;
+    font-size: 0.75em;
     padding: 0.5rem 0;
     /* font-style: italic; */
     align-items: center;

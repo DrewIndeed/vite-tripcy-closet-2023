@@ -54,7 +54,19 @@ const FOOTER_SECTIONS = [
                 style={{ borderRadius: "50%" }}
               />
             </div>
-            <p>@tripcycloset</p>
+            <div className="icon-wrapper pointer">
+              <SocialIcon
+                url="fb://page/tripcycloset"
+                target="_blank"
+                id="facebook-icon"
+                network="facebook"
+                label="Tripcy Closet's Facebook"
+                fgColor="#ffffff"
+                bgColor="#ffffff00"
+                style={{ borderRadius: "50%" }}
+              />
+            </div>
+            {/* <p>@tripcycloset</p> */}
           </div>
         </div>
       );

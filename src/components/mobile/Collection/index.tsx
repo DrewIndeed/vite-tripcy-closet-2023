@@ -77,7 +77,7 @@ const MobileCollection = ({
             initial={{ opacity: 0, scaleY: 1.2 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: true }}
+            // viewport={{ once: true }}
             className="new-status"
           >
             Brand New
@@ -87,7 +87,7 @@ const MobileCollection = ({
           initial={{ opacity: 0, scaleY: 1.2 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           className="title"
         >
           {name}
@@ -96,7 +96,7 @@ const MobileCollection = ({
           initial={{ opacity: 0, scaleY: 1.2 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           className="season"
         >
           __ {season}
