@@ -109,5 +109,7 @@ export const EXCHANGE_RETURN_POLICIES = {
     "- If needed, please kindly contact TRIPCY directly through Instagram or Facebook messaging with your bill attched or order code (when delivered using services such as GHN, GHTK, ...), and your unboxing video in the first 24 hours receiving the products for earliest support.",
     "- Exchange or return duration will be expected to be within 3 days since TRIPCY receives your corresponding products.",
     "- In cases when you want to exchange for a different product, any additional fees will be included in your payment for any products with similar or higher prices.",
+    "- In cases when products have production errors or incorrect code, sizes, or colors, TRIPCY will charge no fees.",
   ],
+  fees: [],
 };

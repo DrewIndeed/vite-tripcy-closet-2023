@@ -204,6 +204,15 @@ const Footer = () => {
                   ))}
                 </div>
               )}
+
+              {viewerContent?.fees?.length > 0 && (
+                <div className="notice">
+                  <span>Fees:</span>
+                  {viewerContent.fees.map((fee: string) => (
+                    <p key={fee}>{fee}</p>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
