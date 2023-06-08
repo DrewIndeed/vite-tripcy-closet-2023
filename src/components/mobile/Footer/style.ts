@@ -231,8 +231,8 @@ export const PoliciesShow = styled(motion.div)<PoliciesShowType>`
 
     #close-policy-icon {
       color: #fff;
-      width: 2.75rem;
-      height: 2.75rem;
+      width: 2.25rem;
+      height: 2.25rem;
       margin: 1.25rem;
       position: absolute;
       right: 0;
