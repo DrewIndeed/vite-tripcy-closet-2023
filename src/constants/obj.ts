@@ -88,7 +88,7 @@ export const DELIVERY_POLICIES = {
   parts: [
     "TRIPCY provides nationwide delivery with duration and standard fees as follows:",
     "- Within Ho Chi Minh city: duration of 1-2 days with fixed fee at 25,000 VND",
-    "- Other regions: duration of 3-4 days with fees of 30,000 - 25,000 VND.",
+    "- Other regions: duration of 3-4 days with fees of 30,000 - 35,000 VND.",
   ],
   notices: [
     `- If requested, TRIPCY will support you to use delivery service providers such as Grab, Ahamove, etc. However, any additional fees from those platforms will be included in your payment.`,
