@@ -1,22 +1,49 @@
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import { DELIVERY_POLICIES, EXCHANGE_RETURN_POLICIES } from "@constants/obj";
+import { EnvelopeIcon, PhoneIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { getOS } from "@utils";
-import { motion } from "framer-motion";
-import { useCallback } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useCallback, useEffect, useState } from "react";
 import { SocialIcon } from "react-social-icons";
-import { FooterWrapper } from "./style";
+import { FooterWrapper, PoliciesShow } from "./style";
+
+const PolicyPicker = ({
+  setViewerContent,
+  onMenuOpen,
+}: {
+  setViewerContent: any;
+  onMenuOpen: any;
+}) => {
+  return (
+    <div className="content">
+      <p
+        onClick={() => {
+          setViewerContent(DELIVERY_POLICIES);
+          onMenuOpen();
+        }}
+      >
+        Delivery Service
+      </p>
+      <p
+        onClick={() => {
+          setViewerContent(EXCHANGE_RETURN_POLICIES);
+          onMenuOpen();
+        }}
+      >
+        Exchange & Return
+      </p>
+    </div>
+  );
+};
 
 const FOOTER_SECTIONS = [
   {
     id: "legal",
     title: "Policies",
-    contentRender: () => {
-      return (
-        <div className="content">
-          <p>Delivery Service</p>
-          <p>Exchange & Return</p>
-        </div>
-      );
-    },
+    contentRender: (
+      viewerContent: Record<string, string>,
+      setViewerContent: any,
+      onMenuOpen: any
+    ) => <PolicyPicker {...{ viewerContent, setViewerContent, onMenuOpen }} />,
   },
   {
     id: "contact-us",
@@ -82,6 +109,48 @@ const FOOTER_SECTIONS = [
 ];
 
 const Footer = () => {
+  const policiesViewControls = useAnimation();
+  const [viewerContent, setViewerContent] = useState<Record<string, any>>({});
+  const isOpen = Object.keys(viewerContent).length > 0;
+
+  const onMenuOpen = useCallback(() => {
+    if (!isOpen) {
+      policiesViewControls.start({
+        left: 0,
+        transition: {
+          duration: 0.2,
+        },
+      });
+      policiesViewControls.start({
+        opacity: [0, 1],
+        transition: {
+          duration: 0.4,
+          delay: 0.2,
+        },
+      });
+    }
+  }, [isOpen]);
+
+  const onMenuClose = useCallback(() => {
+    if (isOpen) {
+      {
+        policiesViewControls.start({
+          opacity: [1, 0],
+          transition: {
+            duration: 0.4,
+          },
+        });
+        policiesViewControls.start({
+          left: "-100%",
+          transition: {
+            duration: 0.2,
+            delay: 0.4,
+          },
+        });
+      }
+    }
+  }, [isOpen]);
+
   return (
     <FooterWrapper>
       {/* footer sections */}
@@ -97,11 +166,48 @@ const Footer = () => {
             >
               <p className="title">{section.title}</p>
               <div className="divider" />
-              {section.contentRender()}
+              {section.contentRender(
+                viewerContent,
+                setViewerContent,
+                onMenuOpen
+              )}
             </motion.div>
           );
         })}
       </section>
+
+      {/* policies display */}
+      <PoliciesShow
+        show={Object.keys(viewerContent).length > 0}
+        animate={policiesViewControls}
+      >
+        <div id="policy-wrapper">
+          <XMarkIcon
+            id="close-policy-icon"
+            onClick={() => {
+              setViewerContent({});
+              onMenuClose();
+            }}
+          />
+          <div id="policy-content">
+            <p id="title">{viewerContent.title}</p>
+            <div id="parts" className="scrollbar-none">
+              {viewerContent?.parts?.map((part: string) => (
+                <p key={part}>{part}</p>
+              ))}
+
+              {viewerContent?.notices?.length > 0 && (
+                <div className="notice">
+                  <span>Notice:</span>
+                  {viewerContent.notices.map((notice: string) => (
+                    <p key={notice}>{notice}</p>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </PoliciesShow>
 
       {/* Copyright at the very bottom */}
       <p id="copyright">

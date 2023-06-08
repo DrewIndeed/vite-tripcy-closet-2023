@@ -1,4 +1,5 @@
 import { devices } from "@styles/themes";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
@@ -199,6 +200,96 @@ export const FooterWrapper = styled.footer`
 
     @media ${devices.tablet} {
       font-size: 1.5em;
+    }
+  }
+`;
+
+type PoliciesShowType = {
+  show: boolean;
+};
+export const PoliciesShow = styled(motion.div)<PoliciesShowType>`
+  display: ${(p) => (p.show ? "block" : "none")};
+  opacity: 0;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100dvh;
+  z-index: 50;
+  background-color: #332f2a95;
+  backdrop-filter: blur(0.5rem) brightness(0.5);
+  overflow: hidden;
+  overscroll-behavior: none;
+
+  #policy-wrapper {
+    width: 100%;
+    height: 90dvh;
+    position: relative;
+
+    #close-policy-icon {
+      color: #fff;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin: 1.25rem;
+      position: absolute;
+      right: 0;
+      border-radius: 50%;
+
+      @media ${devices.tablet} {
+        width: 3.75rem;
+        height: 3.75rem;
+        margin: 1.5rem;
+      }
+    }
+
+    #policy-content {
+      width: 100%;
+      height: 100%;
+      color: #fff;
+
+      #title {
+        font-weight: bold;
+        font-size: 1.8em;
+        padding-top: 1.25rem;
+        padding-left: 2rem;
+
+        @media ${devices.tablet} {
+          font-size: 3em;
+          padding-top: 1rem;
+          padding-left: 4rem;
+        }
+      }
+
+      #parts {
+        height: 100%;
+        overflow-y: auto;
+        margin-top: 1rem;
+        padding-inline: 2rem;
+        padding-bottom: 3rem;
+
+        @media ${devices.tablet} {
+          padding-inline: 4rem;
+        }
+
+        p {
+          text-align: justify;
+          margin-bottom: 1rem;
+          @media ${devices.tablet} {
+            font-size: 1.75em;
+          }
+        }
+
+        .notice {
+          span {
+            font-weight: bold;
+            text-decoration: underline;
+            text-underline-offset: 0.2rem;
+          }
+        }
+      }
     }
   }
 `;

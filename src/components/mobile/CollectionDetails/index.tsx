@@ -31,7 +31,7 @@ const CollectionDetails = () => {
     }
   }, [currentCol]);
 
-  // track vertical scrolling progress
+  // track vertical scrolling progress`1`
   useEffect(() => {
     // target gallery from DOM
     const collectionVerticalScroll = document.querySelector(

@@ -82,3 +82,32 @@ export const collections = {
     },
   },
 };
+
+export const DELIVERY_POLICIES = {
+  title: "Delivery Service",
+  parts: [
+    "TRIPCY provides nationwide delivery with duration and standard fees as follows:",
+    "- Within Ho Chi Minh city: duration of 1-2 days with fixed fee at 25,000 VND",
+    "- Other regions: duration of 3-4 days with fees of 30,000 - 25,000 VND.",
+  ],
+  notices: [
+    `- If requested, TRIPCY will support you to use delivery service providers such as Grab, Ahamove, etc. However, any additional fees from those platforms will be included in your payment.`,
+  ],
+};
+
+export const EXCHANGE_RETURN_POLICIES = {
+  title: "Exchange & Return",
+  parts: [
+    "TRIPCY will accept your exchange or return for following cases:",
+    "- The products have production errors.",
+    "- The products are incorrectly delivered in terms of sizes, colors or desired sets.",
+    "- The products are available for changing sizes if requested.",
+    "- The products retent initial state as delivered, are fully tagged, are fully included with attachments if any, are not adjusted/fixed by any kind, with no abnormal smells, chemicals, or any signs of washing machine, ironing or being dressed.",
+  ],
+  notices: [
+    "- Please kindly spend a little of your time recording and thoroughly checking your products when reveived.",
+    "- If needed, please kindly contact TRIPCY directly through Instagram or Facebook messaging with your bill attched or order code (when delivered using services such as GHN, GHTK, ...), and your unboxing video in the first 24 hours receiving the products for earliest support.",
+    "- Exchange or return duration will be expected to be within 3 days since TRIPCY receives your corresponding products.",
+    "- In cases when you want to exchange for a different product, any additional fees will be included in your payment for any products with similar or higher prices.",
+  ],
+};
