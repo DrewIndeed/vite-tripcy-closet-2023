@@ -275,10 +275,16 @@ export const PoliciesShow = styled(motion.div)<PoliciesShowType>`
         }
 
         p {
+          line-height: 1.25rem;
+          /* background-color: cyan; */
           text-align: justify;
           margin-bottom: 1rem;
           @media ${devices.tablet} {
             font-size: 1.75em;
+            line-height: 2rem;
+          }
+          @media ${devices.laptop} {
+            line-height: 2.25rem;
           }
         }
 
@@ -287,6 +293,11 @@ export const PoliciesShow = styled(motion.div)<PoliciesShowType>`
             font-weight: bold;
             text-decoration: underline;
             text-underline-offset: 0.2rem;
+
+            font-size: 1rem;
+            @media ${devices.tablet} {
+              font-size: 1.75rem;
+            }
           }
         }
       }

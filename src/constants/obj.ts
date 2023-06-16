@@ -44,7 +44,7 @@ export const collections = {
     make you feel confident, and empowered, and make you know that the most gorgeous 
     flower here is yourself. Whether you're dressing up for a special occasion or just
      running errands, our pieces are versatile enough to be worn in any setting`,
-    season: "2023 spring/summer",
+    season: "S23 spring summer",
     isActive: true,
     isNew: true,
     favPhotoIndex: 1,

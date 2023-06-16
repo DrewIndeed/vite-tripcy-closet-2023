@@ -105,18 +105,18 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     .new-status {
       font-size: 1.2em;
       font-style: italic;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       padding-left: 0.5rem;
-      text-decoration: underline;
+      /* text-decoration: underline;
       text-underline-offset: 0.5rem;
-      text-decoration-style: wavy;
+      text-decoration-style: wavy; */
 
       @media ${devices.tablet} {
         font-size: 2.5em;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
       }
       @media ${devices.laptop} {
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
         font-size: 2.5em;
       }
     }
