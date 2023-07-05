@@ -85,7 +85,7 @@ export const ProductRowWrapper = styled.section`
     .scroll {
       padding-top: 1rem;
       width: 100%;
-      height: 90dvh;
+      height: 90vh;
       /* border: 2px solid #000; */
       overflow-x: auto;
       scroll-snap-type: x mandatory;
@@ -99,8 +99,8 @@ export const ProductRowWrapper = styled.section`
         height: 100%;
         /* border: 2px solid green; */
         padding-inline: 2.5rem;
-        padding-top: 1rem;
-        padding-bottom: 8rem;
+        padding-top: 2rem;
+        padding-bottom: 6rem;
         position: relative;
 
         @media ${devices.tablet} {
