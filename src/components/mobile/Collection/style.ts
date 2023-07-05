@@ -12,7 +12,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
   scroll-snap-align: start;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background-color: ${(props) => props.theme.colors.typo3};
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     flex-shrink: 0;
     width: 100%;
     height: -webkit-fill-available;
-    height: 100vh;
+    height: 100dvh;
     position: absolute;
     top: 0;
     left: 0;
@@ -46,7 +46,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
     img {
       width: 100%;
       height: -webkit-fill-available;
-      height: 100vh;
+      height: 100dvh;
       object-fit: cover;
       filter: brightness(0.92);
 

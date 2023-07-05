@@ -3,7 +3,7 @@ import { devices } from "@styles/themes";
 
 export const ProductsWrapper = styled.section`
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: ${(props) => `${props.theme.colors.out2}`};
 
   display: flex;
@@ -57,7 +57,7 @@ export const ProductsWrapper = styled.section`
     color: white; */
     /* padding: 1rem; */
     flex: 1;
-    height: 100vh;
+    height: 100dvh;
     position: relative;
     overflow: hidden;
 

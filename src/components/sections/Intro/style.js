@@ -11,7 +11,7 @@ export const IntroWrapper = styled.div`
   will-change: transform;
 
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   position: fixed;
   top: 0;
   overflow: hidden;

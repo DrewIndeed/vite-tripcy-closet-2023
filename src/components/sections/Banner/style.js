@@ -3,7 +3,7 @@ import { devices } from "@styles/themes";
 
 export const BannerWrapper = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@ export const BannerWrapper = styled.section`
 
   .brandname {
     width: 12vw;
-    height: 100vh;
+    height: 100dvh;
     right: 0;
     position: absolute;
     z-index: 30;

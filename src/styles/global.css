@@ -46,7 +46,7 @@ body {
 }
 
 body {
-  height: 100vh;
+  height: 100dvh;
   height: -webkit-fill-available;
   display: flex;
   flex-direction: column;

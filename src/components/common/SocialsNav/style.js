@@ -4,7 +4,7 @@ export const SocialsNavWrapper = styled.div`
   left: 0;
   position: absolute;
   z-index: 30;
-  height: 100vh;
+  height: 100dvh;
   width: 90px;
 
   display: flex;
