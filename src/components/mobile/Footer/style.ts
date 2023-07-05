@@ -79,7 +79,7 @@ export const FooterWrapper = styled.footer`
           align-items: center;
           gap: 0.75rem;
           @media ${devices.tablet} {
-            gap: 2rem;
+            gap: 1.25rem;
           }
           @media ${devices.laptop} {
             gap: 1.5rem;

@@ -2,7 +2,7 @@ import { DELIVERY_POLICIES, EXCHANGE_RETURN_POLICIES } from "@constants/obj";
 import { EnvelopeIcon, PhoneIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { getOS } from "@utils";
 import { motion, useAnimation } from "framer-motion";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { SocialIcon } from "react-social-icons";
 import { FooterWrapper, PoliciesShow } from "./style";
 

@@ -74,7 +74,10 @@ const Collection = ({
           transition={{ duration: 0.8 }}
         >
           <div className="img-container center">
-            <LazyLoadImage {...firstSetOfCollection.photos[1]} />
+            <LazyLoadImage
+              {...firstSetOfCollection.photos[1]}
+              visibleByDefault
+            />
           </div>
         </motion.div>
 

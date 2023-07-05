@@ -101,6 +101,7 @@ export const MobileBannerWrapper = styled.section`
       margin-top: 3rem;
       font-size: 0.8rem;
       border-radius: 2px;
+      transition: all 0.4s ease-in-out;
       background-color: ${(props) => props.theme.colors.out3};
 
       .btn-text {

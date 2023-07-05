@@ -221,17 +221,17 @@ export const BannerWrapper = styled.section`
         @media ${devices.tablet} {
           margin-left: 3rem;
           margin-top: 2rem;
-          padding: 20px 0;
+          padding: 16px 0;
         }
 
         @media ${devices.laptop} {
-          width: 14rem;
-          font-size: 1.3em;
+          width: 12rem;
+          font-size: 1.1em;
           margin-left: 2rem;
 
           :hover {
             opacity: 0.75;
-            font-size: 1.4em;
+            font-size: 1.15em;
           }
         }
       }

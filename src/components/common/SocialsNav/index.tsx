@@ -31,14 +31,6 @@ const SocialsNav = () => {
       >
         <EnvelopeIcon className="icons" />
       </a>
-      <a
-        className="icon-wrapper"
-        aria-label="Telephone icon wrapper"
-        target="_blank"
-        href="tel:+84383430553"
-      >
-        <PhoneIcon className="icons" />
-      </a>
       <div className="icon-wrapper" aria-label="Instagram icon wrapper">
         <SocialIcon
           url="https://www.instagram.com/tripcycloset/"
@@ -46,6 +38,18 @@ const SocialsNav = () => {
           id="insta-icon"
           network="instagram"
           label="Tripcy Closet's Instagram"
+          fgColor="#ffffff"
+          bgColor="#ffffff00"
+          style={{ borderRadius: "50%" }}
+        />
+      </div>
+      <div className="icon-wrapper" aria-label="Facebook icon wrapper">
+        <SocialIcon
+          url="https://www.facebook.com/tripcycloset"
+          target="_blank"
+          id="facebook-icon"
+          network="facebook"
+          label="Tripcy Closet's Facebook"
           fgColor="#ffffff"
           bgColor="#ffffff00"
           style={{ borderRadius: "50%" }}
