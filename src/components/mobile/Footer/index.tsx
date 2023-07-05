@@ -74,7 +74,11 @@ const FOOTER_SECTIONS = [
           <div className="contact-row">
             <div className="icon-wrapper pointer">
               <SocialIcon
-                url="https://instagram.com/_u/tripcycloset/"
+                url={
+                  getOSString() === "iOS"
+                    ? "instagram://user?username=tripcycloset"
+                    : "https://www.instagram.com/_u/tripcycloset/"
+                }
                 target="_blank"
                 id="insta-icon"
                 network="instagram"
@@ -89,7 +93,9 @@ const FOOTER_SECTIONS = [
                 url={
                   getOSString() === "iOS"
                     ? "fb://profile/110148568698120"
-                    : "fb://page/110148568698120"
+                    : getOSString() === "Android"
+                    ? "fb://page/110148568698120"
+                    : "https://www.facebook.com/tripcycloset"
                 }
                 target="_blank"
                 id="facebook-icon"
