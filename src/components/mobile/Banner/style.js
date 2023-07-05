@@ -6,7 +6,7 @@ export const MobileBannerWrapper = styled.section`
   position: relative;
   width: 100%;
   height: -webkit-fill-available;
-  height: 100vh;
+  height: 100dvh;
   background-color: ${(props) => props.theme.colors.bg2};
   display: flex;
   flex-direction: column;

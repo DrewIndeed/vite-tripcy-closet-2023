@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   position: relative;
   align-items: center;
