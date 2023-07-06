@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
   width: 100%;
-  height: -webkit-fill-available;
-  height: 100dvh;
+  min-height: -webkit-fill-available;
+  min-height: 100dvh;
 
   display: flex;
   overflow: auto;
@@ -221,8 +221,8 @@ export const PoliciesShow = styled(motion.div)<PoliciesShowType>`
   left: 0;
   right: 0;
   width: 100%;
-  height: -webkit-fill-available;
-  height: 100dvh;
+  min-height: -webkit-fill-available;
+  min-height: 100dvh;
   z-index: 50;
   background-color: #332f2a95;
   backdrop-filter: blur(0.5rem) brightness(0.5);
