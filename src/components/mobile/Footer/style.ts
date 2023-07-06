@@ -13,7 +13,7 @@ export const FooterWrapper = styled.footer`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  scroll-snap-align: start;
+  scroll-snap-align: end;
   background-color: ${(props) => props.theme.colors.out2};
 
   section {
