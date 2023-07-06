@@ -5,6 +5,7 @@ export const AppMainContent = styled.main`
 `;
 export const MobileMainContent = styled.main`
   width: 100%;
+  height: -webkit-fill-available;
   height: 100vh;
   min-height: -webkit-fill-available;
   min-height: 100dvh;
