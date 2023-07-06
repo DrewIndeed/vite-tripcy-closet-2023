@@ -12,7 +12,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
   scroll-snap-align: start;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100dvh;
   background-color: ${(props) => props.theme.colors.typo3};
   display: flex;
   flex-direction: column;
