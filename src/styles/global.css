@@ -40,14 +40,17 @@ html {
 html,
 body {
   width: 100%;
+  min-height: -webkit-fill-available;
   overscroll-behavior: hidden;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 body {
-  height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: 100dvh;
   height: -webkit-fill-available;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   overflow: auto;
