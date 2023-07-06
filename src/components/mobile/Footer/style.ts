@@ -4,7 +4,9 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
   width: 100%;
-  height: 90dvh;
+  height: -webkit-fill-available;
+  height: 100dvh;
+
   display: flex;
   overflow: auto;
   position: relative;
@@ -219,6 +221,7 @@ export const PoliciesShow = styled(motion.div)<PoliciesShowType>`
   left: 0;
   right: 0;
   width: 100%;
+  height: -webkit-fill-available;
   height: 100dvh;
   z-index: 50;
   background-color: #332f2a95;
