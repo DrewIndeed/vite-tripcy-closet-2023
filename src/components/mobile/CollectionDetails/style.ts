@@ -6,6 +6,7 @@ export const CollectionDetailsWrapper = styled(motion.section)`
   width: 100%;
   height: 100dvh;
   background-color: ${(props) => props.theme.colors.bg2};
+  /* background-color: cyan; */
   z-index: 100;
 
   position: absolute;

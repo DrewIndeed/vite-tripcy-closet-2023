@@ -199,17 +199,6 @@ export const athenaAllSetsPhotos = {
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
-/imgs/athena/bloom/bloom_1_aendg9_c_scale,w_320.webp 320w,
-/imgs/athena/bloom/bloom_1_aendg9_c_scale,w_818.webp 818w,
-/imgs/athena/bloom/bloom_1_aendg9_c_scale,w_1136.webp 1136w,
-/imgs/athena/bloom/bloom_1_aendg9_c_scale,w_1440.webp 1440w`,
-      src: "/imgs/athena/bloom/bloom_1_aendg9_c_scale,w_1440.webp",
-      alt: "",
-    },
-
-    {
-      sizes: "(max-width: 1440px) 100vw, 1440px",
-      srcSet: `
 /imgs/athena/bloom/bloom_2_hpblwn_c_scale,w_320.webp 320w,
 /imgs/athena/bloom/bloom_2_hpblwn_c_scale,w_679.webp 679w,
 /imgs/athena/bloom/bloom_2_hpblwn_c_scale,w_924.webp 924w,
@@ -217,6 +206,17 @@ export const athenaAllSetsPhotos = {
 /imgs/athena/bloom/bloom_2_hpblwn_c_scale,w_1390.webp 1390w,
 /imgs/athena/bloom/bloom_2_hpblwn_c_scale,w_1440.webp 1440w`,
       src: "/imgs/athena/bloom/bloom_2_hpblwn_c_scale,w_1440.webp",
+      alt: "",
+    },
+
+    {
+      sizes: "(max-width: 1440px) 100vw, 1440px",
+      srcSet: `
+/imgs/athena/bloom/bloom_1_aendg9_c_scale,w_320.webp 320w,
+/imgs/athena/bloom/bloom_1_aendg9_c_scale,w_818.webp 818w,
+/imgs/athena/bloom/bloom_1_aendg9_c_scale,w_1136.webp 1136w,
+/imgs/athena/bloom/bloom_1_aendg9_c_scale,w_1440.webp 1440w`,
+      src: "/imgs/athena/bloom/bloom_1_aendg9_c_scale,w_1440.webp",
       alt: "",
     },
 

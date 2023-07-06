@@ -59,7 +59,7 @@ const ProductRow = ({ value }: Props) => {
               viewport={{ once: true }}
               key={"product-card-" + idx}
             >
-              {idx !== value.photos.length - 1 && (
+              {/* {idx !== value.photos.length - 1 && (
                 <div className="swipe-more">
                   <ChevronDoubleLeftIcon className="icon" />
                   <p className="text">Swipe</p>
@@ -70,7 +70,7 @@ const ProductRow = ({ value }: Props) => {
                   <p className="text">Back</p>
                   <ChevronDoubleRightIcon className="icon" />
                 </div>
-              )}
+              )} */}
               <div className="img-container">
                 <LazyLoadImage
                   placeholderSrc={photo.src}

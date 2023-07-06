@@ -2,6 +2,9 @@ import { devices } from "@styles/themes";
 import styled from "styled-components";
 
 export const ProductRowWrapper = styled.section`
+  width: 100%;
+  height: 100dvh;
+
   .product-row {
     scroll-snap-align: start;
     width: 100%;
@@ -19,12 +22,13 @@ export const ProductRowWrapper = styled.section`
       z-index: 50;
       transform: rotate(-90deg);
 
-      top: calc(18vh + 0.5rem);
-      right: 3rem;
+      bottom: 1rem;
+      right: 1rem;
 
       @media ${devices.tablet} {
-        top: 17vh;
-        right: 7rem;
+        transform: rotate(-90deg) scale(1.2);
+        top: 7.5rem;
+        right: 12.5rem;
       }
 
       /* background-color: #8b8a8715;
@@ -56,11 +60,11 @@ export const ProductRowWrapper = styled.section`
       z-index: 50;
       transform-origin: bottom left;
 
-      bottom: 18vh;
-      left: 3.5rem;
+      bottom: 2rem;
+      left: 1rem;
       @media ${devices.tablet} {
-        bottom: 15vh;
-        left: 8rem;
+        bottom: 9rem;
+        left: 13rem;
       }
 
       .title-text {
@@ -76,36 +80,38 @@ export const ProductRowWrapper = styled.section`
         font-size: 2.5em;
         line-height: 2rem;
         @media ${devices.tablet} {
-          font-size: 5em;
-          line-height: 4rem;
+          font-size: 4em;
+          line-height: 3.5rem;
         }
       }
     }
 
     .scroll {
-      padding-top: 1rem;
+      /* padding-top: 1rem; */
       width: 100%;
-      height: 90vh;
+      height: 100dvh;
+
       /* border: 2px solid #000; */
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       display: flex;
-      margin-top: auto;
+      /* margin-top: auto; */
 
       .product-card {
         scroll-snap-align: start;
         flex-shrink: 0;
         width: 100%;
         height: 100%;
+
         /* border: 2px solid green; */
-        padding-inline: 2.5rem;
+        /* padding-inline: 2.5rem;
         padding-top: 2rem;
-        padding-bottom: 6rem;
+        padding-bottom: 6rem; */
         position: relative;
 
-        @media ${devices.tablet} {
+        /* @media ${devices.tablet} {
           padding-inline: 6rem;
-        }
+        } */
 
         .swipe-more {
           display: flex;
@@ -151,6 +157,11 @@ export const ProductRowWrapper = styled.section`
             rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
           background-color: #c1b6a330;
           position: relative;
+          padding-block: 0;
+          @media ${devices.tablet} {
+            padding-block: 6rem;
+            padding-inline: 11rem;
+          }
 
           :after {
             content: "";
@@ -172,6 +183,7 @@ export const ProductRowWrapper = styled.section`
           img {
             width: 100%;
             height: 100%;
+            border-radius: 0.5rem;
             object-fit: cover;
             /* filter: saturate(1.02); */
           }
