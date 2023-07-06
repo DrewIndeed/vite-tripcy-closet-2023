@@ -4,10 +4,12 @@ import anime from "animejs";
 import { useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import MediaQuery from "react-responsive";
-import { Tooltip } from "react-tooltip";
+// import { Tooltip } from "react-tooltip";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 import { BannerWrapper } from "./style";
 
 const Banner = () => {
+  const { scroll } = useLocomotiveScroll();
   useEffect(() => {
     const animBanner = () => {
       anime({
@@ -80,12 +82,15 @@ const Banner = () => {
           </p>
           <p id="chic">{slogan}.</p>
           <p id="inner-desc">{innerDesc}</p>
-          <Tooltip id="banner-shopnow-btn" />
+          {/* <Tooltip id="banner-shopnow-btn" /> */}
           <button
             data-tooltip-id="banner-shopnow-btn"
             data-tooltip-content="Coming Soon"
             data-tooltip-place="right"
             data-tooltip-delay-hide={500}
+            onClick={() => {
+              scroll && scroll?.scrollTo("#collections");
+            }}
           >
             {actionBtnText}
           </button>

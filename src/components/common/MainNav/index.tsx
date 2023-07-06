@@ -115,7 +115,14 @@ const MainNav = ({ isMobile }: Props) => {
                     href={href}
                     key={text}
                     className="menu__item"
-                    onClick={onMenuClose}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onMenuClose();
+                      const collections = document.getElementById(
+                        href.slice(1)
+                      );
+                      collections?.scrollIntoView({ behavior: "smooth" });
+                    }}
                   >
                     <p className="menu__item-link">{text}</p>
                   </a>

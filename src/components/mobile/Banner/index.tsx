@@ -4,7 +4,7 @@ import { useSmoothScrollTo } from "@hooks/useSmoothScrollTo";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import MediaQuery from "react-responsive";
-import toast from "react-simple-toasts";
+// import toast from "react-simple-toasts";
 import { MobileBannerWrapper } from "./style";
 
 const MobileBanner = () => {
@@ -56,13 +56,8 @@ const MobileBanner = () => {
           viewport={{ once: true }}
           id="show-more-btn-mobile"
           onClick={() => {
-            toast("Coming Soon!", {
-              duration: 2500,
-              clickable: true,
-              clickClosable: true,
-              maxVisibleToasts: 1,
-              render: (message) => <p>{message}</p>,
-            });
+            const collections = document.getElementById("collections");
+            collections?.scrollIntoView({ behavior: "smooth" });
           }}
         >
           {actionBtnText}
