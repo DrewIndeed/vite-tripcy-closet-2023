@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const FooterWrapper = styled.footer`
   width: 100%;
   height: -webkit-fill-available;
-  height: 100dvh;
+  height: 100vh;
 
   display: flex;
   overflow: auto;

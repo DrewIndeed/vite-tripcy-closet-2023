@@ -2,7 +2,7 @@ import { DELIVERY_POLICIES, EXCHANGE_RETURN_POLICIES } from "@constants/obj";
 import { EnvelopeIcon, PhoneIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { getOS } from "@utils";
 import { motion, useAnimation } from "framer-motion";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { SocialIcon } from "react-social-icons";
 import { FooterWrapper, PoliciesShow } from "./style";
 
@@ -116,6 +116,10 @@ const FOOTER_SECTIONS = [
 
 const Footer = () => {
   const policiesViewControls = useAnimation();
+  const scrollToBot = useCallback(
+    () => window?.scrollTo({ top: 1000, behavior: "smooth" }),
+    []
+  );
   const [viewerContent, setViewerContent] = useState<Record<string, any>>({});
   const isOpen = Object.keys(viewerContent).length > 0;
 
@@ -206,6 +210,7 @@ const Footer = () => {
         {FOOTER_SECTIONS.map((section: Record<string, any>, idx: number) => {
           return (
             <motion.div
+              onAnimationStart={() => scrollToBot()}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.2 + (0.05 * idx + 1) }}
