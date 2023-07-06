@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
   width: 100%;
-  min-height: -webkit-fill-available;
-  min-height: 100dvh;
+  height: -webkit-fill-available;
+  height: 100dvh;
 
   display: flex;
   position: relative;

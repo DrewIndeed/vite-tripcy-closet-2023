@@ -42,8 +42,6 @@ body {
   width: 100%;
   height: -webkit-fill-available;
   height: 100dvh;
-  min-height: -webkit-fill-available;
-  min-height: 100dvh;
   overscroll-behavior: hidden;
   scroll-behavior: smooth;
   overflow-x: hidden;

@@ -31,7 +31,7 @@ function App() {
   const { currentCol } = useData();
 
   return (
-    <>
+    <div style={{ height: "100dvh" }}>
       <Helmet>
         <title>Tripcy Closet</title>
       </Helmet>
@@ -95,7 +95,7 @@ function App() {
           </AppMainContent>
         </LocomotiveScrollProvider>
       )}
-    </>
+    </div>
   );
 }
 
