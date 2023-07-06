@@ -8,12 +8,11 @@ export const FooterWrapper = styled.footer`
   min-height: 100dvh;
 
   display: flex;
-  overflow: auto;
   position: relative;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  scroll-snap-align: end;
+  scroll-snap-align: start;
   background-color: ${(props) => props.theme.colors.out2};
 
   section {
