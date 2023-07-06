@@ -4,8 +4,9 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
   width: 100%;
-  height: 100%;
+  height: 90dvh;
   display: flex;
+  overflow: auto;
   position: relative;
   align-items: center;
   flex-direction: column;
@@ -191,13 +192,14 @@ export const FooterWrapper = styled.footer`
 
   #copyright {
     display: flex;
-    font-size: 0.75em;
     padding: 0.5rem 0;
     /* font-style: italic; */
     align-items: center;
     justify-content: center;
     color: ${(props) => props.theme.colors.bg2};
+    margin-bottom: 1rem;
 
+    font-size: 0.75em;
     @media ${devices.tablet} {
       font-size: 1.5em;
     }

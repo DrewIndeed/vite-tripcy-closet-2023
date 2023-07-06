@@ -159,29 +159,6 @@ const Footer = () => {
 
   return (
     <FooterWrapper>
-      {/* footer sections */}
-      <section id="content">
-        {FOOTER_SECTIONS.map((section: Record<string, any>, idx: number) => {
-          return (
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.2 + (0.05 * idx + 1) }}
-              key={section.id}
-              id={section.id}
-            >
-              <p className="title">{section.title}</p>
-              <div className="divider" />
-              {section.contentRender(
-                viewerContent,
-                setViewerContent,
-                onMenuOpen
-              )}
-            </motion.div>
-          );
-        })}
-      </section>
-
       {/* policies display */}
       <PoliciesShow
         show={Object.keys(viewerContent).length > 0}
@@ -223,6 +200,29 @@ const Footer = () => {
           </div>
         </div>
       </PoliciesShow>
+
+      {/* footer sections */}
+      <section id="content">
+        {FOOTER_SECTIONS.map((section: Record<string, any>, idx: number) => {
+          return (
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.2 + (0.05 * idx + 1) }}
+              key={section.id}
+              id={section.id}
+            >
+              <p className="title">{section.title}</p>
+              <div className="divider" />
+              {section.contentRender(
+                viewerContent,
+                setViewerContent,
+                onMenuOpen
+              )}
+            </motion.div>
+          );
+        })}
+      </section>
 
       {/* Copyright at the very bottom */}
       <p id="copyright">
