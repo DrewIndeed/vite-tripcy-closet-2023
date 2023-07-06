@@ -55,3 +55,41 @@ export const getOS = (): string => {
 
   return "unknown";
 };
+
+export const getBrowser = () => {
+  // Get the user-agent string
+  const userAgentString = navigator.userAgent;
+
+  // Detect Chrome
+  let chromeAgent = userAgentString.indexOf("Chrome") > -1;
+
+  // Detect Internet Explorer
+  const IExplorerAgent =
+    userAgentString.indexOf("MSIE") > -1 || userAgentString.indexOf("rv:") > -1;
+
+  // Detect Firefox
+  const firefoxAgent = userAgentString.indexOf("Firefox") > -1;
+
+  // Detect Safari
+  let safariAgent = userAgentString.indexOf("Safari") > -1;
+
+  // Detect Opera
+  const operaAgent = userAgentString.indexOf("OP") > -1;
+
+  // Discard Safari since it also matches Chrome
+  if (chromeAgent && safariAgent) safariAgent = false;
+
+  // Discard Chrome since it also matches Opera
+  if (chromeAgent && operaAgent) chromeAgent = false;
+
+  // result for all browsers
+  const rs = {
+    userAgentString,
+    chromeAgent,
+    IExplorerAgent,
+    firefoxAgent,
+    safariAgent,
+    operaAgent,
+  };
+  return rs;
+};
