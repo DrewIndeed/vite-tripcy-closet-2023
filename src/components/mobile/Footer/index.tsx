@@ -116,12 +116,13 @@ const FOOTER_SECTIONS = [
 
 const Footer = () => {
   const policiesViewControls = useAnimation();
-  const scrollToBot = useCallback(
-    () => window?.scrollTo({ top: 1000, behavior: "smooth" }),
-    []
-  );
   const [viewerContent, setViewerContent] = useState<Record<string, any>>({});
   const isOpen = Object.keys(viewerContent).length > 0;
+
+  useEffect(() => {
+    const scrollingElement = document.scrollingElement || document.body;
+    scrollingElement.scrollTop = scrollingElement.scrollHeight;
+  }, []);
 
   const onMenuOpen = useCallback(() => {
     if (!isOpen) {
@@ -210,7 +211,6 @@ const Footer = () => {
         {FOOTER_SECTIONS.map((section: Record<string, any>, idx: number) => {
           return (
             <motion.div
-              onAnimationStart={() => scrollToBot()}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.2 + (0.05 * idx + 1) }}
