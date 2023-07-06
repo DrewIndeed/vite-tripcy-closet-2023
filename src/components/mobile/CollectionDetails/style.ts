@@ -4,7 +4,7 @@ import { devices } from "@styles/themes";
 
 export const CollectionDetailsWrapper = styled(motion.section)`
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background-color: ${(props) => props.theme.colors.bg2};
   z-index: 100;
 

@@ -5,7 +5,7 @@ export const ProductRowWrapper = styled.section`
   .product-row {
     scroll-snap-align: start;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
 
     display: flex;
     justify-content: center;
