@@ -123,12 +123,14 @@ const Footer = () => {
     if (!isOpen) {
       policiesViewControls.start({
         left: 0,
+        display: "none",
         transition: {
           duration: 0.2,
         },
       });
       policiesViewControls.start({
         opacity: [0, 1],
+        display: "block",
         transition: {
           duration: 0.4,
           delay: 0.2,
@@ -142,12 +144,14 @@ const Footer = () => {
       {
         policiesViewControls.start({
           opacity: [1, 0],
+          display: "block",
           transition: {
             duration: 0.4,
           },
         });
         policiesViewControls.start({
           left: "-100%",
+          display: "none",
           transition: {
             duration: 0.2,
             delay: 0.4,
@@ -160,10 +164,7 @@ const Footer = () => {
   return (
     <FooterWrapper>
       {/* policies display */}
-      <PoliciesShow
-        show={Object.keys(viewerContent).length > 0}
-        animate={policiesViewControls}
-      >
+      <PoliciesShow animate={policiesViewControls}>
         <div id="policy-wrapper">
           <XMarkIcon
             id="close-policy-icon"

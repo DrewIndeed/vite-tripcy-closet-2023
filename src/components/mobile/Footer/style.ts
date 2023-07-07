@@ -211,8 +211,8 @@ type PoliciesShowType = {
   show: boolean;
 };
 export const PoliciesShow = styled(motion.div)<PoliciesShowType>`
-  display: ${(p) => (p.show ? "block" : "none")};
   opacity: 0;
+  display: none;
 
   position: fixed;
   top: 0;

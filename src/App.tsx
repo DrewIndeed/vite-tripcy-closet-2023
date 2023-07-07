@@ -15,6 +15,7 @@ import { Helmet } from "react-helmet-async";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import MediaQuery from "react-responsive";
 
+import Products from "@components/sections/Products";
 import { AppMainContent, MobileMainContent } from "@styles/global";
 import "@styles/global.css";
 import { common as commonTheme } from "@styles/themes";
@@ -37,11 +38,11 @@ function App() {
       </Helmet>
 
       {/* website reveal */}
-      <Intro
+      {/* <Intro
         svgColorHex={commonTheme.colors.typo1}
         textColorHex={commonTheme.colors.typo1}
         bgColorHex={commonTheme.colors.bg2}
-      />
+      /> */}
 
       {/* mobile content */}
       {!booleans.isLaptopMedium && (
@@ -91,7 +92,7 @@ function App() {
             ))}
 
             {/* Selected collection's details and Products preview- COMING SOON */}
-            {/* <Products /> */}
+            <Products />
           </AppMainContent>
         </LocomotiveScrollProvider>
       )}
