@@ -207,10 +207,7 @@ export const FooterWrapper = styled.footer`
   }
 `;
 
-type PoliciesShowType = {
-  show: boolean;
-};
-export const PoliciesShow = styled(motion.div)<PoliciesShowType>`
+export const PoliciesShow = styled(motion.div)`
   opacity: 0;
   display: none;
 

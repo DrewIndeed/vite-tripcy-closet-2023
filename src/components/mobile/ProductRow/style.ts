@@ -28,7 +28,7 @@ export const ProductRowWrapper = styled.section`
       @media ${devices.tablet} {
         transform: rotate(-90deg) scale(1.2);
         top: 7.5rem;
-        right: 12.5rem;
+        right: 7.5rem;
       }
 
       /* background-color: #8b8a8715;
@@ -63,8 +63,8 @@ export const ProductRowWrapper = styled.section`
       bottom: 2rem;
       left: 1rem;
       @media ${devices.tablet} {
-        bottom: 9rem;
-        left: 13rem;
+        bottom: 8.5rem;
+        left: 8rem;
       }
 
       .title-text {
@@ -160,7 +160,7 @@ export const ProductRowWrapper = styled.section`
           padding-block: 0;
           @media ${devices.tablet} {
             padding-block: 6rem;
-            padding-inline: 11rem;
+            padding-inline: 6rem;
           }
 
           :after {

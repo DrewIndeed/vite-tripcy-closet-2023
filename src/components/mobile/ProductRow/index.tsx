@@ -1,7 +1,3 @@
-import {
-  ChevronDoubleLeftIcon,
-  ChevronDoubleRightIcon,
-} from "@heroicons/react/24/solid";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
