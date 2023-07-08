@@ -33,7 +33,7 @@ export const ProductsWrapper = styled.section`
     width: 100%;
     height: 100%;
     display: grid;
-    gap: 3px;
+    gap: 4px;
     /* background-color: ${(props) => `${props.theme.colors.out2}`}; */
     /* max-width: 1440px; */
     /* margin: 0 auto; */
@@ -48,7 +48,7 @@ export const ProductsWrapper = styled.section`
 
   @media ${devices.laptopM} {
     .cards {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(6, 1fr);
     }
   }
 

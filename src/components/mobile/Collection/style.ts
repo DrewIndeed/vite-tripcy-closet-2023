@@ -164,7 +164,7 @@ export const MobileCollectionWrapper = styled.section<MobileCollectionWrapperTyp
       transform: scale(1.4);
     }
     @media ${devices.laptop} {
-      transform: scale(1);
+      transform: scale(1.4);
     }
 
     .arrow-button {

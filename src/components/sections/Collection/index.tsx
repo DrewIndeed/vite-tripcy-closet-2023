@@ -1,7 +1,8 @@
+import { useData } from "@hooks/useData";
 import { stringRepeat } from "@utils";
 import { motion } from "framer-motion";
+import throttle from "lodash.throttle";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Tooltip } from "react-tooltip";
 import { CollectionWrapper } from "./style";
 
 type CollectionProps = {
@@ -27,6 +28,16 @@ const Collection = ({
 }: CollectionProps) => {
   const isEven = count % 2 === 0;
   const firstSetOfCollection = Object.values(allSets)[0] as Record<string, any>;
+  const { getCollectionDataById } = useData();
+
+  // methods
+  const handleClick = throttle(
+    () => {
+      getCollectionDataById(id);
+    },
+    600,
+    { trailing: true }
+  );
 
   if (!isActive) return <></>;
   return (
@@ -61,7 +72,7 @@ const Collection = ({
         >
           <div className="img-container">
             <LazyLoadImage
-              {...firstSetOfCollection.photos[0]}
+              {...firstSetOfCollection.photos[1]}
               visibleByDefault
             />
           </div>
@@ -75,7 +86,7 @@ const Collection = ({
         >
           <div className="img-container center">
             <LazyLoadImage
-              {...firstSetOfCollection.photos[1]}
+              {...firstSetOfCollection.photos[0]}
               visibleByDefault
             />
           </div>
@@ -99,15 +110,17 @@ const Collection = ({
 
       <p className="season">{season}</p>
       <div className="see-more">
-        <Tooltip id="collection-showmore-btn" />
+        {/* <Tooltip id="collection-showmore-btn" /> */}
         <button
           data-tooltip-id="collection-showmore-btn"
           data-tooltip-content="Coming Soon"
           data-tooltip-place="right"
           data-tooltip-delay-hide={500}
           className="arrow-button"
+          onClick={handleClick}
         >
-          See More<span className="arrow"></span>
+          See More
+          <span className="arrow" />
         </button>
       </div>
     </CollectionWrapper>

@@ -104,15 +104,16 @@ const MobileCollection = ({
       </div>
 
       <div className="see-more">
-        {booleans.isLaptop && <Tooltip id="collection-showmore-btn" />}
+        {booleans.isLaptopMedium && <Tooltip id="collection-showmore-btn" />}
         <button
           data-tooltip-id="collection-showmore-btn"
           data-tooltip-content="Coming Soon"
           data-tooltip-place="right"
           className="arrow-button"
-          onClick={!booleans.isLaptop ? handleClick : () => {}}
+          onClick={!booleans.isLaptopMedium ? handleClick : () => {}}
         >
-          See More<span className="arrow"></span>
+          See More
+          <span className="arrow" />
         </button>
       </div>
     </MobileCollectionWrapper>

@@ -31,6 +31,10 @@ export const ProductRowWrapper = styled.section`
         right: 7.5rem;
       }
 
+      @media ${devices.laptop} {
+        right: 18rem;
+      }
+
       /* background-color: #8b8a8715;
       backdrop-filter: blur(0.5rem);
       border-radius: 50%; */
@@ -65,6 +69,9 @@ export const ProductRowWrapper = styled.section`
       @media ${devices.tablet} {
         bottom: 8.5rem;
         left: 8rem;
+      }
+      @media ${devices.laptop} {
+        left: 18rem;
       }
 
       .title-text {
@@ -161,6 +168,10 @@ export const ProductRowWrapper = styled.section`
           @media ${devices.tablet} {
             padding-block: 6rem;
             padding-inline: 6rem;
+          }
+
+          @media ${devices.laptop} {
+            padding-inline: 16rem;
           }
 
           :after {

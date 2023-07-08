@@ -3,18 +3,6 @@ export const athenaAllSetsPhotos = {
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
-/imgs/athena/kayla/kayla_1_fpcs5t_c_scale,w_320.webp 320w,
-/imgs/athena/kayla/kayla_1_fpcs5t_c_scale,w_703.webp 703w,
-/imgs/athena/kayla/kayla_1_fpcs5t_c_scale,w_970.webp 970w,
-/imgs/athena/kayla/kayla_1_fpcs5t_c_scale,w_1250.webp 1250w,
-/imgs/athena/kayla/kayla_1_fpcs5t_c_scale,w_1440.webp 1440w`,
-      src: "/imgs/athena/kayla/kayla_1_fpcs5t_c_scale,w_1440.webp",
-      alt: "Athena Collection - Kayla Set - Photo 1",
-    },
-
-    {
-      sizes: "(max-width: 1440px) 100vw, 1440px",
-      srcSet: `
 /imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_320.webp 320w,
 /imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_697.webp 697w,
 /imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1057.webp 1057w,
@@ -22,6 +10,18 @@ export const athenaAllSetsPhotos = {
 /imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1440.webp 1440w`,
       src: "/imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1440.webp",
       alt: "Athena Collection - Kayla Set - Photo 2",
+    },
+
+    {
+      sizes: "(max-width: 1440px) 100vw, 1440px",
+      srcSet: `
+/imgs/athena/kayla/kayla_1_fpcs5t_c_scale,w_320.webp 320w,
+/imgs/athena/kayla/kayla_1_fpcs5t_c_scale,w_703.webp 703w,
+/imgs/athena/kayla/kayla_1_fpcs5t_c_scale,w_970.webp 970w,
+/imgs/athena/kayla/kayla_1_fpcs5t_c_scale,w_1250.webp 1250w,
+/imgs/athena/kayla/kayla_1_fpcs5t_c_scale,w_1440.webp 1440w`,
+      src: "/imgs/athena/kayla/kayla_1_fpcs5t_c_scale,w_1440.webp",
+      alt: "Athena Collection - Kayla Set - Photo 1",
     },
 
     {

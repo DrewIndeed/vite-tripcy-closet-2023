@@ -47,7 +47,7 @@ export const collections = {
     season: "S23 spring summer",
     isActive: true,
     isNew: true,
-    favPhotoIndex: 1,
+    favPhotoIndex: 0,
     allSets: {
       kayla: {
         name: "Kayla Blouse",
@@ -76,7 +76,7 @@ export const collections = {
       },
       flow: {
         name: "Flowing Top",
-        subname: "w/ White Pleated Skirt ",
+        subname: "w/ White Pleated Skirt",
         photos: athenaAllSetsPhotos.flow,
       },
     },

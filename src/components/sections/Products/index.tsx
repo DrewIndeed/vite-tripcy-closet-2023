@@ -1,4 +1,4 @@
-import { productCardsData } from "@constants/arr";
+import { collections } from "@constants/obj";
 import useGlobalMedia from "@hooks/useGlobalMedia";
 import { stringRepeat } from "@utils";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -21,9 +21,7 @@ const ProductCard = ({
       className="card"
       data-scroll
       data-scroll-speed={targetScroll}
-      data-scroll-direction={
-        booleans.isLaptopMedium ? "vertical" : "horizontal"
-      }
+      data-scroll-direction="vertical"
     >
       <div className="item-wrapper">
         <LazyLoadImage {...{ sizes, srcSet, src, alt }} />
@@ -40,7 +38,7 @@ const ProductCard = ({
 const Products = () => {
   return (
     <ProductsWrapper data-scroll-section data-scroll-id="products">
-      <div className="title">
+      {/* <div className="title">
         <p
           className="title-content"
           data-scroll
@@ -49,11 +47,18 @@ const Products = () => {
         >
           {stringRepeat(7, "Our products.")}
         </p>
-      </div>
+      </div> */}
       <div className="cards noselect" id="products">
-        {productCardsData.map(({ image, name, subname }, idx) => {
-          return <ProductCard key={name} {...{ image, name, subname, idx }} />;
-        })}
+        {Object.values(collections["col1-athena-sprsum23"].allSets).map(
+          ({ photos, name, subname }, idx) => {
+            return (
+              <ProductCard
+                key={name}
+                {...{ image: photos[0], name, subname, idx }}
+              />
+            );
+          }
+        )}
       </div>
     </ProductsWrapper>
   );

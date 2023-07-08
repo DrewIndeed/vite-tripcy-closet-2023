@@ -4,7 +4,7 @@ import CollectionDetails from "@components/mobile/CollectionDetails";
 import Footer from "@components/mobile/Footer";
 import Banner from "@components/sections/Banner";
 import Collection from "@components/sections/Collection";
-import Intro from "@components/sections/Intro";
+import CollectionDetailsDesktop from "@components/sections/CollectionDetails";
 
 import { collections, locoOptions } from "@constants/obj";
 import { useData } from "@hooks/useData";
@@ -15,10 +15,8 @@ import { Helmet } from "react-helmet-async";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import MediaQuery from "react-responsive";
 
-import Products from "@components/sections/Products";
 import { AppMainContent, MobileMainContent } from "@styles/global";
 import "@styles/global.css";
-import { common as commonTheme } from "@styles/themes";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import "react-tooltip/dist/react-tooltip.css";
 
@@ -60,7 +58,7 @@ function App() {
           ))}
 
           {/* Selected collection's details and Products preview */}
-          <MediaQuery maxWidth={1027}>
+          <MediaQuery maxWidth={1208}>
             {!isObjEmpty(currentCol) && <CollectionDetails />}
           </MediaQuery>
 
@@ -91,8 +89,10 @@ function App() {
               <Collection key={collect.id} {...collect} count={idx} />
             ))}
 
-            {/* Selected collection's details and Products preview- COMING SOON */}
-            <Products />
+            {/* Selected collection's details and Products preview */}
+            <MediaQuery minWidth={1208}>
+              {!isObjEmpty(currentCol) && <CollectionDetailsDesktop />}
+            </MediaQuery>
           </AppMainContent>
         </LocomotiveScrollProvider>
       )}
