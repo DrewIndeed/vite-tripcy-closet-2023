@@ -13,7 +13,7 @@ export const FooterWrapper = styled.footer`
   flex-direction: column;
   justify-content: center;
   scroll-snap-align: start;
-  background-color: ${(props) => props.theme.colors.out2};
+  background-color: ${(props) => props.theme.colors.out3};
 
   section {
     width: 100%;
