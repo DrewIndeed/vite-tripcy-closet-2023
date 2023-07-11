@@ -90,7 +90,7 @@ function App() {
             ))}
 
             {/* Selected collection's details and Products preview */}
-            <MediaQuery minWidth={1208}>
+            <MediaQuery minWidth={1209}>
               {!isObjEmpty(currentCol) && <CollectionDetailsDesktop />}
             </MediaQuery>
           </AppMainContent>

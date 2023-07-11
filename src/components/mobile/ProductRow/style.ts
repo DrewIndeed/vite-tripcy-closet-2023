@@ -27,12 +27,12 @@ export const ProductRowWrapper = styled.section`
 
       @media ${devices.tablet} {
         transform: rotate(-90deg) scale(1.2);
-        top: 7.5rem;
+        top: 7rem;
         right: 7.5rem;
       }
 
       @media ${devices.laptop} {
-        right: 18rem;
+        right: 17rem;
       }
 
       /* background-color: #8b8a8715;
@@ -68,10 +68,11 @@ export const ProductRowWrapper = styled.section`
       left: 1rem;
       @media ${devices.tablet} {
         bottom: 8.5rem;
-        left: 8rem;
+        left: 7.5rem;
       }
       @media ${devices.laptop} {
-        left: 18rem;
+        left: 17.5rem;
+        bottom: 8.5rem;
       }
 
       .title-text {
