@@ -198,6 +198,9 @@ export const ProductRowWrapper = styled.section`
             border-radius: 0.5rem;
             object-fit: cover;
             /* filter: saturate(1.02); */
+            @media ${devices.tablet} {
+              object-position: 2% 0;
+            }
           }
 
           .img-loader {

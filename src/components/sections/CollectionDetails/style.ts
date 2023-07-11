@@ -24,6 +24,32 @@ export const CollectionDetailsWrapper = styled(motion.div)`
   overflow-y: auto;
   scroll-snap-type: y mandatory;
 
+  .menu-close {
+    color: #ffffff;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    margin: 1rem 1rem 0 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    border: 1px solid #ffffff00;
+    z-index: 100;
+
+    :hover {
+      border: 1px solid #ffffff90;
+    }
+
+    .menu-close-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+
   .row {
     width: 100%;
     height: 100dvh;
@@ -164,10 +190,12 @@ export const ProductItemWrapper = styled.div<ProductItemWrapperType>`
     padding-block: 1rem;
 
     .normal {
+      border: 3px solid ${({ theme }) => theme.colors.typo3};
       animation: to-normal 0.4s ease-in-out forwards;
     }
 
     .darker {
+      border: 0px solid transparent;
       animation: to-darker 0.4s ease-in-out forwards;
     }
 
@@ -194,22 +222,18 @@ export const ProductItemWrapper = styled.div<ProductItemWrapperType>`
 
     @keyframes to-normal {
       from {
-        border: 3px solid transparent;
         filter: brightness(0.6);
       }
       to {
-        border: 3px solid ${({ theme }) => theme.colors.typo3};
         filter: brightness(1);
       }
     }
 
     @keyframes to-darker {
       from {
-        border: 3px solid ${({ theme }) => theme.colors.typo3};
         filter: brightness(1);
       }
       to {
-        border: 1px solid transparent;
         filter: brightness(0.6);
       }
     }

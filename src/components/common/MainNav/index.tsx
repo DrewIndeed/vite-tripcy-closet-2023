@@ -44,21 +44,19 @@ const MainNav = ({ isMobile }: Props) => {
   }, [isOpen]);
   const onMenuClose = useCallback(() => {
     if (isOpen) {
-      {
-        navContainerControls.start({
-          opacity: [1, 0],
-          transition: {
-            duration: 0.4,
-          },
-        });
-        navContainerControls.start({
-          left: "-100%",
-          transition: {
-            duration: 0.2,
-            delay: 0.4,
-          },
-        });
-      }
+      navContainerControls.start({
+        opacity: [1, 0],
+        transition: {
+          duration: 0.4,
+        },
+      });
+      navContainerControls.start({
+        left: "-100%",
+        transition: {
+          duration: 0.2,
+          delay: 0.4,
+        },
+      });
 
       setIsOpen(false);
     }

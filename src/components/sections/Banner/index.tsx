@@ -51,7 +51,7 @@ const Banner = () => {
     };
 
     // anim ahihi
-    // animBanner();
+    animBanner();
   }, []);
 
   return (

@@ -8,6 +8,7 @@ import {
   ProductCardWrapper,
   ProductItemWrapper,
 } from "./style";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
 type ProductCardType = {
   name: string;
@@ -111,12 +112,31 @@ const CollectionDetails = ({}) => {
     }
   }, [currentCol]);
 
+  // methods
+  const onMenuClose = () => {
+    setLastAnimDone(false);
+    collectionDetailsControl.start({
+      opacity: [1, 0],
+      left: "100%",
+      transition: {
+        duration: 0.8,
+      },
+    });
+    setTimeout(() => {
+      getCollectionDataById("");
+    }, 800);
+  };
+
   return (
     <CollectionDetailsWrapper
       animate={collectionDetailsControl}
       className="scrollbar-hide"
       id="collection-details-desktop"
     >
+      {/* COLLECTION CLOSE BTN */}
+      <div className="menu-close" onClick={onMenuClose}>
+        <XMarkIcon className="menu-close-icon" />
+      </div>
       <div className="row">
         {Object.values(currentCol.allSets).map((productItem, order) => {
           const { name, subname, photos } = productItem as ProductCardType;
