@@ -9,12 +9,14 @@ import CollectionDetailsDesktop from "@components/sections/CollectionDetails";
 import { collections, locoOptions } from "@constants/obj";
 import { useData } from "@hooks/useData";
 import useGlobalMedia from "@hooks/useGlobalMedia";
+import { common as commonTheme } from "@styles/themes";
 import { isObjEmpty } from "@utils";
 import { Suspense, lazy, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import MediaQuery from "react-responsive";
 
+import Intro from "@components/sections/Intro";
 import { AppMainContent, MobileMainContent } from "@styles/global";
 import "@styles/global.css";
 import "locomotive-scroll/dist/locomotive-scroll.css";
@@ -36,11 +38,11 @@ function App() {
       </Helmet>
 
       {/* website reveal */}
-      {/* <Intro
+      <Intro
         svgColorHex={commonTheme.colors.typo1}
         textColorHex={commonTheme.colors.typo1}
         bgColorHex={commonTheme.colors.bg2}
-      /> */}
+      />
 
       {/* mobile content */}
       {!booleans.isLaptopMedium && (

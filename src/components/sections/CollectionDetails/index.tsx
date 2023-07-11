@@ -13,9 +13,11 @@ type ProductCardType = {
   name: string;
   subname: string;
   photos: any[];
+  onClick?: any;
   order?: number;
   isLastAnimDone?: boolean;
   setLastAnimDone?: any;
+  clickedCardOrder?: number;
 };
 
 const ProductCard = ({
@@ -25,13 +27,17 @@ const ProductCard = ({
   photos,
   isLastAnimDone,
   setLastAnimDone,
+  clickedCardOrder,
+  onClick,
 }: ProductCardType) => {
   const { sizes, srcSet, src, alt } = photos[0];
+  const isClicked = order === clickedCardOrder;
+
   return (
     <ProductCardWrapper
       initial={{ x: 100, opacity: 0 }}
       whileInView={{
-        x: [-10, 20, 0],
+        x: [-30, 20, 0],
         opacity: [0.2, 0.6, 1],
       }}
       transition={{ duration: 1, delay: 0.1 * (order as number) }}
@@ -39,8 +45,10 @@ const ProductCard = ({
         if (order !== 5) return;
         setLastAnimDone(true);
       }}
+      onClick={onClick}
+      className={isClicked ? "anim-width" : "normal-width"}
     >
-      <ProductItemWrapper isLastAnimDone={isLastAnimDone}>
+      <ProductItemWrapper isLastAnimDone={isLastAnimDone} isClicked={isClicked}>
         <LazyLoadImage {...{ sizes, srcSet, src, alt }} />
         <div className="item-copy"></div>
         <div className="img-overlay">
@@ -54,6 +62,7 @@ const ProductCard = ({
 
 const CollectionDetails = ({}) => {
   const [isLastAnimDone, setLastAnimDone] = useState<boolean>(false);
+  const [clickedCardOrder, setClickedCardOrder] = useState<number>(-1);
   const { currentCol, getCollectionDataById } = useData();
   const collectionDetailsControl = useAnimation();
 
@@ -89,8 +98,14 @@ const CollectionDetails = ({}) => {
                 photos,
                 isLastAnimDone,
                 setLastAnimDone,
+                clickedCardOrder,
               }}
               key={name}
+              onClick={() =>
+                setClickedCardOrder((prevOrder) =>
+                  prevOrder !== -1 ? (prevOrder === order ? -1 : order) : order
+                )
+              }
             />
           );
         })}
