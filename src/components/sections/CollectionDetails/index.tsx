@@ -38,7 +38,7 @@ const ProductCard = ({
     <ProductCardWrapper
       initial={{ x: 100, opacity: 0 }}
       whileInView={{
-        x: [-15, 20, 0],
+        x: [-15, 10, 0],
         opacity: [0.2, 0.6, 1],
       }}
       transition={{ duration: 1, delay: 0.1 * (order as number) }}

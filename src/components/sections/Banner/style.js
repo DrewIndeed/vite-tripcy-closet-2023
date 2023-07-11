@@ -226,12 +226,12 @@ export const BannerWrapper = styled.section`
 
         @media ${devices.laptop} {
           width: 12rem;
-          font-size: 1.1em;
+          font-size: 1.3em;
           margin-left: 2rem;
 
           :hover {
             opacity: 0.75;
-            font-size: 1.15em;
+            font-size: 1.35em;
           }
         }
       }

@@ -99,7 +99,7 @@ export const MobileBannerWrapper = styled.section`
       outline: none;
       margin: 0 auto;
       margin-top: 3rem;
-      font-size: 0.8rem;
+      font-size: 1rem;
       border-radius: 2px;
       transition: all 0.4s ease-in-out;
       background-color: ${(props) => props.theme.colors.out3};
@@ -114,7 +114,7 @@ export const MobileBannerWrapper = styled.section`
         width: 10rem;
         height: 3.5rem;
         margin-top: 2rem;
-        font-size: 1.1rem;
+        font-size: 1.25rem;
 
         :hover {
           opacity: 0.75;

@@ -30,4 +30,4 @@ export const innerDesc = `Tripcy Closet is a fashion brand that hightens a gentl
 elegance and mild luxury, making the best of each individual's
 natural beauty to leverage our brand and products.`;
 
-export const actionBtnText = "SHOW MORE";
+export const actionBtnText = "Show More";
