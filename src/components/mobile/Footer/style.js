@@ -197,7 +197,7 @@ export const FooterWrapper = styled.footer`
     /* font-style: italic; */
     align-items: center;
     justify-content: center;
-    color: ${(props) => props.theme.colors.bg2};
+    color: ${(props) => props.theme.colors.bg1};
     margin-bottom: 1rem;
 
     font-size: 0.75em;
