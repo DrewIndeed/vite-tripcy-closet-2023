@@ -91,7 +91,7 @@ const MainNav = ({ isMobile }: Props) => {
                     }}
                   >
                     <p className="menu__item-link">{text}</p>
-                    <LazyLoadImage
+                    {/* <LazyLoadImage
                       width="100px"
                       height="200px"
                       className="menu__item-img"
@@ -99,7 +99,7 @@ const MainNav = ({ isMobile }: Props) => {
                       src={imgSrc}
                       srcSet={imgSrcSet}
                       sizes={imgSizes}
-                    />
+                    /> */}
                     <div className="marquee">
                       <div className="marquee__inner">
                         <span>

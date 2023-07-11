@@ -84,10 +84,10 @@ const Banner = () => {
           <p id="inner-desc">{innerDesc}</p>
           {/* <Tooltip id="banner-shopnow-btn" /> */}
           <button
-            data-tooltip-id="banner-shopnow-btn"
-            data-tooltip-content="Coming Soon"
-            data-tooltip-place="right"
-            data-tooltip-delay-hide={500}
+            // data-tooltip-id="banner-shopnow-btn"
+            // data-tooltip-content="Coming Soon"
+            // data-tooltip-place="right"
+            // data-tooltip-delay-hide={500}
             onClick={() => {
               scroll && scroll?.scrollTo("#collections");
             }}

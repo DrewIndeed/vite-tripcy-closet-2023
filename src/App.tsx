@@ -22,7 +22,6 @@ import { isObjEmpty } from "@utils";
 
 import "@styles/global.css";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-import "react-tooltip/dist/react-tooltip.css";
 
 const Intro = lazy(() => import("@components/common/Intro"));
 const MainNav = lazy(() => import("@components/common/MainNav"));

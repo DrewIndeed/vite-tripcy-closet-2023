@@ -3,7 +3,7 @@ import useGlobalMedia from "@hooks/useGlobalMedia";
 import { motion } from "framer-motion";
 import throttle from "lodash.throttle";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Tooltip } from "react-tooltip";
+// import { Tooltip } from "react-tooltip";
 import { MobileCollectionWrapper } from "./style";
 
 type CollectionProps = {
@@ -104,11 +104,11 @@ const MobileCollection = ({
       </div>
 
       <div className="see-more">
-        {booleans.isLaptopMedium && <Tooltip id="collection-showmore-btn" />}
+        {/* {booleans.isLaptopMedium && <Tooltip id="collection-showmore-btn" />} */}
         <button
-          data-tooltip-id="collection-showmore-btn"
-          data-tooltip-content="Coming Soon"
-          data-tooltip-place="right"
+          // data-tooltip-id="collection-showmore-btn"
+          // data-tooltip-content="Coming Soon"
+          // data-tooltip-place="right"
           className="arrow-button"
           onClick={!booleans.isLaptopMedium ? handleClick : () => {}}
         >
