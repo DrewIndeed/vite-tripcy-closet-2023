@@ -149,11 +149,11 @@ export const ProductItemWrapper = styled.div<ProductItemWrapperType>`
     object-fit: cover;
     transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
-    transform: ${({ isClicked }) => (isClicked ? "scale(1)" : "scale(1)")};
+    transform: ${({ isClicked }) => (isClicked ? "scale(1)" : "scale(1.5)")};
     filter: ${({ isClicked }) =>
       isClicked ? "brightness(1)" : "brightness(0.75)"};
     @media ${devices.laptopM} {
-      transform: ${({ isClicked }) => (isClicked ? "scale(1)" : "scale(1)")};
+      transform: ${({ isClicked }) => (isClicked ? "scale(1)" : "scale(1.5)")};
       filter: ${({ isClicked }) =>
         isClicked ? "brightness(1)" : "brightness(0.25)"};
     }
