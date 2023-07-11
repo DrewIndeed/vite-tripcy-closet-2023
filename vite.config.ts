@@ -8,7 +8,7 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 // https://github.com/FatehAK/vite-plugin-image-optimizer
 const DEFAULT_IMG_OPTIONS = {
-  test: /\.(jpe?g|png|gif|tiff|svg|avif)$/i, // excluded webp
+  test: /\.(jpe?g|png|gif|tiff|svg|avif|webp)$/i, // excluded webp
   exclude: undefined,
   include: undefined,
   includePublic: true,
@@ -58,10 +58,11 @@ const DEFAULT_IMG_OPTIONS = {
   // gif does not support lossless compression
   // https://sharp.pixelplumbing.com/api-output#gif
   gif: {},
-  // webp: {
-  //   // https://sharp.pixelplumbing.com/api-output#webp
-  //   quality: 90,
-  // },
+  webp: {
+    // https://sharp.pixelplumbing.com/api-output#webp
+    loseless: true,
+    effort: 2,
+  },
   avif: {
     // https://sharp.pixelplumbing.com/api-output#avif
     lossless: true,
