@@ -119,11 +119,11 @@ export const ProductItemWrapper = styled.div<ProductItemWrapperType>`
     .item-name {
       /* border: 2px solid lime; */
       margin-top: 72dvh;
-      margin-left: 5.5rem;
+      margin-left: 6rem;
       font-size: 3em;
       @media ${devices.laptopL} {
         margin-top: 70dvh;
-        margin-left: 9.5rem;
+        margin-left: 8rem;
         font-size: 4em;
       }
 
