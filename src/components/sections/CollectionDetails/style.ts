@@ -180,6 +180,7 @@ export const ProductItemWrapper = styled.div<ProductItemWrapperType>`
         height: 4rem;
       }
       /* background-color: cyan; */
+      background-color: ${({ theme }) => theme.colors.out2};
       overflow: hidden !important;
       position: relative;
 

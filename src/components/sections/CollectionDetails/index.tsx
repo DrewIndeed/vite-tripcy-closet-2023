@@ -49,7 +49,7 @@ const ProductCard = ({
       className={isClicked ? "anim-width" : "normal-width"}
     >
       <ProductItemWrapper isLastAnimDone={isLastAnimDone} isClicked={isClicked}>
-        <LazyLoadImage {...photos[curDisplayImg]} />
+        <LazyLoadImage visibleByDefault {...photos[curDisplayImg]} />
         {isClicked && (
           <div className="item-copy">
             <div id="images">
@@ -75,7 +75,7 @@ const ProductCard = ({
                     }`}
                     key={photo.src}
                   >
-                    <LazyLoadImage {...photo} />
+                    <LazyLoadImage visibleByDefault {...photo} />
                   </motion.div>
                 );
               })}
