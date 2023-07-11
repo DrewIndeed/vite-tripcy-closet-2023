@@ -227,7 +227,7 @@ const Footer = () => {
 
       {/* Copyright at the very bottom */}
       <p id="copyright">
-        © {new Date().getFullYear()} Tripcy Closet. All Rights Reserved.
+        © {new Date().getFullYear()} TRIPCY CLOSET. All Rights Reserved
       </p>
     </FooterWrapper>
   );

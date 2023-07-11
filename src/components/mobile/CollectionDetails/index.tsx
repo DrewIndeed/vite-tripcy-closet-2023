@@ -1,9 +1,11 @@
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useState } from "react";
+
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { useData } from "@hooks/useData";
 import { isObjEmpty } from "@utils";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
-import ProductRow from "../ProductRow";
+
+import ProductRow from "./ProductRow";
 import { CollectionDetailsWrapper } from "./style";
 
 const CollectionDetails = () => {

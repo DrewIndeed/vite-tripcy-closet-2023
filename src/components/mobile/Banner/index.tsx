@@ -1,17 +1,15 @@
 import { imgAttributes } from "@constants/obj";
 import { actionBtnText, innerDesc, slogan } from "@constants/text";
-import { useSmoothScrollTo } from "@hooks/useSmoothScrollTo";
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import MediaQuery from "react-responsive";
+
 // import toast from "react-simple-toasts";
 import { MobileBannerWrapper } from "./style";
 
 const MobileBanner = () => {
-  const bind = useSmoothScrollTo("#home");
-
   return (
-    <MobileBannerWrapper {...bind} id="home">
+    <MobileBannerWrapper id="home">
       <div className="content noselect">
         <motion.span
           initial={{ opacity: 0 }}

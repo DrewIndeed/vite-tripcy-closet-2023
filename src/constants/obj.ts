@@ -1,4 +1,4 @@
-import { athenaAllSetsPhotos } from "./collections";
+import { athenaAllSetsPhotos } from "./cols";
 
 export const locoOptions = {
   smooth: true,

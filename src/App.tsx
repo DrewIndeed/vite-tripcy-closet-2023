@@ -1,48 +1,53 @@
-import MobileBanner from "@components/mobile/Banner";
-import MobileCollection from "@components/mobile/Collection";
-import CollectionDetails from "@components/mobile/CollectionDetails";
-import Footer from "@components/mobile/Footer";
-import Banner from "@components/sections/Banner";
-import Collection from "@components/sections/Collection";
-import CollectionDetailsDesktop from "@components/sections/CollectionDetails";
-
-import { collections, locoOptions } from "@constants/obj";
-import { useData } from "@hooks/useData";
-import useGlobalMedia from "@hooks/useGlobalMedia";
-import { common as commonTheme } from "@styles/themes";
-import { isObjEmpty } from "@utils";
 import { Suspense, lazy, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import MediaQuery from "react-responsive";
 
-import Intro from "@components/sections/Intro";
+import MobileBanner from "@components/mobile/Banner";
+import MobileCollection from "@components/mobile/Collection";
+import MobileCollectionDetails from "@components/mobile/CollectionDetails";
+import MobileFooter from "@components/mobile/Footer";
+
+import Banner from "@components/desktop/Banner";
+import Collection from "@components/desktop/Collection";
+import CollectionDetails from "@components/desktop/CollectionDetails";
+
+import { collections, locoOptions } from "@constants/obj";
+import { useData } from "@hooks/useData";
+import useGlobalMedia from "@hooks/useGlobalMedia";
+
 import { AppMainContent, MobileMainContent } from "@styles/global";
+import { common as commonTheme } from "@styles/themes";
+import { isObjEmpty } from "@utils";
+
 import "@styles/global.css";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import "react-tooltip/dist/react-tooltip.css";
 
+const Intro = lazy(() => import("@components/common/Intro"));
 const MainNav = lazy(() => import("@components/common/MainNav"));
 const SocialsNav = lazy(() => import("@components/common/SocialsNav"));
 
-function App() {
+const App = () => {
   // hooks
   const containerRef = useRef(null);
   const { booleans } = useGlobalMedia();
   const { currentCol } = useData();
 
   return (
-    <div style={{ height: "100dvh" }}>
+    <div id="app-wrapper">
       <Helmet>
         <title>Tripcy Closet</title>
       </Helmet>
 
       {/* website reveal */}
-      <Intro
-        svgColorHex={commonTheme.colors.typo1}
-        textColorHex={commonTheme.colors.typo1}
-        bgColorHex={commonTheme.colors.bg2}
-      />
+      <Suspense fallback={<></>}>
+        <Intro
+          svgColorHex={commonTheme.colors.typo1}
+          textColorHex={commonTheme.colors.typo1}
+          bgColorHex={commonTheme.colors.bg2}
+        />
+      </Suspense>
 
       {/* mobile content */}
       {!booleans.isLaptopMedium && (
@@ -61,11 +66,11 @@ function App() {
 
           {/* Selected collection's details and Products preview */}
           <MediaQuery maxWidth={1208}>
-            {!isObjEmpty(currentCol) && <CollectionDetails />}
+            {!isObjEmpty(currentCol) && <MobileCollectionDetails />}
           </MediaQuery>
 
           <div id="contacts" />
-          <Footer />
+          <MobileFooter />
         </MobileMainContent>
       )}
 
@@ -93,13 +98,13 @@ function App() {
 
             {/* Selected collection's details and Products preview */}
             <MediaQuery minWidth={1209}>
-              {!isObjEmpty(currentCol) && <CollectionDetailsDesktop />}
+              {!isObjEmpty(currentCol) && <CollectionDetails />}
             </MediaQuery>
           </AppMainContent>
         </LocomotiveScrollProvider>
       )}
     </div>
   );
-}
+};
 
 export default App;

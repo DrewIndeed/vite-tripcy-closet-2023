@@ -76,6 +76,10 @@ button:hover {
   cursor: pointer;
 }
 
+#app-wrapper {
+  height: 100dvh;
+}
+
 .c-scrollbar {
   display: none;
 }
