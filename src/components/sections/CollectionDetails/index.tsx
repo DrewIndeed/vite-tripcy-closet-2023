@@ -1,6 +1,6 @@
 import { useData } from "@hooks/useData";
 import { isObjEmpty } from "@utils";
-import { useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import {
@@ -30,14 +30,14 @@ const ProductCard = ({
   clickedCardOrder,
   onClick,
 }: ProductCardType) => {
-  const { sizes, srcSet, src, alt } = photos[0];
   const isClicked = order === clickedCardOrder;
+  const [curDisplayImg, setCurDisplayImg] = useState<number>(0);
 
   return (
     <ProductCardWrapper
       initial={{ x: 100, opacity: 0 }}
       whileInView={{
-        x: [-30, 20, 0],
+        x: [-15, 20, 0],
         opacity: [0.2, 0.6, 1],
       }}
       transition={{ duration: 1, delay: 0.1 * (order as number) }}
@@ -49,8 +49,39 @@ const ProductCard = ({
       className={isClicked ? "anim-width" : "normal-width"}
     >
       <ProductItemWrapper isLastAnimDone={isLastAnimDone} isClicked={isClicked}>
-        <LazyLoadImage {...{ sizes, srcSet, src, alt }} />
-        <div className="item-copy"></div>
+        <LazyLoadImage {...photos[curDisplayImg]} />
+        {isClicked && (
+          <div className="item-copy">
+            <div id="images">
+              {photos.map((photo, photoIdx) => {
+                return (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{
+                      opacity: [0, 1],
+                      y: 0,
+                    }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 0.1 * (photoIdx as number),
+                    }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setCurDisplayImg(photoIdx);
+                    }}
+                    className={`container ${
+                      photoIdx !== curDisplayImg ? "darker" : "normal"
+                    }`}
+                    key={photo.src}
+                  >
+                    <LazyLoadImage {...photo} />
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        )}
         <div className="img-overlay">
           <div className="item-order">{(order as number) + 1}</div>
           <div className="item-name">{name}</div>

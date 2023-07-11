@@ -40,7 +40,7 @@ export const CollectionDetailsWrapper = styled(motion.div)`
   }
   @keyframes anim-width {
     to {
-      flex: 1.5;
+      flex: 2;
     }
   }
 
@@ -49,7 +49,7 @@ export const CollectionDetailsWrapper = styled(motion.div)`
   }
   @keyframes normal-width {
     from {
-      flex: 1.5;
+      flex: 2;
 
       to {
         flex: 1;
@@ -68,6 +68,7 @@ export const ProductCardWrapper = styled(motion.div)`
 `;
 
 export const ProductItemWrapper = styled.div<ProductItemWrapperType>`
+  color: ${(props) => props.theme.colors.typo1};
   cursor: ${({ isLastAnimDone }) => (isLastAnimDone ? "pointer" : "auto")};
 
   .img-overlay {
@@ -92,8 +93,8 @@ export const ProductItemWrapper = styled.div<ProductItemWrapperType>`
     .item-name {
       /* border: 2px solid lime; */
       margin-top: 72dvh;
-      margin-left: 7.5rem;
-      font-size: 3.5em;
+      margin-left: 5.5rem;
+      font-size: 3em;
       @media ${devices.laptopL} {
         margin-top: 70dvh;
         margin-left: 9.5rem;
@@ -137,12 +138,13 @@ export const ProductItemWrapper = styled.div<ProductItemWrapperType>`
   }
 
   .item-copy {
+    position: absolute;
     width: 100%;
     height: 100%;
-    position: absolute;
 
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
 
     color: #ffffff;
     text-transform: uppercase;
@@ -151,11 +153,64 @@ export const ProductItemWrapper = styled.div<ProductItemWrapperType>`
     /* temp */
     /* border: 2px solid cyan; */
   }
-  /* :hover .item-copy {
-      color: #ffffff;
-    } */
 
-  @media ${devices.laptopM} {
-    color: ${(props) => props.theme.colors.typo1};
+  #images {
+    /* background-color: lime; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    padding-block: 1rem;
+
+    .normal {
+      animation: to-normal 0.4s ease-in-out forwards;
+    }
+
+    .darker {
+      animation: to-darker 0.4s ease-in-out forwards;
+    }
+
+    .container {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.4rem;
+      @media ${devices.laptopL} {
+        width: 4rem;
+        height: 4rem;
+      }
+      /* background-color: cyan; */
+      overflow: hidden !important;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 0;
+      }
+    }
+
+    @keyframes to-normal {
+      from {
+        border: 3px solid transparent;
+        filter: brightness(0.6);
+      }
+      to {
+        border: 3px solid ${({ theme }) => theme.colors.typo3};
+        filter: brightness(1);
+      }
+    }
+
+    @keyframes to-darker {
+      from {
+        border: 3px solid ${({ theme }) => theme.colors.typo3};
+        filter: brightness(1);
+      }
+      to {
+        border: 1px solid transparent;
+        filter: brightness(0.6);
+      }
+    }
   }
 `;
