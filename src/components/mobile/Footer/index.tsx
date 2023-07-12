@@ -1,4 +1,5 @@
 import { DELIVERY_POLICIES, EXCHANGE_RETURN_POLICIES } from "@constants/obj";
+import { footerCopyright } from "@constants/text";
 import { EnvelopeIcon, PhoneIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { getOS } from "@utils";
 import { motion, useAnimation } from "framer-motion";
@@ -226,9 +227,7 @@ const Footer = () => {
       </section>
 
       {/* Copyright at the very bottom */}
-      <p id="copyright">
-        © {new Date().getFullYear()} TRIPCY CLOSET. All Rights Reserved
-      </p>
+      <p id="copyright">{footerCopyright}</p>
     </FooterWrapper>
   );
 };

@@ -83,6 +83,8 @@ export const collections = {
   },
 };
 
+Object.freeze(collections);
+
 export const DELIVERY_POLICIES = {
   title: "Delivery Service",
   parts: [

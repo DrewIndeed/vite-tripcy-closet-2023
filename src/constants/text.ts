@@ -31,3 +31,5 @@ elegance and mild luxury, making the best of each individual's
 natural beauty to leverage our brand and products.`;
 
 export const actionBtnText = "Show More";
+
+export const footerCopyright = `© ${new Date().getFullYear()} TRIPCY CLOSET. All Rights Reserved`;

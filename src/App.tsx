@@ -11,6 +11,7 @@ import MobileFooter from "@components/mobile/Footer";
 import Banner from "@components/desktop/Banner";
 import Collection from "@components/desktop/Collection";
 import CollectionDetails from "@components/desktop/CollectionDetails";
+import Footer from "@components/desktop/Footer";
 
 import { collections, locoOptions } from "@constants/obj";
 import { useData } from "@hooks/useData";
@@ -36,7 +37,7 @@ const App = () => {
   return (
     <div id="app-wrapper">
       <Helmet>
-        <title>Tripcy Closet</title>
+        <title>Tripcy Closet - Clothing Brand</title>
       </Helmet>
 
       {/* website reveal */}
@@ -47,31 +48,6 @@ const App = () => {
           bgColorHex={commonTheme.colors.bg2}
         />
       </Suspense>
-
-      {/* mobile content */}
-      {!booleans.isLaptopMedium && (
-        <MobileMainContent className="scrollbar-hide">
-          {/* nav bars */}
-          <Suspense fallback={<></>}>
-            <MainNav isMobile />
-          </Suspense>
-          <MobileBanner />
-
-          {/* Collections */}
-          <div id="collections" />
-          {Object.values(collections).map((collect, idx) => (
-            <MobileCollection key={collect.id} {...collect} count={idx} />
-          ))}
-
-          {/* Selected collection's details and Products preview */}
-          <MediaQuery maxWidth={1208}>
-            {!isObjEmpty(currentCol) && <MobileCollectionDetails />}
-          </MediaQuery>
-
-          <div id="contacts" />
-          <MobileFooter />
-        </MobileMainContent>
-      )}
 
       {/* desktop content */}
       {booleans.isLaptopMedium && (
@@ -99,8 +75,36 @@ const App = () => {
             <MediaQuery minWidth={1209}>
               {!isObjEmpty(currentCol) && <CollectionDetails />}
             </MediaQuery>
+
+            <div id="contacts" />
+            <Footer />
           </AppMainContent>
         </LocomotiveScrollProvider>
+      )}
+
+      {/* mobile content */}
+      {!booleans.isLaptopMedium && (
+        <MobileMainContent className="scrollbar-hide">
+          {/* nav bars */}
+          <Suspense fallback={<></>}>
+            <MainNav isMobile />
+          </Suspense>
+          <MobileBanner />
+
+          {/* Collections */}
+          <div id="collections" />
+          {Object.values(collections).map((collect, idx) => (
+            <MobileCollection key={collect.id} {...collect} count={idx} />
+          ))}
+
+          {/* Selected collection's details and Products preview */}
+          <MediaQuery maxWidth={1208}>
+            {!isObjEmpty(currentCol) && <MobileCollectionDetails />}
+          </MediaQuery>
+
+          <div id="contacts" />
+          <MobileFooter />
+        </MobileMainContent>
       )}
     </div>
   );

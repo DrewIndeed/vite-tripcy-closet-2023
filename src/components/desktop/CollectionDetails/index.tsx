@@ -1,3 +1,4 @@
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useData } from "@hooks/useData";
 import { isObjEmpty } from "@utils";
 import { motion, useAnimation } from "framer-motion";
@@ -8,7 +9,6 @@ import {
   ProductCardWrapper,
   ProductItemWrapper,
 } from "./style";
-import { XMarkIcon } from "@heroicons/react/24/outline";
 
 type ProductCardType = {
   name: string;
@@ -76,7 +76,10 @@ const ProductCard = ({
                     }`}
                     key={photo.src}
                   >
-                    <LazyLoadImage visibleByDefault {...photo} />
+                    <LazyLoadImage
+                      visibleByDefault={photoIdx === 0}
+                      {...photo}
+                    />
                   </motion.div>
                 );
               })}

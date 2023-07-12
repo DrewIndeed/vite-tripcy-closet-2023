@@ -11,7 +11,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/kayla/kayla_2_jncrgg_c_scale,w_1440.webp",
       alt: "Athena Collection - Kayla Set - Photo 2",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -23,7 +22,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/kayla/kayla_1_fpcs5t_c_scale,w_1440.webp",
       alt: "Athena Collection - Kayla Set - Photo 1",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -35,7 +33,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/kayla/kayla_3_arbqa9_c_scale,w_1440.webp",
       alt: "Athena Collection - Kayla Set - Photo 3",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -61,7 +58,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/envy/envy_1_ogvlfo_c_scale,w_1440.webp",
       alt: "Athena Collection - Envy Set - Photo 1",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -73,7 +69,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/envy/envy_2_rpchxi_c_scale,w_1440.webp",
       alt: "Athena Collection - Envy Set - Photo 2",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -84,7 +79,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/envy/envy_3_arqhs1_c_scale,w_1440.webp",
       alt: "Athena Collection - Envy Set - Photo 3",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -108,7 +102,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/cici/cici_1_jaj1kv_c_scale,w_1440.webp",
       alt: "",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -121,7 +114,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/cici/cici_2_uxwlcs_c_scale,w_1440.webp",
       alt: "",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -134,7 +126,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/cici/cici_3_pwixtn_c_scale,w_1440.webp",
       alt: "",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -158,7 +149,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/dolly/dolly_1_xshted_c_scale,w_1440.webp",
       alt: "",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -171,7 +161,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/dolly/dolly_2_y6lmvj_c_scale,w_1440.webp",
       alt: "",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -182,7 +171,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/dolly/dolly_3_ocatgz_c_scale,w_1440.webp",
       alt: "",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -208,7 +196,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/bloom/bloom_2_hpblwn_c_scale,w_1440.webp",
       alt: "",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -219,7 +206,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/bloom/bloom_1_aendg9_c_scale,w_1440.webp",
       alt: "",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -232,7 +218,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/bloom/bloom_3_wuxeoc_c_scale,w_1440.webp",
       alt: "",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -259,7 +244,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/flow/flow_1_jks4yq_c_scale,w_1440.webp",
       alt: "",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -271,7 +255,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/flow/flow_2_cgiyxm_c_scale,w_1440.webp",
       alt: "",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -283,7 +266,6 @@ export const athenaAllSetsPhotos = {
       src: "/imgs/athena/flow/flow_3_iz7f3a_c_scale,w_1440.webp",
       alt: "",
     },
-
     {
       sizes: "(max-width: 1440px) 100vw, 1440px",
       srcSet: `
@@ -297,3 +279,5 @@ export const athenaAllSetsPhotos = {
     },
   ],
 };
+
+Object.freeze(athenaAllSetsPhotos);
